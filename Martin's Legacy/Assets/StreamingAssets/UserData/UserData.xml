@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<component type="setting">
+		<setting type="language">CN</setting>
+		<setting type="fullScreen">True</setting>
+	</component>
+	<component type="level">
+		<level type="levelNum"></level>
+		<level type="levelItem"></level>
+	</component>
+	<component type="map">
+		
+	</component>
+</data>
