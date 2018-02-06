@@ -7,32 +7,33 @@ public class LocalizeManager : MonoBehaviour {
 
 	private string language;    //文本语言
 	private string textPath;    //文本路径
-	private string languageChoicePath;   //设置页面中的语言选项路径
 
 	public GameObject[] textTiles;     //文本列表
-	public GameObject languageChoice;  //针对设置页面中的语言选项文本
 
 	// Use this for initialization
 	void Start () {
 		//获取语言包路径
 		textPath = "Texts/";
-		languageChoicePath = "Texts/General/";
 
 		//获取用户语言
 		language = UserDataManager.instance.GetLanguage ();
 
 		//加载资源
 		LoadText (language);
+	}
 
-		//设置页面的单独的语言选项文本
-		if (languageChoice != null)
-			LoadLanguageChoice (language);
+	//每帧调用
+	void Update () {
+		string new_language = UserDataManager.instance.GetLanguage ();
+		if (language != new_language) {
+			LoadText (new_language);
+		}
 	}
 
 	//本地化加载文本资源
-	void LoadText(string language) {
+	void LoadText(string this_language) {
 		//根据用户语言选定Resource文件夹下的语言包路径
-		textPath += language;
+		textPath += this_language;
 		textPath += "/";
 
 		//为当前场景下的所有文本匹配对应的sprite资源
@@ -49,15 +50,8 @@ public class LocalizeManager : MonoBehaviour {
 			//绑定资源
 			image.GetComponent <Image> ().sprite = imageSourceSprite;
 		}
-	}
 
-	//本地化加载设置页面中的语言选项
-	void LoadLanguageChoice(string language) {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		//清空textPath保证下次调用
+		textPath = "Texts/";
 	}
 }

@@ -24,7 +24,16 @@ public class MenuClickHandeler : MonoBehaviour {
 
 	//开始按钮
 	private void StartClick() {
-		
+		//找到存档中的章节和关卡号
+		string chapterNum = UserDataManager.instance.GetChapterNum ();
+		string levelNum = UserDataManager.instance.GetLevelNum ();
+
+		//建立场景索引
+		string sceneName = "Chapter-" + chapterNum + 
+		                   "-Level-" + levelNum;
+
+		//加载场景
+		SceneManager.LoadScene (sceneName);
 	}
 
 	//设置按钮

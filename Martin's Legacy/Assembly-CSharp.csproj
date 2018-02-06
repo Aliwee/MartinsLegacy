@@ -51,11 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BGFadeInOut.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\FullScreen.cs" />
+     <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\ItemMouseHandeler.cs" />
+     <Compile Include="Assets\Scripts\ItemsManager.cs" />
+     <Compile Include="Assets\Scripts\LoadNextScene.cs" />
      <Compile Include="Assets\Scripts\LocalizeManager.cs" />
      <Compile Include="Assets\Scripts\MenuClickHandeler.cs" />
      <Compile Include="Assets\Scripts\MenuMouseHandeler.cs" />
+     <Compile Include="Assets\Scripts\SettingManager.cs" />
      <Compile Include="Assets\Scripts\UserDataManager.cs" />
      <None Include="Assets\StreamingAssets\UserData\UserData.xml" />
  <Reference Include="UnityEngine.UI">
