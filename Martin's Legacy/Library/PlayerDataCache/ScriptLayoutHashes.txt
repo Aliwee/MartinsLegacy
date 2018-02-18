@@ -1,6 +1,5 @@
 WindowsStandalone
 SceneListBegin?
-Assets/Scenes/Start.unity
 Assets/Scenes/Chapter-1-Level-1.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -149,5 +148,5 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-ee11235370c899fcae61f20cf6ec6957 Assembly-CSharp.dll:.ItemsManager
+76ed2a2191448e4b585cce5080683279 Assembly-CSharp.dll:.ItemsManager
 f60dd9de3c6f6e5ebd51bc8cf90890ea Assembly-CSharp.dll:.BGFadeInOut

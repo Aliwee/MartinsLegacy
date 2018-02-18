@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
 
 public class LocalizeManager : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class LocalizeManager : MonoBehaviour {
 	private string textPath;    //文本路径
 
 	public GameObject[] textTiles;     //文本列表
+	//public GameObject localize;        //Fungus Localization组件
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +19,9 @@ public class LocalizeManager : MonoBehaviour {
 
 		//获取用户语言
 		language = UserDataManager.instance.GetLanguage ();
+
+		//调用Fungus
+		//localize.GetComponent <Localization > ().SetActiveLanguage (language);
 
 		//加载资源
 		LoadText (language);

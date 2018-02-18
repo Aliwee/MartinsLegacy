@@ -16,6 +16,9 @@ public class ItemsManager : MonoBehaviour {
 	public Button[] itemTiles;                   //物品栏中的物品窗格
 	public Button[] clickTiles;                  //互动按钮窗格
 	public Button exitBtn;                       //退出按钮
+	public GameObject letter;                    //显示纸质内容的面板
+	public GameObject shadow;                    //显示纸质内容的阴影
+	public Button backBtn;                       //取消显示纸质内容按钮
 
 	//Awake总是在任何Start方法之前调用
 	void Start() {
@@ -28,6 +31,7 @@ public class ItemsManager : MonoBehaviour {
 			clickTiles [i].onClick.AddListener (UseItemClick);
 		}
 		exitBtn.onClick.AddListener (ExitClick);
+		backBtn.onClick.AddListener (BackClick);
 
 		//隐藏场景中已经获得的物品
 		HideItemsInScene();
@@ -92,7 +96,27 @@ public class ItemsManager : MonoBehaviour {
 		//获取该物品的名称
 		GameObject btn = EventSystem.current.currentSelectedGameObject;
 		string itemName = btn.GetComponent <Image> ().sprite.name;
+		//读信件
+		if (itemName == "item003") {
+			//取得路径
+			string path = itemsPath + itemName;
+			//取得索引下的资源
+			Sprite imageSourceSprite = new Sprite();
+			imageSourceSprite = Resources.Load (path, imageSourceSprite.GetType ()) as Sprite;
+			//绑定资源
+			letter.GetComponent<Image >().sprite = imageSourceSprite;
+			//显示
+			letter.SetActive (true);
+			shadow.SetActive (true);
+			backBtn.gameObject.SetActive (true);
+		}		
+	}
 
+	//取消显示纸质内容按钮
+	void BackClick() {
+		letter.SetActive (false);
+		shadow.SetActive (false);
+		backBtn.gameObject.SetActive (false);
 	}
 
 	//使用物品按钮
