@@ -16,7 +16,8 @@ public class UserDataManager : MonoBehaviour {
 	private string isFirstPlay;                       //用户是否是第一次玩
 	private string chapterNum;                        //用户存档章节
 	private string levelNum;                          //用户存档关卡
-	private List<Item> itemsInPack;                    //用户存档中已获得的物品
+	private List<Item> itemsInPack;                   //用户存档中已获得还未用的物品
+	private List<Item> consumedItems;                 //用户存档中已经拆解或者已经使用的物品
 
 	public static UserDataManager instance = null;    //一个UserDataManager实例
 
@@ -37,6 +38,7 @@ public class UserDataManager : MonoBehaviour {
 		userDataXml = new XmlDocument ();
 		readerSetting = new XmlReaderSettings ();
 		itemsInPack = new List<Item> ();
+		consumedItems = new List<Item> ();
 
 		//找到xml文件目录
 		StartCoroutine (findXML ());
@@ -151,7 +153,7 @@ public class UserDataManager : MonoBehaviour {
 				}
 			}
 			//选择标签为levelItems的<component>
-			else if (component.GetAttribute ("type") == "levelItems") {
+			else if (component.GetAttribute ("type") == "itemsInPack") {
 				XmlNodeList userSettingNodes = component.ChildNodes;   //获得标签为levelItems的<component>下的子节点
 				//遍历所有<setting>子节点
 				foreach (XmlElement item in userSettingNodes ) {
@@ -190,6 +192,11 @@ public class UserDataManager : MonoBehaviour {
 	//获取用户物品栏
 	public List<Item> GetItemsInPack() {
 		return this.itemsInPack;
+	}
+
+	//获取用户已消耗物品
+	public List<Item> GetConsumedItems() {
+		return this.consumedItems;
 	}
 
 	//读取用户配置完之后跳转至开始页面
@@ -249,6 +256,16 @@ public class UserDataManager : MonoBehaviour {
 			new_item.InnerText = itemsInPack [i].name;
 			items.AppendChild (new_item);
 		}
+		//插入已消耗物品数据
+		XmlNode consumed_items = userDataNodes.Item (3);
+		while (consumed_items.HasChildNodes)
+			consumed_items.RemoveChild (consumed_items.FirstChild);
+		for (int i = 0; i < consumedItems.Count; i++) {
+			XmlElement new_item = userDataXml.CreateElement ("item");
+			new_item.SetAttribute ("type", consumedItems [i].tag);
+			new_item.InnerText = consumedItems [i].name;
+			consumed_items.AppendChild (new_item);
+		}
 
 		//保存更新信息至本地用户存档
 		StartCoroutine (saveUserData ());
@@ -281,5 +298,12 @@ public class UserDataManager : MonoBehaviour {
 	//从itemsInPack删除一个物品
 	public void RemoveItemInPack(Item item) {
 		this.itemsInPack.Remove (item);
+	}
+
+	//增加一个物品至consumedItems中
+	public void AddItemInConsume(string itemName, string tag) {
+		//加入consumedItems中
+		Item i = new Item (itemName, tag);
+		this.consumedItems.Add (i);
 	}
 }

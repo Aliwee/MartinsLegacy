@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 public class ItemsManager : MonoBehaviour {
 
 	private List<Item> itemsInPack;              //用户存档中物品栏
+	private List<Item> consumedItems;            //用户存档中已消耗物品
 	private string itemsPath;                    //物品资源路径
 	private int levelItemsNum;                   //用户存档物品数
 
@@ -24,6 +25,7 @@ public class ItemsManager : MonoBehaviour {
 	void Start() {
 		//初始化
 		itemsInPack = UserDataManager.instance.GetItemsInPack ();
+		consumedItems = UserDataManager.instance.GetConsumedItems ();
 		itemsPath = "LevelItems/";
 		int length = itemTiles.Length;
 		for (int i = 0; i < length; i++) {
@@ -61,7 +63,7 @@ public class ItemsManager : MonoBehaviour {
 			itemTiles[i].GetComponent <Image> ().sprite = imageSourceSprite;
 
 			//取得物品的属性
-			string tag = itemsInPack [i].tag;
+			string tag = itemsInPack[i].tag;
 			//如果是可拆解物品还需要拆解按钮显示
 			if (tag == "unravel") {
 				clickTiles [i].gameObject.SetActive (true);
@@ -71,6 +73,16 @@ public class ItemsManager : MonoBehaviour {
 
 	//隐藏场景中的物品
 	void HideItemsInScene() {
+		for (int i = 0; i < consumedItems.Count; i++) {
+			//取得物品索引名字
+			string name = consumedItems[i].name;
+			string path = "/Canvas/interactableItems/" + name;
+			//隐藏已获得在物品栏中的图标
+			GameObject o = GameObject.Find (path);
+			if (o != null) {
+				o.SetActive (false);
+			}
+		}
 		for (int i = 0; i < itemsInPack.Count; i++) {
 			//取得物品索引名字
 			string name = itemsInPack[i].name;
@@ -119,7 +131,7 @@ public class ItemsManager : MonoBehaviour {
 		backBtn.gameObject.SetActive (false);
 	}
 
-	//使用物品按钮
+	//拆解物品按钮
 	void UseItemClick() {
 		//获取物品的名称
 		GameObject btn = EventSystem.current.currentSelectedGameObject;
@@ -130,6 +142,7 @@ public class ItemsManager : MonoBehaviour {
 			Item item = itemsInPack [i];
 			if (item.name == itemName) {
 				UserDataManager.instance.RemoveItemInPack (item);
+				UserDataManager.instance.AddItemInConsume (itemName, "ravel");
 				break;
 			}
 		}

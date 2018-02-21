@@ -8,7 +8,9 @@
 		<level type="chapterNum">1</level>
 		<level type="levelNum">1</level>
 	</component>
-	<component type="levelItems">
+	<component type="itemsInPack">
+	</component>
+	<component type="consumedItems">
 	</component>
 	<component type="map">
 	</component>
