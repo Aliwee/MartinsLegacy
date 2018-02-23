@@ -45,10 +45,6 @@ public class UserDataManager : MonoBehaviour {
 
 	}
 
-	//每一帧调用
-	void Update () {
-	}
-
 	//使用这个创建和查找xml文件目录
 	IEnumerator findXML() {
 		//如果不存在那么就创建并且拷贝初始存档

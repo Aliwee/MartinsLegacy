@@ -21,7 +21,9 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 
 	//鼠标点下
 	public void OnPointerClick (PointerEventData eventData) {
-		//如果是可放入物品，放入物品栏
+		/*如果是可放入物品，放入物品栏
+		 * 如果是有对话的物品，产生对话
+        */
 		if (this.tag == "PickableItem") {
 			UserDataManager.instance.AddItemInPack (this.name, "use");
 			this.gameObject.SetActive (false);
@@ -33,6 +35,9 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 			Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
 		}
 		else if (this.tag == "CheckableItem") {
+			//TODO:对话
+		}
+		else if (this.tag == "UseableItem") {
 			//TODO:对话
 		}
 	}

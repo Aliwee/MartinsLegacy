@@ -576,6 +576,7 @@
      <Compile Include="Assets\Scripts\FullScreen.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\ItemMouseHandeler.cs" />
+     <Compile Include="Assets\Scripts\ItemsInteractiveManager.cs" />
      <Compile Include="Assets\Scripts\ItemsManager.cs" />
      <Compile Include="Assets\Scripts\LoadNextScene.cs" />
      <Compile Include="Assets\Scripts\LocalizeManager.cs" />
