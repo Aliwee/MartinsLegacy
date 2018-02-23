@@ -41,6 +41,11 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 			//TODO:对话
 			//设置当前选中的物品标志到ItemsInteractiveManager中去
 			ItemsInteractiveManager.instance.SetWaitForConsumeItem (this.name);
+			//取消选中当前的物品栏物品
+			GameObject o = GameObject.Find("/Scripts/ItemsManager");
+			GameObject lastPickedItem = o.GetComponent <ItemsManager> ().lastPickedItem;
+			if (lastPickedItem != null)
+				lastPickedItem.SetActive (false);
 		}
 	}
 }

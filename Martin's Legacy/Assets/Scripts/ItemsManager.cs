@@ -21,6 +21,7 @@ public class ItemsManager : MonoBehaviour {
 	public GameObject letter;                    //显示纸质内容的面板
 	public GameObject shadow;                    //显示纸质内容的阴影
 	public Button backBtn;                       //取消显示纸质内容按钮
+	public GameObject lastPickedItem;           //上一次选中的物品
 
 	//Awake总是在任何Start方法之前调用
 	void Start() {
@@ -134,7 +135,17 @@ public class ItemsManager : MonoBehaviour {
 		GameObject btn = EventSystem.current.currentSelectedGameObject;
 		string itemName = btn.GetComponent <Image> ().sprite.name;
 
+		//显示选框
+		if(itemName != "transparent") {
+			if (lastPickedItem != null)
+				lastPickedItem.SetActive (false);
+			GameObject itemBack = btn.transform.GetChild (0).gameObject;
+			itemBack.SetActive (true);
+			lastPickedItem = itemBack;
+		}
+
 		//设置当前选中的物品标志到ItemsInteractiveManager中去
+		ItemsInteractiveManager.instance.SetWaitForConsumeItem ("null_consumed");
 		ItemsInteractiveManager.instance.SetPickedItem (itemName);
 
 		//读信件
@@ -183,6 +194,8 @@ public class ItemsManager : MonoBehaviour {
 		}
 		//交互按钮重设为设为不可见
 		btn.SetActive (false);
+		if (lastPickedItem != null)
+			lastPickedItem.SetActive (false);
 	}
 
 	//销毁交互成功的物品
