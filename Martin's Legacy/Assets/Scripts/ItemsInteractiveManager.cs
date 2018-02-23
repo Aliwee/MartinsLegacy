@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ItemsInteractiveManager : MonoBehaviour {
 	private string pickedItem;                //选中的物品栏物品
@@ -88,6 +89,19 @@ public class ItemsInteractiveManager : MonoBehaviour {
 			Destroy (o);
 			consumableItems.Remove (waitForConsumeItem);
 			waitForConsumeItem = "null_consumed";
+		}
+		AfterSuccessfulInteraction (pickedItem);
+	}
+
+	//根据物品进行交互成功之后的处理
+	void AfterSuccessfulInteraction(string changeId) {
+		switch (changeId) {
+		case "item002":
+			//跳转至开始界面
+			SceneManager.LoadScene ("Chapter-1-Level-5");
+			break;
+		default :
+			break;
 		}
 	}
 }

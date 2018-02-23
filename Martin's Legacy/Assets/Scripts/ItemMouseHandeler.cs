@@ -39,6 +39,8 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 		}
 		else if (this.tag == "UseableItem") {
 			//TODO:对话
+			//设置当前选中的物品标志到ItemsInteractiveManager中去
+			ItemsInteractiveManager.instance.SetWaitForConsumeItem (this.name);
 		}
 	}
 }

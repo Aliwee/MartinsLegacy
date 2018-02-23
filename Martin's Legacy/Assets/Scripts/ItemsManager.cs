@@ -17,7 +17,6 @@ public class ItemsManager : MonoBehaviour {
 
 	public Button[] itemTiles;                   //物品栏中的物品窗格
 	public Button[] clickTiles;                  //拆解互动按钮窗格
-	public Button[] consumeTiles;                //待互动物品列表
 	public Button exitBtn;                       //退出按钮
 	public GameObject letter;                    //显示纸质内容的面板
 	public GameObject shadow;                    //显示纸质内容的阴影
@@ -30,13 +29,9 @@ public class ItemsManager : MonoBehaviour {
 		consumedItems = UserDataManager.instance.GetConsumedItems ();
 		itemsPath = "LevelItems/";
 		int item_length = itemTiles.Length;
-		int consume_length = consumeTiles.Length;
 		for (int i = 0; i < item_length; i++) {
 			itemTiles [i].onClick.AddListener (ItemClick);
 			clickTiles [i].onClick.AddListener (UseItemClick);
-		}
-		for (int i = 0; i< consume_length; i++) {
-			consumeTiles [i].onClick.AddListener (ConsumeItemClick);
 		}
 		exitBtn.onClick.AddListener (ExitClick);
 		backBtn.onClick.AddListener (BackClick);
@@ -188,15 +183,6 @@ public class ItemsManager : MonoBehaviour {
 		}
 		//交互按钮重设为设为不可见
 		btn.SetActive (false);
-	}
-
-	//消耗物品按钮
-	void ConsumeItemClick() {
-		//获取物品的名称
-		GameObject btn = EventSystem.current.currentSelectedGameObject;
-		string consumeItemName = btn.name;
-		//设置当前选中的物品标志到ItemsInteractiveManager中去
-		ItemsInteractiveManager.instance.SetWaitForConsumeItem (consumeItemName);
 	}
 
 	//销毁交互成功的物品
