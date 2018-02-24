@@ -49,6 +49,7 @@ public class ItemsManager : MonoBehaviour {
 	void Update() {
 		//加载物品栏
 		itemsInPack = UserDataManager.instance.GetItemsInPack ();
+		consumedItems = UserDataManager.instance.GetConsumedItems ();
 		LoadItemsInPack ();
 		//交互成功事件是否触发
 		interactionSuccess = ItemsInteractiveManager.instance.GetItemInteractionResult ();
@@ -210,6 +211,21 @@ public class ItemsManager : MonoBehaviour {
 		UserDataManager.instance.AddItemInConsume (pickedItemName, "consumed");
 		//销毁场景物品
 		ItemsInteractiveManager.instance.DestoryConsumedItem ();
+		//鼠标重设为默认
+		Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
+	}
+
+	//仅销毁物品栏中的物品
+	public void DestoryPickedItems() {
+		//获取交互成功的物品栏物品和场景中物品
+		string pickedItemName = ItemsInteractiveManager.instance.GetPickedItem ();
+		//销毁物品栏物品
+		for (int i = 0; i < itemsInPack.Count; i++) {
+			if (itemsInPack [i].name == pickedItemName)
+				UserDataManager.instance.RemoveItemInPack (itemsInPack [i]);
+		}
+		UserDataManager.instance.AddItemInConsume (pickedItemName, "consumed");
+		//鼠标重设为默认
 		Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
 	}
 }

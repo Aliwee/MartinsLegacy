@@ -157,6 +157,15 @@ public class UserDataManager : MonoBehaviour {
 					this.itemsInPack.Add (i);
 				}
 			}
+			//选择标签为consumedItems的<component>
+			else if (component.GetAttribute ("type") == "consumedItems") {
+				XmlNodeList userSettingNodes = component.ChildNodes;   //获得标签为consumedItems的<component>下的子节点
+				//遍历所有<setting>子节点
+				foreach (XmlElement item in userSettingNodes ) {
+					Item i = new Item (item.InnerText, item.GetAttribute ("type"));
+					this.consumedItems.Add (i);
+				}
+			}
 		}
 	}
 

@@ -585,6 +585,7 @@
      <Compile Include="Assets\Scripts\SettingManager.cs" />
      <Compile Include="Assets\Scripts\UserDataManager.cs" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />
+     <None Include="Assets\UserData\UserData.xml" />
      <None Include="Assets\Fungus\Docs\README.txt" />
      <None Include="Assets\StreamingAssets\UserData\UserData.xml" />
      <None Include="Assets\Fungus\Thirdparty\LeanTween\ReadMe.txt" />

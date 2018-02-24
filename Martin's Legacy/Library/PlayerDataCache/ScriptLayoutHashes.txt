@@ -2,6 +2,8 @@ WindowsStandalone
 SceneListBegin?
 Assets/Scenes/Loading.unity
 Assets/Scenes/Start.unity
+Assets/Scenes/Setting.unity
+Assets/Scenes/Chapter-1-Level-1.unity
 SceneListEnd?
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Stop
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SfxrCacheSurrogate
