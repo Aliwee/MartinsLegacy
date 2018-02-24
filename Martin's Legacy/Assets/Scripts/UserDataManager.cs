@@ -34,7 +34,7 @@ public class UserDataManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		//初始化
-		userDataXmlPath = Application.persistentDataPath + "/UserData/UserData.xml";
+		userDataXmlPath = Application.dataPath + "/UserData/UserData.xml";
 		userDataXml = new XmlDocument ();
 		readerSetting = new XmlReaderSettings ();
 		itemsInPack = new List<Item> ();
@@ -48,7 +48,7 @@ public class UserDataManager : MonoBehaviour {
 	//使用这个创建和查找xml文件目录
 	IEnumerator findXML() {
 		//如果不存在那么就创建并且拷贝初始存档
-		string path = Application.persistentDataPath + "/UserData";
+		string path = Application.dataPath + "/UserData";
 		if (!Directory.Exists (path)) {
 			//创建存档目录
 			Directory.CreateDirectory (path);

@@ -755,8 +755,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1928304323}
   - component: {fileID: 1928304322}
+  - component: {fileID: 1928304324}
   m_Layer: 0
-  m_Name: UserDataManager
+  m_Name: DataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -786,3 +787,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928304324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1928304321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 702841265fde0c240b86743546567e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

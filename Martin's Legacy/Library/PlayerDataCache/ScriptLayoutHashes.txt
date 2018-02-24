@@ -1,6 +1,7 @@
 WindowsStandalone
 SceneListBegin?
-Assets/Scenes/Chapter-1-Level-4.unity
+Assets/Scenes/Loading.unity
+Assets/Scenes/Start.unity
 SceneListEnd?
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Stop
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SfxrCacheSurrogate
@@ -208,6 +209,7 @@ b30bc2f56f513654f32757d74b913134 Assembly-CSharp.dll:Fungus.Vector3Arithmetic
 a303d09b935c1ab9e51aa8fdedf97b5c Assembly-CSharp.dll:Fungus.Say
 53ac5788e6679a5a9d9ebd1bc37dd229 Assembly-CSharp.dll:Fungus.PlaySound
 77970364171c06631f60a4d72cc2036d Assembly-CSharp.dll:Fungus.SpawnObject
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ItemsInteractiveManager
 4ccfe2713237d1f5edde6f2a8bc7c9a7 Assembly-CSharp.dll:Fungus.LoadVariable
 f6318a2d62902bac71c55f69e828b50b Assembly-CSharp.dll:Fungus.SetAnimFloat
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UserDataManager
@@ -332,7 +334,7 @@ ee89b1b5b5f65cb74289075021dc8085 Assembly-CSharp.dll:Fungus.FloatVariable
 d8f44a9b64195a671a39d675de04d51f Assembly-CSharp.dll:Fungus.Menu
 e0296d5d3b66ca1ad568fd5ee987f416 Assembly-CSharp.dll:Fungus.SetClickable2D
 64ac2f7e4a2245866e0d1042ba4a9ccc Assembly-CSharp.dll:Fungus.RotateTo
-c721125abac16ee77adb33b53974c8d0 Assembly-CSharp.dll:.ItemsManager
+51ae52d378ea669ba83162d355c63890 Assembly-CSharp.dll:.ItemsManager
 f60dd9de3c6f6e5ebd51bc8cf90890ea Assembly-CSharp.dll:.BGFadeInOut
 a6cc716ff45b305b8bfd476db85bd219 Assembly-CSharp.dll:Fungus.StopBlock
 8e32f86da5244fa3fd8c5ecbd5db6422 Assembly-CSharp.dll:Fungus.Character
