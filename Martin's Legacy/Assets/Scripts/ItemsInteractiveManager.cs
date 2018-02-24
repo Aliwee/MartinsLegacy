@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ItemsInteractiveManager : MonoBehaviour {
+	private List<Item> itemsInPack;           //用户存档中物品栏
 	private string pickedItem;                //选中的物品栏物品
 	private List<string> consumableItems;     //待互动物品列表
 	private string waitForConsumeItem;        //选中的场景中待交互物品
@@ -29,6 +30,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 		waitForConsumeItem = "null_consumed";
 		isRightItem = "false";
 		consumableItems = new List<string> ();
+		itemsInPack = UserDataManager.instance.GetItemsInPack ();
 
 		//获得待互动物品列表
 		GetConsumableItems ();
@@ -36,13 +38,15 @@ public class ItemsInteractiveManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//加载物品栏
+		itemsInPack = UserDataManager.instance.GetItemsInPack ();
+		//判断是否是有物品交互成功
 		if(pickedItem == waitForConsumeItem) {
 			isRightItem = "true";
 		}
 		else {
 			isRightItem = "false";
 		}
-			
 	}
 		
 	//设置当前选中的物品栏物品
@@ -102,6 +106,15 @@ public class ItemsInteractiveManager : MonoBehaviour {
 			break;
 		default :
 			break;
+		}
+	}
+
+	//仅销毁物品栏中的物品
+	public void DestoryPickedItems() {
+		//销毁物品栏物品
+		for (int i = 0; i < itemsInPack.Count; i++) {
+			if (itemsInPack [i].name == pickedItem)
+				UserDataManager.instance.RemoveItemInPack (itemsInPack [i]);
 		}
 	}
 }
