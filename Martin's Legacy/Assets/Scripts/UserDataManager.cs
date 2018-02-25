@@ -8,18 +8,22 @@ using UnityEngine.SceneManagement;
 
 public class UserDataManager : MonoBehaviour {
 	
-	private string userDataXmlPath;    //xml文件路径
-	private XmlDocument userDataXml;   //userData.xml文件
-	private XmlReaderSettings readerSetting;   //xml reader设置
-	private XmlNodeList userDataNodes;      //<component>子节点列表
-	private string language;   //用户所选语言
-	private string fullScreen; //用户所选屏幕是否为全屏
+	private string userDataXmlPath;                   //xml文件路径
+	private XmlDocument userDataXml;                  //userData.xml文件
+	private XmlReaderSettings readerSetting;          //xml reader设置
+	private XmlNodeList userDataNodes;                //<component>子节点列表
+	private string language;                          //用户所选语言
+	private string isFirstPlay;                       //用户是否是第一次玩
+	private string chapterNum;                        //用户存档章节
+	private string levelNum;                          //用户存档关卡
+	private List<Item> itemsInPack;                   //用户存档中已获得还未用的物品
+	private List<Item> consumedItems;                 //用户存档中已经拆解或者已经使用的物品
 
-	public static UserDataManager instance = null;
+	public static UserDataManager instance = null;    //一个UserDataManager实例
 
 	//Awake总是在任何Start方法之前调用
 	void Awake() {
-		Debug.Log ("UserDataManager");
+
 		//判断是否已有一个实例
 		if (instance == null)
 			instance = this;   //如果没有，那么设置实例为该实例
@@ -29,9 +33,12 @@ public class UserDataManager : MonoBehaviour {
 		//设置为重新加载场景时不被销毁
 		DontDestroyOnLoad(gameObject);
 
-		userDataXmlPath = Application.persistentDataPath + "/UserData/UserData.xml";
+		//初始化
+		userDataXmlPath = Application.dataPath + "/UserData/UserData.xml";
 		userDataXml = new XmlDocument ();
 		readerSetting = new XmlReaderSettings ();
+		itemsInPack = new List<Item> ();
+		consumedItems = new List<Item> ();
 
 		//找到xml文件目录
 		StartCoroutine (findXML ());
@@ -41,15 +48,12 @@ public class UserDataManager : MonoBehaviour {
 	//使用这个创建和查找xml文件目录
 	IEnumerator findXML() {
 		//如果不存在那么就创建并且拷贝初始存档
-		string path = Application.persistentDataPath + "/UserData";
-		Debug.Log (path);
+		string path = Application.dataPath + "/UserData";
 		if (!Directory.Exists (path)) {
 			//创建存档目录
 			Directory.CreateDirectory (path);
 			//拷贝初始存档至该目录
 			yield return StartCoroutine (createOriginXML ());
-
-			Debug.Log ("Finish");
 		}
 
 		//加载xml文件
@@ -63,7 +67,7 @@ public class UserDataManager : MonoBehaviour {
 
 		//如果是Loading页面需要在获取到存档文件之后跳转至下一个页面
 		if (SceneManager.GetActiveScene ().name == "Loading")
-			loadStartScene ();
+			LoadStartScene ();
 	}
 
 	//第一次使用时写入一个默认的游戏存档
@@ -99,9 +103,8 @@ public class UserDataManager : MonoBehaviour {
 		#elif UNITY_STANDALONE_WIN    //如果是Windows平台模式
 		prefix = "file:///";
 
-		#elif UNITY_STANDALONE_OSX
+		#elif UNITY_STANDALONE_OSX    //如果是MACOS平台
 		prefix = "file://";
-
 		#endif 
 
 		string path = prefix + Application.streamingAssetsPath + "/UserData/UserData.xml";
@@ -130,11 +133,28 @@ public class UserDataManager : MonoBehaviour {
 				//遍历所有<setting>子节点
 				foreach (XmlElement setting in userSettingNodes ) {
 					if (setting.GetAttribute ("type") == "language")
-						language = setting.InnerText;    //获得语言信息
-					else if (setting .GetAttribute ("type") == "fullScreen") {
-						fullScreen = setting.InnerText;  //获得屏幕信息
-					}
-
+						this.language = setting.InnerText;             //获得语言信息
+					else if (setting.GetAttribute ("type") == "isFirstPlay")
+						this.isFirstPlay = setting.InnerText;          //获得启动次数信息
+				}
+			}
+			//选择标签为level的<component>
+			else if (component .GetAttribute ("type") == "level") {
+				XmlNodeList userLevelNodes = component.ChildNodes;    //获得标签为level的<component>下的子节点
+				foreach (XmlElement level in userLevelNodes ) {
+					if (level.GetAttribute ("type") == "chapterNum")
+						this.chapterNum = level.InnerText;            //获得章节信息
+					else
+						this.levelNum = level.InnerText;              //获得关卡信息
+				}
+			}
+			//选择标签为levelItems的<component>
+			else if (component.GetAttribute ("type") == "itemsInPack") {
+				XmlNodeList userSettingNodes = component.ChildNodes;   //获得标签为levelItems的<component>下的子节点
+				//遍历所有<setting>子节点
+				foreach (XmlElement item in userSettingNodes ) {
+					Item i = new Item (item.InnerText, item.GetAttribute ("type"));
+					this.itemsInPack.Add (i);
 				}
 			}
 		}
@@ -150,13 +170,136 @@ public class UserDataManager : MonoBehaviour {
 		return this.language;
 	}
 
-	//获得是否全屏项
-	public string GetIsFullScreen() {
-		return this.fullScreen;
+	//获得是否是首次启动游戏
+	public string GetIsFirstPlay() {
+		return this.isFirstPlay;
+	}
+
+	//获得用户存档章节数
+	public string GetChapterNum() {
+		return this.chapterNum;
+	}
+
+	//获得用户存档关卡数
+	public string GetLevelNum() {
+		return this.levelNum;
+	}
+
+	//获取用户物品栏
+	public List<Item> GetItemsInPack() {
+		return this.itemsInPack;
+	}
+
+	//获取用户已消耗物品
+	public List<Item> GetConsumedItems() {
+		return this.consumedItems;
 	}
 
 	//读取用户配置完之后跳转至开始页面
-	void loadStartScene() {
+	void LoadStartScene() {
 		SceneManager.LoadScene ("Start");
+	}
+
+	//设置所选语言项
+	public void UpdateSettingData(string new_language) {
+		//遍历所有<component>子节点
+		foreach (XmlElement component in userDataNodes) {
+			//选择标签为setting的<component>
+			if (component.GetAttribute ("type") == "setting") {
+				XmlNodeList userSettingNodes = component.ChildNodes;   //获得标签为setting的<component>下的子节点
+				//遍历所有<setting>子节点
+				foreach (XmlElement setting in userSettingNodes ) {
+					if (setting.GetAttribute ("type") == "language")
+						setting.InnerText =  new_language;    //更新语言信息
+				}
+			}
+		}
+
+		//保存更新信息至本地用户存档
+		StartCoroutine (saveUserData ());
+
+		//更新设置信息
+		this.language = new_language;
+	}
+
+	//更新用户物品栏和关卡信息
+	public void UpdateItemsAndLevelData() {
+		//获取退出前的场景信息
+		SplitLevelName ();
+		//遍历所有<component>子节点
+		foreach (XmlElement component in userDataNodes) {
+			//选择标签为setting的<component>
+			if (component.GetAttribute ("type") == "level") {
+				XmlNodeList userSettingNodes = component.ChildNodes;   //获得标签为level的<component>下的子节点
+				//遍历所有<level>子节点
+				foreach (XmlElement level in userSettingNodes ) {
+					if (level.GetAttribute ("type") == "chapterNum")
+						level.InnerText = this.chapterNum;    //更新章节信息
+					else if (level.GetAttribute ("type") == "levelNum")
+						level.InnerText = this.levelNum;      //更新关卡信息
+				}
+			}
+		}
+			
+		//删除之前的物品栏数据
+		XmlNode items = userDataNodes.Item (2);
+		while (items.HasChildNodes)
+			items.RemoveChild (items.FirstChild);
+		//插入新的物品栏数据
+		for (int i = 0; i < itemsInPack.Count; i++) {
+			XmlElement new_item = userDataXml.CreateElement ("item");
+			new_item.SetAttribute ("type", itemsInPack [i].tag);
+			new_item.InnerText = itemsInPack [i].name;
+			items.AppendChild (new_item);
+		}
+		//插入已消耗物品数据
+		XmlNode consumed_items = userDataNodes.Item (3);
+		while (consumed_items.HasChildNodes)
+			consumed_items.RemoveChild (consumed_items.FirstChild);
+		for (int i = 0; i < consumedItems.Count; i++) {
+			XmlElement new_item = userDataXml.CreateElement ("item");
+			new_item.SetAttribute ("type", consumedItems [i].tag);
+			new_item.InnerText = consumedItems [i].name;
+			consumed_items.AppendChild (new_item);
+		}
+
+		//保存更新信息至本地用户存档
+		StartCoroutine (saveUserData ());
+	}
+
+	//保存用户存档
+	IEnumerator saveUserData() {
+		userDataXml.Save (userDataXmlPath);
+		yield return new WaitForSeconds (1.0f);
+	}
+
+	//分割场景名称字符串
+	void SplitLevelName() {
+		//获取当前场景名称
+		string levelName = SceneManager.GetActiveScene ().name;
+		//按照-分割
+		string[] nameArray = levelName.Split (new char[] { '-' });
+		//得到chapter和level的编号
+		this.chapterNum = nameArray [1];
+		this.levelNum = nameArray [3];
+	}
+
+	//增加一个物品至itemsInPack中
+	public void AddItemInPack(string itemName, string tag) {
+		//加入itemsInPack中
+		Item i = new Item (itemName, tag);
+		this.itemsInPack.Add (i);
+	}
+
+	//从itemsInPack删除一个物品
+	public void RemoveItemInPack(Item item) {
+		this.itemsInPack.Remove (item);
+	}
+
+	//增加一个物品至consumedItems中
+	public void AddItemInConsume(string itemName, string tag) {
+		//加入consumedItems中
+		Item i = new Item (itemName, tag);
+		this.consumedItems.Add (i);
 	}
 }
