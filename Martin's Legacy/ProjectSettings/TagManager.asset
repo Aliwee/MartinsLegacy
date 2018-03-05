@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PickableItem
+  - CheckableItem
+  - UseableItem
+  - Menu
+  - UnravelableItem
   layers:
   - Default
   - TransparentFX
@@ -13,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - SettingLayer
   - 
   - 
   - 
@@ -40,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1211399593
+    locked: 0
+  - name: Items
+    uniqueID: 1687170349
+    locked: 0
+  - name: Player
+    uniqueID: 507531333
     locked: 0

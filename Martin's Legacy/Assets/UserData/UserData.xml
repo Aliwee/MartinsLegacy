@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <component type="setting">
+    <setting type="language">CN</setting>
+    <setting type="isFirstPaly">True</setting>
+  </component>
+  <component type="level">
+    <level type="chapterNum">1</level>
+    <level type="levelNum">5</level>
+  </component>
+  <component type="itemsInPack">
+	<item type="use">item002</item>
+    <item type="use">item003</item>
+	<item type="use">item004</item>
+  </component>
+  <component type="consumedItems">
+    <item type="ravel">item002-item003</item>
+  </component>
+  <component type="map">
+  </component>
+</data>
