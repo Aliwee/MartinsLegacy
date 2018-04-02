@@ -5,8 +5,6 @@ using System.Collections.Generic;
 public class Item {
 	/*
 	 * tag种类：
-	 * unravel-未拆解
-	 * ravel-已拆解
 	 * use-可使用
 	 * consumed-已使用
 	 */

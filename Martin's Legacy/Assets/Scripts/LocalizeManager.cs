@@ -10,7 +10,7 @@ public class LocalizeManager : MonoBehaviour {
 	private string textPath;    //文本路径
 
 	public GameObject[] textTiles;     //文本列表
-	//public GameObject localize;        //Fungus Localization组件
+	public GameObject localize;        //Fungus Localization组件
 
 	// Use this for initialization
 	void Start () {

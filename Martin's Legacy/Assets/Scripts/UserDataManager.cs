@@ -278,8 +278,15 @@ public class UserDataManager : MonoBehaviour {
 
 	//保存用户存档
 	IEnumerator saveUserData() {
+		//保存xml存档文件
 		userDataXml.Save (userDataXmlPath);
-		yield return new WaitForSeconds (1.0f);
+
+		//等待1秒再执行
+		yield return new WaitForSeconds (3.0f);
+
+		//如果是Loading页面需要在获取到存档文件之后跳转至下一个页面
+		if (SceneManager.GetActiveScene ().name == "Loading") 
+			LoadStartScene ();
 	}
 
 	//分割场景名称字符串
