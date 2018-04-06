@@ -37,12 +37,16 @@ namespace Fungus
             var executeHandler = (ExecuteHandler)target;
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.PrefixLabel(new GUIContent("On Event"));
-            /*executeHandler.ExecuteMethods = (ExecuteMethod)EditorGUILayout.EnumMaskField(executeHandler.ExecuteMethods,
+#if UNITY_2017_3_OR_NEWER
+            executeHandler.ExecuteMethods = (ExecuteMethod)EditorGUILayout.EnumFlagsField(executeHandler.ExecuteMethods,
                                                                                          EditorStyles.popup,
-                                                                                         GUILayout.ExpandWidth(false));*/
-			executeHandler.ExecuteMethods = (ExecuteMethod)EditorGUILayout.EnumFlagsField(executeHandler.ExecuteMethods,
-				EditorStyles.popup,
-				GUILayout.ExpandWidth(false));
+                                                                                         GUILayout.ExpandWidth(false));
+#else
+            executeHandler.ExecuteMethods = (ExecuteMethod)EditorGUILayout.EnumMaskField(executeHandler.ExecuteMethods,
+                                                                                         EditorStyles.popup,
+                                                                                         GUILayout.ExpandWidth(false));
+#endif
+
             EditorGUILayout.EndHorizontal();
 
             if (executeHandler.IsExecuteMethodSelected(ExecuteMethod.AfterPeriodOfTime))

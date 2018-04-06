@@ -6,6 +6,7 @@ using System.Xml;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//全局管理用户数据
 public class UserDataManager : MonoBehaviour {
 	
 	private string userDataXmlPath;                   //xml文件路径

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
 
+//用于本地化游戏文本的类
 public class LocalizeManager : MonoBehaviour {
 
 	private string language;    //文本语言
@@ -21,7 +22,8 @@ public class LocalizeManager : MonoBehaviour {
 		language = UserDataManager.instance.GetLanguage ();
 
 		//调用Fungus
-		//localize.GetComponent <Localization > ().SetActiveLanguage (language);
+		if (localize != null)
+			localize.GetComponent <Localization > ().SetActiveLanguage (language);
 
 		//加载资源
 		LoadText (language);
@@ -31,7 +33,9 @@ public class LocalizeManager : MonoBehaviour {
 	void Update () {
 		string new_language = UserDataManager.instance.GetLanguage ();
 		if (language != new_language) {
+			Debug.Log("Log-LocalizeManager: new language:"+new_language);
 			LoadText (new_language);
+			language = new_language;
 		}
 	}
 

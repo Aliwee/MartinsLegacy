@@ -266,6 +266,7 @@
      <Compile Include="Assets\Fungus\Scripts\Utils\EventDispatcher.cs" />
      <Compile Include="Assets\Fungus\Scripts\Utils\FlowchartData.cs" />
      <Compile Include="Assets\Fungus\Scripts\Utils\FungusConstants.cs" />
+     <Compile Include="Assets\Fungus\Scripts\Utils\GlobalVariables.cs" />
      <Compile Include="Assets\Fungus\Scripts\Utils\PortraitUtils.cs" />
      <Compile Include="Assets\Fungus\Scripts\Utils\SaveDataItem.cs" />
      <Compile Include="Assets\Fungus\Scripts\Utils\SaveHistory.cs" />
@@ -572,6 +573,7 @@
      <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrParams.cs" />
      <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrSynth.cs" />
      <Compile Include="Assets\Scripts\BGFadeInOut.cs" />
+     <Compile Include="Assets\Scripts\CheckItemManager.cs" />
      <Compile Include="Assets\Scripts\CursorState.cs" />
      <Compile Include="Assets\Scripts\ExitManager.cs" />
      <Compile Include="Assets\Scripts\FullScreen.cs" />
@@ -579,10 +581,12 @@
      <Compile Include="Assets\Scripts\ItemMouseHandeler.cs" />
      <Compile Include="Assets\Scripts\ItemsInteractiveManager.cs" />
      <Compile Include="Assets\Scripts\ItemsManager.cs" />
+     <Compile Include="Assets\Scripts\LoadCSV.cs" />
      <Compile Include="Assets\Scripts\LoadNextScene.cs" />
      <Compile Include="Assets\Scripts\LocalizeManager.cs" />
      <Compile Include="Assets\Scripts\MenuClickHandeler.cs" />
      <Compile Include="Assets\Scripts\MenuMouseHandeler.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\SettingManager.cs" />
      <Compile Include="Assets\Scripts\UserDataManager.cs" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />

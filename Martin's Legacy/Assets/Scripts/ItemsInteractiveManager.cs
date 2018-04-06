@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//全局处理点击物品栏物品之后与场景交互的类
 public class ItemsInteractiveManager : MonoBehaviour {
 	private string pickedItem;                //选中的物品栏物品
 	private List<string> consumableItems;     //待互动物品列表
@@ -47,6 +48,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 		
 	//设置当前选中的物品栏物品
 	public void SetPickedItem(string itemName) {
+		Debug.Log("Log-ItemsInteractiveManager: set pickedItem:" + itemName);
 		this.pickedItem = itemName;
 	}
 
@@ -57,6 +59,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 
 	//设置当前选中的场景中物品
 	public void SetWaitForConsumeItem(string itemName) {
+		Debug.Log("Log-ItemsInteractiveManager: set waitForConsumeItem:" + itemName);
 		this.waitForConsumeItem = itemName;
 	}
 
@@ -96,10 +99,6 @@ public class ItemsInteractiveManager : MonoBehaviour {
 	//根据物品进行交互成功之后的处理
 	void AfterSuccessfulInteraction(string changeId) {
 		switch (changeId) {
-		case "item002":
-			//跳转至开始界面
-			SceneManager.LoadScene ("Chapter-1-Level-5");
-			break;
 		default :
 			break;
 		}

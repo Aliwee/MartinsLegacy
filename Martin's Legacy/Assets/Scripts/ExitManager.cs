@@ -9,11 +9,13 @@ public class ExitManager : MonoBehaviour {
 
 	private bool isPaused;            //是否按下Esc键
 	public Transform exitPanel;       //退出菜单面板
+	private CheckItemManager cm;      //当前CheckItemManager实例
 
 	// Use this for initialization
 	void Start () {
 		exitPanel.gameObject.SetActive (false);     //保证退出菜单面板一开始是隐藏的
 		isPaused = false;                           //保证isPaused变量在每次场景打开的时候都是false
+		cm = GetComponent<CheckItemManager> ();     //获得CheckItemManager实例
 	}
 	
 	// Update is called once per frame
@@ -31,7 +33,25 @@ public class ExitManager : MonoBehaviour {
 	//暂停游戏
 	void pause() {
 		isPaused = true;
-		exitPanel.gameObject.SetActive (true);  //显示退出菜单面板
+		//显示退出菜单面板
+		exitPanel.gameObject.SetActive (true);  
+
+		//鼠标指针恢复正常
+		cm.falseInChecking ();   
+		Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
+
+		//清除数据
+		cm.clear ();   
+
+		//取消选中当前的物品栏物品
+		GameObject o = GameObject.Find ("/Scripts/ItemsManager");
+		if (o != null){
+			GameObject lastPickedItem = o.GetComponent <ItemsManager> ().lastPickedItem;
+			if (lastPickedItem != null) {
+				lastPickedItem.SetActive (false);
+			}
+		}
+
 		Time.timeScale = 0f;    //暂停游戏
 	}
 

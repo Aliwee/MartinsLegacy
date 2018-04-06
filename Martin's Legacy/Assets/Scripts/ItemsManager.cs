@@ -15,6 +15,7 @@ public class ItemsManager : MonoBehaviour {
 	private string itemsPath;                    //物品资源路径
 	private int levelItemsNum;                   //用户存档物品数
 	private string interactionSuccess;           //交互成功
+	private const string magnifierName = "item000";
 
 	public Button[] itemTiles;                   //物品栏中的物品窗格
 	public GameObject lastPickedItem;            //上一次选中的物品
@@ -116,7 +117,7 @@ public class ItemsManager : MonoBehaviour {
 		string itemName = btn.GetComponent <Image> ().sprite.name;
 
 		//显示选框
-		if(itemName != "transparent") {
+		if(itemName != "transparent" && itemName != magnifierName) {
 			if (lastPickedItem != null)
 				lastPickedItem.SetActive (false);
 			GameObject itemBack = btn.transform.GetChild (0).gameObject;

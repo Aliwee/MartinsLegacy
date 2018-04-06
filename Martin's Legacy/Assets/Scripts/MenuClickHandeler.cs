@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//用于处理开始界面跳转的类
 public class MenuClickHandeler : MonoBehaviour {
 
 	public Button startBtn;

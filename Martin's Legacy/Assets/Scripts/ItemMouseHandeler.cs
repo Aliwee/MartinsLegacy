@@ -5,7 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using AssemblyCSharp;
 
-//用于控制鼠标移入时候的鼠标指针变化
+/// <summary>
+/// 用于控制鼠标移入时候的鼠标指针变化
+/// </summary>
 public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPointerClickHandler
 {
 
@@ -26,7 +28,10 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 			Cursor.SetCursor (cursorTextures [(int)CursorState.Check], Vector2.zero, CursorMode.Auto);
 			break;
 		case "UseableItem":
-			Cursor.SetCursor (cursorTextures [(int)CursorState.Use], Vector2.zero, CursorMode.Auto);
+			if (ItemsInteractiveManager.instance.GetPickedItem() != "null_picked")
+				Cursor.SetCursor (cursorTextures [(int)CursorState.Use], Vector2.zero, CursorMode.Auto);
+			else
+				Cursor.SetCursor (cursorTextures [(int)CursorState.Question], Vector2.zero, CursorMode.Auto);
 			break;
 		case "CtoPItem":
 			Cursor.SetCursor (cursorTextures [(int)CursorState.Check], Vector2.zero, CursorMode.Auto);
@@ -39,13 +44,19 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 		}
 	}
 
-	//鼠标移出 设置鼠标样式为默认
+	/// <summary>
+	/// 鼠标移出 设置鼠标样式为默认
+	/// </summary>
+	/// <param name="eventData">Event data.</param>
 	public void OnPointerExit (PointerEventData eventData)
 	{
 		Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
 	}
 
-	//鼠标点下
+	/// <summary>
+	/// 鼠标点下之后的事件处理
+	/// </summary>
+	/// <param name="eventData">Event data.</param>
 	public void OnPointerClick (PointerEventData eventData)
 	{
 		/*如果是可放入物品，放入物品栏
@@ -56,10 +67,8 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 			Destroy (this.gameObject);
 			Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
 		} else if (this.tag == "CheckableItem") {
-			//TODO:对话
 			lockCursor ();
 		} else if (this.tag == "UseableItem") {
-			//TODO:对话
 			//设置当前选中的物品标志到ItemsInteractiveManager中去
 			ItemsInteractiveManager.instance.SetWaitForConsumeItem (this.name);
 			//取消选中当前的物品栏物品
@@ -68,12 +77,13 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 			if (lastPickedItem != null)
 				lastPickedItem.SetActive (false);
 		} else if (this.tag == "CtoPItem") {
-			//TODO:对话
 			lockCursor ();
 		}
 	}
 
-	//锁定鼠标
+	/// <summary>
+	/// 锁定鼠标
+	/// </summary>
 	void lockCursor ()
 	{
 		Cursor.visible = false;
@@ -81,7 +91,9 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 		wasLocked = true;
 	}
 
-	//解锁鼠标
+	/// <summary>
+	/// 解锁鼠标
+	/// </summary>
 	public void unlockCursor ()
 	{
 		Cursor.visible = true;
@@ -97,13 +109,18 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 		}
 	}
 
-	//改变CtoPItem的tag
+	/// <summary>
+	/// 改变CtoPItem的tag
+	/// </summary>
 	public void changeTag ()
 	{
 		this.tag = "PickableItem";
 	}
 
-	//获得tag
+	/// <summary>
+	/// 获得点击的CtoPItem的tag
+	/// </summary>
+	/// <returns>The tag.</returns>
 	public string getTag ()
 	{
 		return this.tag;

@@ -2,9 +2,10 @@ WindowsStandalone
 PlayerPath?
 G:/test.exe
 SceneListBegin?
-Assets/Scenes/Chapter-0-Level-0.unity
+Assets/Scenes/Chapter-1-Level-1.unity
 Assets/Scenes/Loading.unity
 Assets/Scenes/Start.unity
+Assets/Scenes/Setting.unity
 SceneListEnd?
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Stop
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SfxrCacheSurrogate
@@ -123,6 +124,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 c6f8879c5be2aa1779658f46fa00d126 Assembly-CSharp.dll:Fungus.RandomFloat
 915aaa3e4bafcb49624a01ea67789b7e Assembly-CSharp.dll:Fungus.BooleanVariable
 670b7711a7b0282935c373e5e7510848 Assembly-CSharp.dll:Fungus.Draggable2D
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadCSV
 2e7d0e3b7c726491e27b2989eb53993f Assembly-CSharp.dll:Fungus.Stage
 6779758d9a48a23dd32a2444b26e2e5b Assembly-CSharp.dll:Fungus.Vector2Variable
 507638d4a41cb9131848b0d6b4fcb60b Assembly-CSharp.dll:Fungus.ShakeScale
@@ -181,13 +183,14 @@ b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Quit
 959d0fff5e452c20f305e0bfe3cf69de Assembly-CSharp.dll:Fungus.UpdateTick
 959d0fff5e452c20f305e0bfe3cf69de Assembly-CSharp.dll:Fungus.Render
 21bc64dee3df50d34f08a94b5455dbd7 Assembly-CSharp.dll:Fungus.GetAxis
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.GlobalVariables
 6264351853e9c7233c9a622d961d5a4c Assembly-CSharp.dll:Fungus.SetAudioVolume
 826f13cf6484008d643df5913f2b304c Assembly-CSharp.dll:Fungus.SetSaveProfile
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 dc331af9157ad5cae49bb898fea934c8 Assembly-CSharp.dll:Fungus.AddTorque2D
 1928d671d0ffe9a2f71d39075e9861db Assembly-CSharp.dll:Fungus.Fullscreen
-abb921b4ef874b7b5b817e54014be6c9 Assembly-CSharp.dll:Fungus.ElseIf
+9974ffe984db4c6935e1da2656ff5ad9 Assembly-CSharp.dll:Fungus.ElseIf
 89a36b9f4bc9736fc891182f4fe3037d Assembly-CSharp.dll:Fungus.SetInteractable
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.StopTweens
 3053a1d3d09c04317f1d8f0299bb66a2 Assembly-CSharp.dll:Fungus.WriterAudio
@@ -248,7 +251,7 @@ b0e44a4640c05bc7dffcf824950f569e Assembly-CSharp.dll:Fungus.ExecuteLua
 5f692182acc4e73fadde07d2de7cc644 Assembly-CSharp.dll:Fungus.Label
 9fcb8ba9ef84c15ee213c3fa147e52ef Assembly-CSharp.dll:Fungus.SpriteVariable
 5e6d45a991f8b0a32a316d0a266ae47b Assembly-CSharp.dll:Fungus.Abs
-abb921b4ef874b7b5b817e54014be6c9 Assembly-CSharp.dll:Fungus.While
+9974ffe984db4c6935e1da2656ff5ad9 Assembly-CSharp.dll:Fungus.While
 d42c0964705688f14135e5d833a587b1 Assembly-CSharp.dll:Fungus.OpenURL
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.EventDispatcher
 5093524ccdcfa505089337cf23998886 Assembly-CSharp.dll:Fungus.Parallax
@@ -312,10 +315,11 @@ e7616abb390a21bcfd4e9f1697910642 Assembly-CSharp.dll:Fungus.StopTween
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-abb921b4ef874b7b5b817e54014be6c9 Assembly-CSharp.dll:Fungus.If
+9974ffe984db4c6935e1da2656ff5ad9 Assembly-CSharp.dll:Fungus.If
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.SceneLoader
 5a24898fd8b54346cb8049601696d8b9 Assembly-CSharp.dll:.MenuClickHandeler
 89d4e43e5295d3eea0a5c6829fcca293 Assembly-CSharp.dll:Fungus.SetText
+3933449af832af45e62f26d8e86e27a4 Assembly-CSharp.dll:.CheckItemManager
 b15824a6bb101ccacba53ce69baf66e6 Assembly-CSharp.dll:Fungus.SetSpriteOrder
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
@@ -368,7 +372,7 @@ a0dcb8b539796676b0a47cc6bb8cf1ed Assembly-CSharp.dll:Fungus.DragExited
 32a7db1107693f3ce2e12123ab78f417 Assembly-CSharp.dll:Fungus.ShakeCamera
 55f4e74117b53167347e2976e61f9f31 Assembly-CSharp.dll:Fungus.Block
 a9b584424c1bd58fc35cf0db73a8a42e Assembly-CSharp.dll:Fungus.DragCancelled
-69bba96e3802fac375bfb367ad29b6d8 Assembly-CSharp.dll:Fungus.SetVariable
+6f2f94697eb857e1702338380b849ba2 Assembly-CSharp.dll:Fungus.SetVariable
 3d4501935c82b1ad586cc7811d1f8ed2 Assembly-CSharp.dll:Fungus.Collision
 c62a0d5a09fb248b291a594b3005858f Assembly-CSharp.dll:Fungus.TransformProperty
 e2edf8be30edf1b53356e4ac2139b562 Assembly-CSharp.dll:Fungus.Writer
@@ -380,3 +384,4 @@ cd7c8a47f1b5872b6622d92fc7ee6533 Assembly-CSharp.dll:Fungus.DebugLog
 fe3d12793b53f3795d75e32ceb000843 Assembly-CSharp.dll:Fungus.SaveMenu
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.LuaStore
 fd160bb264b468cfb1957ebeb7c17190 Assembly-CSharp.dll:Fungus.MoveLean
+78df6e77063563c8c0c87b3ec1c0226e Assembly-CSharp.dll:.Player
