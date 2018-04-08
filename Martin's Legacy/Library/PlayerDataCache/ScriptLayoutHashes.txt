@@ -5,7 +5,6 @@ SceneListBegin?
 Assets/Scenes/Chapter-1-Level-1.unity
 Assets/Scenes/Loading.unity
 Assets/Scenes/Start.unity
-Assets/Scenes/Setting.unity
 SceneListEnd?
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Stop
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SfxrCacheSurrogate
@@ -375,6 +374,7 @@ a9b584424c1bd58fc35cf0db73a8a42e Assembly-CSharp.dll:Fungus.DragCancelled
 6f2f94697eb857e1702338380b849ba2 Assembly-CSharp.dll:Fungus.SetVariable
 3d4501935c82b1ad586cc7811d1f8ed2 Assembly-CSharp.dll:Fungus.Collision
 c62a0d5a09fb248b291a594b3005858f Assembly-CSharp.dll:Fungus.TransformProperty
+78df6e77063563c8c0c87b3ec1c0226e Assembly-CSharp.dll:.Player
 e2edf8be30edf1b53356e4ac2139b562 Assembly-CSharp.dll:Fungus.Writer
 144f1a11d3a0586c587d4b4ca0edd8da Assembly-CSharp.dll:Fungus.ControlAudio
 6884501df86b64ee537771b3172066db Assembly-CSharp.dll:Fungus.AnimatorState
@@ -384,4 +384,3 @@ cd7c8a47f1b5872b6622d92fc7ee6533 Assembly-CSharp.dll:Fungus.DebugLog
 fe3d12793b53f3795d75e32ceb000843 Assembly-CSharp.dll:Fungus.SaveMenu
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.LuaStore
 fd160bb264b468cfb1957ebeb7c17190 Assembly-CSharp.dll:Fungus.MoveLean
-78df6e77063563c8c0c87b3ec1c0226e Assembly-CSharp.dll:.Player

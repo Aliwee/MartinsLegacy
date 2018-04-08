@@ -1670,11 +1670,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTextures:
-  - {fileID: 2800000, guid: c6ee4bbfda6e32f409e3acdec9659bac, type: 3}
-  - {fileID: 2800000, guid: 2c139b957c6dd3741adc92f09bdaf94f, type: 3}
-  - {fileID: 2800000, guid: d53e23300aebfef4493edb657dde6e77, type: 3}
-  - {fileID: 2800000, guid: e20bfd9d86b55a14c8de271a20c8eb1d, type: 3}
-  - {fileID: 2800000, guid: 73685943306d12f418008008d086b2fd, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &695933968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2553,7 +2553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c2538b158c28f44b138a3eebe2d5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 2c139b957c6dd3741adc92f09bdaf94f, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 2816e4b85aa6b0f4d9aaf6decf47916f, type: 3}
   flowchart: {fileID: 960933765}
   pausePanel: {fileID: 786958773}
 --- !u!1 &817249808
@@ -4686,11 +4686,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTextures:
-  - {fileID: 2800000, guid: c6ee4bbfda6e32f409e3acdec9659bac, type: 3}
-  - {fileID: 2800000, guid: 2c139b957c6dd3741adc92f09bdaf94f, type: 3}
-  - {fileID: 2800000, guid: d53e23300aebfef4493edb657dde6e77, type: 3}
-  - {fileID: 2800000, guid: e20bfd9d86b55a14c8de271a20c8eb1d, type: 3}
-  - {fileID: 2800000, guid: 73685943306d12f418008008d086b2fd, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1528288837
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@
 	</component>
 	<component type="itemsInPack">
 		<item type="check">item000</item>
+		<item type="pick">item001</item>
+		<item type="pick">item002</item>
 	</component>
 	<component type="consumedItems">
 	</component>

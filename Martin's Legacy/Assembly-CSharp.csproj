@@ -576,6 +576,7 @@
      <Compile Include="Assets\Scripts\CheckItemManager.cs" />
      <Compile Include="Assets\Scripts\CursorState.cs" />
      <Compile Include="Assets\Scripts\ExitManager.cs" />
+     <Compile Include="Assets\Scripts\FontManager.cs" />
      <Compile Include="Assets\Scripts\FullScreen.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\ItemMouseHandeler.cs" />
