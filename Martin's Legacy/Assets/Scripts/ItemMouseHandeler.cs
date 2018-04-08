@@ -123,6 +123,7 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 	/// <returns>The tag.</returns>
 	public string getTag ()
 	{
+		GameObject.Find ("Tag").GetComponent<Text> ().text = this.tag;
 		return this.tag;
 	}
 }

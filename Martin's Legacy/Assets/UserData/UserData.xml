@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <data>
-	<component type="setting">
-		<setting type="language">CN</setting>
-		<setting type="isFirstPaly">True</setting>
-	</component>
-	<component type="level">
-		<level type="chapterNum">1</level>
-		<level type="levelNum">1</level>
-	</component>
-	<component type="itemsInPack">
-		<item type="check">item000</item>
-		<item type="pick">item001</item>
-		<item type="pick">item002</item>
-	</component>
-	<component type="consumedItems">
-	</component>
-	<component type="map">
-	</component>
+  <component type="setting">
+    <setting type="language">CN</setting>
+    <setting type="isFirstPaly">True</setting>
+  </component>
+  <component type="level">
+    <level type="chapterNum">1</level>
+    <level type="levelNum">1</level>
+  </component>
+  <component type="itemsInPack">
+    <item type="check">item000</item>
+    <item type="pick">item001</item>
+  </component>
+  <component type="consumedItems">
+  </component>
+  <component type="map">
+  </component>
 </data>
