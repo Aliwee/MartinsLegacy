@@ -240,6 +240,7 @@ e1be7416cd0029d9960d6fe7a95e9cee Assembly-CSharp.dll:Fungus.ScaleTo
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 0af48a890577dc5af96a7c7b0f2553a9 Assembly-CSharp.dll:Fungus.Destroy
+f34a4c53055030324d4fc6493565b6be Assembly-CSharp.dll:.FontManager
 756583da8e4247ba481c3d2e9cc96cbf Assembly-CSharp.dll:Fungus.TextureVariable
 0b43b23ca8ab3594d9e6ce19c0151a21 Assembly-CSharp.dll:Fungus.Round
 5e98a5480c3a7c1207d0ed1178881744 Assembly-CSharp.dll:Fungus.InvokeEvent
