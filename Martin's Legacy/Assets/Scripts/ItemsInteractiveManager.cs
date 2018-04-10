@@ -75,7 +75,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 
 	//获取当前待交互物品
 	void GetConsumableItems() {
-		string path = "/Canvas/consumableItems";
+		string path = "/Canvas/background/consumableItems";
 		GameObject root = GameObject.Find (path);
 		if (root != null) {
 			foreach (Transform child in root.transform) {
@@ -86,7 +86,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 
 	//销毁场景中的物品
 	public void DestoryConsumedItem() {
-		string path = "/Canvas/consumableItems/" + waitForConsumeItem;
+		string path = "/Canvas/background/consumableItems/" + waitForConsumeItem;
 		GameObject o = GameObject.Find (path);
 		if (o != null) {
 			Destroy (o);

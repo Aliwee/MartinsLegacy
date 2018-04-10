@@ -84,8 +84,9 @@ public class ItemsManager : MonoBehaviour {
 		for (int i = consumedItems.Count-1; i >= 0; i--) {
 			//取得物品索引名字
 			string name = consumedItems[i].name;
-			string path1 = "/Canvas/interactableItems/" + name;
-			string path2 = "/Canvas/consumableItems/" + name;
+			string path1 = "/Canvas/background/interactableItems/" + name;
+			string path2 = "/Canvas/background/consumableItems/" + name;
+
 			//隐藏已获得在物品栏中的图标
 			GameObject o = GameObject.Find (path1);
 			if (o != null) {
@@ -100,7 +101,7 @@ public class ItemsManager : MonoBehaviour {
 		for (int i = itemsInPack.Count-1; i >= 0; i--) {
 			//取得物品索引名字
 			string name = itemsInPack[i].name;
-			string path = "/Canvas/interactableItems/" + name;
+			string path = "/Canvas/background/interactableItems/" + name;
 			//隐藏已获得在物品栏中的图标
 			GameObject o = GameObject.Find (path);
 			if (o != null) {
