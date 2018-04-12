@@ -6,12 +6,11 @@
   </component>
   <component type="level">
     <level type="chapterNum">1</level>
-    <level type="levelNum">1</level>
+    <level type="levelNum">2</level>
   </component>
   <component type="itemsInPack">
     <item type="check">item000</item>
     <item type="pick">item001</item>
-    <item type="pick">item002</item>
   </component>
   <component type="consumedItems">
   </component>

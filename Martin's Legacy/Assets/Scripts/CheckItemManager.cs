@@ -22,7 +22,6 @@ public class CheckItemManager : MonoBehaviour {
 	void Update () {
 		//if player click the magnifier in inventory 如果点击了物品栏中的放大镜
 		if (ItemsInteractiveManager.instance.GetPickedItem() == magnifierName && !inChecking){
-			Debug.Log("Log-CheckItemManager: set cursor.");
 			inChecking = true;
 		}
 
@@ -44,12 +43,10 @@ public class CheckItemManager : MonoBehaviour {
 			//get current selected gameobject, determine whether to clear it or not 获取鼠标点击的物品,判断是否需要清空当前选中物品和待交互物品
 			GameObject btn = EventSystem.current.currentSelectedGameObject;
 			if (btn == null) {
-				Debug.Log("Log-CheckItemManager: clear pickedItem & waitForConsumeItem.");
 				clear ();
 			}
 			else {
 				if (btn.tag != "UseableItem") {
-					Debug.Log("Log-CheckItemManager: clear pickedItem & waitForConsumeItem.");
 					clear ();
 				}
 			}
@@ -57,23 +54,24 @@ public class CheckItemManager : MonoBehaviour {
 			//if player's choosen magnifier 处理点击放大镜事件
 			if (inChecking == true){
 				//set cursor's texture to null 取消鼠标指针样式
-				Debug.Log("Log-CheckItemManager: clear cursor.");
 				inChecking = false;
 				Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
 				clear ();
 
 				//determine whether hit any item in inventory 判断是否点击到物品栏中的物品
 				if (btn != null && btn.GetComponent <Image> () != null) {
-					string itemName = btn.GetComponent <Image> ().sprite.name;
-					string language = UserDataManager.instance.GetLanguage ();
-					string text = LoadCSV.instance.getText (itemName, language);
-					if (itemName.StartsWith("item")){
-						lockCursor ();
-						if (itemName == letterName) {
-							showDialog2 (text);
+					if (btn.transform.parent.gameObject.name.StartsWith("Unit")) {
+						string itemName = btn.GetComponent <Image> ().sprite.name;
+						string language = UserDataManager.instance.GetLanguage ();
+						string text = LoadCSV.instance.getText (itemName, language);
+						if (itemName.StartsWith("item")) {
+							lockCursor ();
+							if (itemName == letterName) {
+								showDialog2 (text);
+							}
+							else
+								showDialog (text);
 						}
-						else
-							showDialog (text);
 					}
 				}
 			}
@@ -108,7 +106,6 @@ public class CheckItemManager : MonoBehaviour {
 	/// </summary>
 	/// <param name="storyText">需要加载进Say中的游戏文本.</param>
 	void showDialog(string storyText) {
-		Debug.Log("Log-CheckItemManager: show dailog.");
 		Block block = flowchart.FindBlock ("CheckItems");
 		List<Command> commands = block.CommandList;
 		Say s = (Say)commands[0];
@@ -121,7 +118,6 @@ public class CheckItemManager : MonoBehaviour {
 	/// </summary>
 	/// <param name="storyText">需要加载进Say中的游戏文本.</param>
 	void showDialog2(string storyText) {
-		Debug.Log("Log-CheckItemManager: show dailog.");
 		Block block = flowchart.FindBlock ("CheckItems2");
 		List<Command> commands = block.CommandList;
 		Say s = (Say)commands[0];

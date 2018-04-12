@@ -9,6 +9,7 @@ TagManager:
   - UseableItem
   - CtoPItem
   - WalkableItem
+  - TalkableItem
   layers:
   - Default
   - TransparentFX

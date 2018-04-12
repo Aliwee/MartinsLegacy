@@ -2,7 +2,7 @@ WindowsStandalone
 PlayerPath?
 G:/test.exe
 SceneListBegin?
-Assets/Scenes/Chapter-1-Level-1.unity
+Assets/Scenes/Chapter-1-Level-0.unity
 Assets/Scenes/Loading.unity
 Assets/Scenes/Start.unity
 SceneListEnd?

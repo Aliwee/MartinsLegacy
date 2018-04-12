@@ -6,12 +6,13 @@
  * Use-对应gear.png
  * Walk-对应foot.png
  * Question-对应question.png
+ * Talk-对应session.png
  **/
 namespace AssemblyCSharp
 {
 	public enum CursorState
 	{
-		Pick, Check, Use, Walk, Question
+		Pick, Check, Use, Walk, Question, Talk
 	}
 }
 

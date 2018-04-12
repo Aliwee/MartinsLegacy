@@ -17,6 +17,9 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 	//cursorTexture：使用的2D图片
 	public Texture2D[] cursorTextures;
 
+	//想要显示的GameObject
+	public GameObject itemToShow,pathToShow;
+
 	//鼠标移入 设置鼠标样式
 	public void OnPointerEnter (PointerEventData eventData)
 	{
@@ -36,8 +39,11 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 		case "CtoPItem":
 			Cursor.SetCursor (cursorTextures [(int)CursorState.Check], Vector2.zero, CursorMode.Auto);
 			break;
-		case "WalkabelItem":
+		case "WalkableItem":
 			Cursor.SetCursor (cursorTextures [(int)CursorState.Walk], Vector2.zero, CursorMode.Auto);
+			break;
+		case "TalkableItem":
+			Cursor.SetCursor (cursorTextures [(int)CursorState.Talk], Vector2.zero, CursorMode.Auto);
 			break;
 		default:
 			break;
@@ -64,6 +70,12 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
         */
 		if (this.tag == "PickableItem") {
 			UserDataManager.instance.AddItemInPack (this.name, "use");
+
+			if (this.name == "item003") {
+				itemToShow.SetActive (true);
+				pathToShow.SetActive (true);
+			}
+
 			Destroy (this.gameObject);
 			Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
 		} else if (this.tag == "CheckableItem") {
@@ -78,13 +90,15 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 				lastPickedItem.SetActive (false);
 		} else if (this.tag == "CtoPItem") {
 			lockCursor ();
+		} else if (this.tag == "TalkableItem") {
+			lockCursor ();
 		}
 	}
 
 	/// <summary>
 	/// 锁定鼠标
 	/// </summary>
-	void lockCursor ()
+	public void lockCursor ()
 	{
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
@@ -120,10 +134,8 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 	/// <summary>
 	/// 获得点击的CtoPItem的tag
 	/// </summary>
-	/// <returns>The tag.</returns>
-	public string getTag ()
+	public void getTag ()
 	{
-		GameObject.Find ("Tag").GetComponent<Text> ().text = this.tag;
-		return this.tag;
+		GameObject.Find ("/Canvas/Tag").GetComponent<Text> ().text = this.tag;
 	}
 }
