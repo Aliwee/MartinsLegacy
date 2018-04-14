@@ -46,8 +46,10 @@ public class CheckItemManager : MonoBehaviour {
 				clear ();
 			}
 			else {
-				if (btn.tag != "UseableItem") {
+				if (btn.tag != "UseableItem" && btn.tag != "PackItem") {
 					clear ();
+				} else {
+					ItemsInteractiveManager.instance.SetWaitForConsumeItem (btn.name);
 				}
 			}
 
@@ -60,10 +62,11 @@ public class CheckItemManager : MonoBehaviour {
 
 				//determine whether hit any item in inventory 判断是否点击到物品栏中的物品
 				if (btn != null && btn.GetComponent <Image> () != null) {
-					if (btn.transform.parent.gameObject.name.StartsWith("Unit")) {
+					string parentName = btn.transform.parent.gameObject.name;
+					if (parentName.StartsWith("Unit")) {
 						string itemName = btn.GetComponent <Image> ().sprite.name;
 						string language = UserDataManager.instance.GetLanguage ();
-						string text = LoadCSV.instance.getText (itemName, language);
+						string text = LoadCSV.instance.getText (itemName, language, "item");
 						if (itemName.StartsWith("item")) {
 							lockCursor ();
 							if (itemName == letterName) {
@@ -72,6 +75,19 @@ public class CheckItemManager : MonoBehaviour {
 							else
 								showDialog (text);
 						}
+					} else if (parentName.StartsWith("characterImage")) {
+						string itemName = btn.name;
+						string language = UserDataManager.instance.GetLanguage ();
+						string text = LoadCSV.instance.getText (itemName, language,"people");
+						lockCursor ();
+						showDialog (text);
+					} else if (parentName.StartsWith("consumableItems") 
+						&& ItemsInteractiveManager.instance.GetPickedItem() == "null_picked") {
+						string itemName = btn.name;
+						string language = UserDataManager.instance.GetLanguage ();
+						string text = LoadCSV.instance.getText (itemName, language,"puzzle");
+						lockCursor ();
+						showDialog (text);
 					}
 				}
 			}
@@ -81,7 +97,9 @@ public class CheckItemManager : MonoBehaviour {
 	/// <summary>
 	/// Clear selected item data. 清除数据
 	/// </summary>
-	public void clear() {
+	public void clear() 
+	{
+		Debug.Log ("clear");
 		ItemsInteractiveManager.instance.SetPickedItem ("null_picked");
 		ItemsInteractiveManager.instance.SetWaitForConsumeItem ("null_consumed");
 	}
@@ -90,14 +108,16 @@ public class CheckItemManager : MonoBehaviour {
 	/// Get inChecking variable 获得是否点击了放大镜
 	/// </summary>
 	/// <returns><c>true</c>, 如果点击了放大镜, <c>false</c> 没有点击放大镜.</returns>
-	public bool getInChecking() {
+	public bool getInChecking() 
+	{
 		return this.inChecking;
 	}
 
 	/// <summary>
 	/// Set inChecking variable to false 设置是否电击了放大镜
 	/// </summary>
-	public void falseInChecking() {
+	public void falseInChecking() 
+	{
 		this.inChecking = false;
 	}
 
@@ -105,24 +125,26 @@ public class CheckItemManager : MonoBehaviour {
 	/// Show custom Fungus conversation dialog. 调用Fungus对话框之一
 	/// </summary>
 	/// <param name="storyText">需要加载进Say中的游戏文本.</param>
-	void showDialog(string storyText) {
+	void showDialog(string storyText) 
+	{
 		Block block = flowchart.FindBlock ("CheckItems");
 		List<Command> commands = block.CommandList;
 		Say s = (Say)commands[0];
 		s.SetStandardText (storyText);
-		flowchart.ExecuteBlock ("CheckItems");
+		flowchart.ExecuteBlock (block);
 	}
 
 	/// <summary>
 	/// Show custom Fungus letter dialog. 调用Fungus对话框之二
 	/// </summary>
 	/// <param name="storyText">需要加载进Say中的游戏文本.</param>
-	void showDialog2(string storyText) {
+	void showDialog2(string storyText) 
+	{
 		Block block = flowchart.FindBlock ("CheckItems2");
 		List<Command> commands = block.CommandList;
 		Say s = (Say)commands[0];
 		s.SetStandardText (storyText);
-		flowchart.ExecuteBlock ("CheckItems2");
+		flowchart.ExecuteBlock (block);
 	}
 
 	/// <summary>

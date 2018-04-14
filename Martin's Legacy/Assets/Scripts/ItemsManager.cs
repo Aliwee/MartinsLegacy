@@ -6,6 +6,7 @@ using System.Xml;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using Fungus;
 
 //用于管理物品栏的类
 public class ItemsManager : MonoBehaviour {
@@ -19,6 +20,8 @@ public class ItemsManager : MonoBehaviour {
 
 	public Button[] itemTiles;                   //物品栏中的物品窗格
 	public GameObject lastPickedItem;            //上一次选中的物品
+	public GameObject[] itemsToShowInScene;      //要显示的item
+	public Fungus.Flowchart flowchart;           //Fungus Flowchart
 
 	//Awake总是在任何Start方法之前调用
 	void Start() {
@@ -37,6 +40,9 @@ public class ItemsManager : MonoBehaviour {
 		//加载物品栏
 		LoadItemsInPack ();
 
+		//显示某些隐藏在场景中的物品
+		ShowItemsInScene();
+
 	}
 
 	//每帧调用
@@ -50,6 +56,7 @@ public class ItemsManager : MonoBehaviour {
 		if (interactionSuccess == "true") {
 			DestoryItems ();
 			interactionSuccess = "false";
+			ItemsInteractiveManager.instance.SetPickedItem ("null_picked");
 		}
 	}
 
@@ -147,10 +154,10 @@ public class ItemsManager : MonoBehaviour {
 		Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
 	}
 
-	//仅销毁物品栏中的物品
+	//仅销毁物品栏中的奶酪
 	public void DestoryPickedItems() {
 		//获取交互成功的物品栏物品和场景中物品
-		string pickedItemName = ItemsInteractiveManager.instance.GetPickedItem ();
+		string pickedItemName = "item003";
 		//销毁物品栏物品
 		for (int i = 0; i < itemsInPack.Count; i++) {
 			if (itemsInPack [i].name == pickedItemName)
@@ -159,5 +166,30 @@ public class ItemsManager : MonoBehaviour {
 		UserDataManager.instance.AddItemInConsume (pickedItemName, "consumed");
 		//鼠标重设为默认
 		Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
+	}
+
+	/// <summary>
+	/// Shows some items in scene.
+	/// </summary>
+	void ShowItemsInScene() {
+		string levelName = SceneManager.GetActiveScene ().name;
+		switch (levelName) {
+		case "Chapter-1-Level-2":
+			//查找是否有item003
+			int index = itemsInPack.FindIndex (item => item.name == "item003");
+			if (index > 0) {
+				foreach (GameObject o in itemsToShowInScene)
+					o.SetActive (true);
+			}
+			break;
+		}
+	}
+
+	/// <summary>
+	/// Shows the atuo dialog.
+	/// </summary>
+	void showAtuoDialog() {
+		Block block = flowchart.FindBlock ("AtuoDialog");
+		flowchart.ExecuteBlock (block);
 	}
 }

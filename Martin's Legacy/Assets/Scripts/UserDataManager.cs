@@ -319,4 +319,12 @@ public class UserDataManager : MonoBehaviour {
 		Item i = new Item (itemName, tag);
 		this.consumedItems.Add (i);
 	}
+
+	/// <summary>
+	/// Finds the item in consume.
+	/// </summary>
+	/// <returns>The item in consume.</returns>
+	public int findItemInConsume() {
+		return consumedItems.Count;
+	}
 }

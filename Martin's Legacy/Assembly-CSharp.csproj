@@ -582,11 +582,13 @@
      <Compile Include="Assets\Scripts\ItemMouseHandeler.cs" />
      <Compile Include="Assets\Scripts\ItemsInteractiveManager.cs" />
      <Compile Include="Assets\Scripts\ItemsManager.cs" />
+     <Compile Include="Assets\Scripts\JudgeItem.cs" />
      <Compile Include="Assets\Scripts\LoadCSV.cs" />
      <Compile Include="Assets\Scripts\LoadNextScene.cs" />
      <Compile Include="Assets\Scripts\LocalizeManager.cs" />
      <Compile Include="Assets\Scripts\MenuClickHandeler.cs" />
      <Compile Include="Assets\Scripts\MenuMouseHandeler.cs" />
+     <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\SettingManager.cs" />
      <Compile Include="Assets\Scripts\UserDataManager.cs" />

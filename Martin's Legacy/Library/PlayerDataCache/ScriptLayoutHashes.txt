@@ -2,9 +2,11 @@ WindowsStandalone
 PlayerPath?
 G:/test.exe
 SceneListBegin?
-Assets/Scenes/Chapter-1-Level-0.unity
 Assets/Scenes/Loading.unity
 Assets/Scenes/Start.unity
+Assets/Scenes/Chapter-1-Level-1.unity
+Assets/Scenes/Chapter-1-Level-2.unity
+Assets/Scenes/Chapter-1-Level-3.unity
 SceneListEnd?
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Stop
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SfxrCacheSurrogate
@@ -76,6 +78,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 d540bd77c4e9c7c24f8e84ebee5ce5d2 Assembly-CSharp.dll:Fungus.SavePointLoaded
+706a785a690944c0e1ecf0affd629f26 Assembly-CSharp.dll:.Move
 962a1a6297a4edddbb5fb27f0d093431 Assembly-CSharp.dll:Fungus.Localization
 5e6d45a991f8b0a32a316d0a266ae47b Assembly-CSharp.dll:Fungus.Sign
 d5b7498f0e4faa6fdacac6b4930c79e6 Assembly-CSharp.dll:Fungus.RotateLean
@@ -228,7 +231,7 @@ b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.StopSwipe
 4f3a4eabf58980aa7e9cc8df555a4b24 Assembly-CSharp.dll:Fungus.LuaUtils
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadNextScene
 b6d2a3e67d49b529e242cc91ce41c834 Assembly-CSharp.dll:Fungus.ReadTextFile
-c1b1cfe425d169f69427149efbe28db9 Assembly-CSharp.dll:.ItemMouseHandeler
+1bde75b7315abb0e5be7d210a58bbd55 Assembly-CSharp.dll:.ItemMouseHandeler
 a2df2af1def9f50f97d6e5028966c9f4 Assembly-CSharp.dll:Fungus.ClearMenu
 af979efbf670a695ecf468da1f77adec Assembly-CSharp.dll:Fungus.Call
 106a6eb2caee11ab6bed7e193e032e31 Assembly-CSharp.dll:Fungus.FadeScreen
@@ -255,6 +258,7 @@ b0e44a4640c05bc7dffcf824950f569e Assembly-CSharp.dll:Fungus.ExecuteLua
 d42c0964705688f14135e5d833a587b1 Assembly-CSharp.dll:Fungus.OpenURL
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.EventDispatcher
 5093524ccdcfa505089337cf23998886 Assembly-CSharp.dll:Fungus.Parallax
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.JudgeItem
 c1e5e4e5ad9eb07bed8851b99038c6fa Assembly-CSharp.dll:Fungus.KeyPressed
 301a30eeaee996dbf8f54342ee92cb21 Assembly-CSharp.dll:Fungus.SavePoint
 b8a18df1051085b5f90566253ca49ebf Assembly-CSharp.dll:Fungus.ReloadScene
@@ -347,7 +351,7 @@ ee89b1b5b5f65cb74289075021dc8085 Assembly-CSharp.dll:Fungus.FloatVariable
 d8f44a9b64195a671a39d675de04d51f Assembly-CSharp.dll:Fungus.Menu
 e0296d5d3b66ca1ad568fd5ee987f416 Assembly-CSharp.dll:Fungus.SetClickable2D
 64ac2f7e4a2245866e0d1042ba4a9ccc Assembly-CSharp.dll:Fungus.RotateTo
-79e4992e4381c0fd95ce4276279b222d Assembly-CSharp.dll:.ItemsManager
+5b2da239a5b2afa5a9ad191b289590f2 Assembly-CSharp.dll:.ItemsManager
 f60dd9de3c6f6e5ebd51bc8cf90890ea Assembly-CSharp.dll:.BGFadeInOut
 a6cc716ff45b305b8bfd476db85bd219 Assembly-CSharp.dll:Fungus.StopBlock
 8e32f86da5244fa3fd8c5ecbd5db6422 Assembly-CSharp.dll:Fungus.Character

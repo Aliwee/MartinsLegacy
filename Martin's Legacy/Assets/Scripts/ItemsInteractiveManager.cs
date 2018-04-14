@@ -92,6 +92,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 			Destroy (o);
 			consumableItems.Remove (waitForConsumeItem);
 			waitForConsumeItem = "null_consumed";
+			pickedItem = "null_picked";
 		}
 		AfterSuccessfulInteraction (pickedItem);
 	}

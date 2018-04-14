@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using AssemblyCSharp;
+using Fungus;
 
 /// <summary>
 /// 用于控制鼠标移入时候的鼠标指针变化
@@ -19,6 +20,9 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 
 	//想要显示的GameObject
 	public GameObject itemToShow,pathToShow;
+
+	//Fungus Flowchart
+	public Fungus.Flowchart flowchart;          
 
 	//鼠标移入 设置鼠标样式
 	public void OnPointerEnter (PointerEventData eventData)
@@ -74,6 +78,7 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 			if (this.name == "item003") {
 				itemToShow.SetActive (true);
 				pathToShow.SetActive (true);
+				showAtuoDialog ();
 			}
 
 			Destroy (this.gameObject);
@@ -81,13 +86,14 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 		} else if (this.tag == "CheckableItem") {
 			lockCursor ();
 		} else if (this.tag == "UseableItem") {
-			//设置当前选中的物品标志到ItemsInteractiveManager中去
-			ItemsInteractiveManager.instance.SetWaitForConsumeItem (this.name);
 			//取消选中当前的物品栏物品
 			GameObject o = GameObject.Find ("/Scripts/ItemsManager");
 			GameObject lastPickedItem = o.GetComponent <ItemsManager> ().lastPickedItem;
 			if (lastPickedItem != null)
 				lastPickedItem.SetActive (false);
+			if (ItemsInteractiveManager.instance.GetItemInteractionResult () == "false") {
+				ItemsInteractiveManager.instance.SetPickedItem ("null_picked");
+			}
 		} else if (this.tag == "CtoPItem") {
 			lockCursor ();
 		} else if (this.tag == "TalkableItem") {
@@ -137,5 +143,13 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 	public void getTag ()
 	{
 		GameObject.Find ("/Canvas/Tag").GetComponent<Text> ().text = this.tag;
+	}
+
+	/// <summary>
+	/// Shows the atuo dialog.
+	/// </summary>
+	void showAtuoDialog() {
+		Block block = flowchart.FindBlock ("AtuoDialog");
+		flowchart.ExecuteBlock (block);
 	}
 }

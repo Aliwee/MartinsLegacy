@@ -531,6 +531,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1735914148}
   - {fileID: 730084632}
   - {fileID: 1224648169}
   - {fileID: 1772091610}
@@ -1456,7 +1457,7 @@ RectTransform:
   m_Children:
   - {fileID: 798019854}
   m_Father: {fileID: 165153318}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1712,6 +1713,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: f04eb3e82cab0434289fe254b7ead461, type: 3}
   itemToShow: {fileID: 0}
   pathToShow: {fileID: 0}
+  flowchart: {fileID: 0}
 --- !u!114 &635258090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1795,7 +1797,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 165153318}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2051,6 +2053,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: f04eb3e82cab0434289fe254b7ead461, type: 3}
   itemToShow: {fileID: 0}
   pathToShow: {fileID: 0}
+  flowchart: {fileID: 0}
 --- !u!114 &762121472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2242,7 +2245,7 @@ GameObject:
   - component: {fileID: 777713615}
   m_Layer: 5
   m_Name: itemImage8
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2500,7 +2503,7 @@ RectTransform:
   m_Children:
   - {fileID: 265068806}
   m_Father: {fileID: 165153318}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.057893682}
   m_AnchorMax: {x: 1, y: 0.9464469}
@@ -3160,6 +3163,9 @@ GameObject:
   - component: {fileID: 960933785}
   - component: {fileID: 960933797}
   - component: {fileID: 960933798}
+  - component: {fileID: 960933800}
+  - component: {fileID: 960933799}
+  - component: {fileID: 960933796}
   m_Layer: 0
   m_Name: FungusFlow
   m_TagString: Untagged
@@ -3182,7 +3188,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 334.82294
     y: 142.52298
-    width: 131.58755
+    width: 133.23123
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3263,11 +3269,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 245.27835, y: -30.389393}
+  scrollPos: {x: 197.20123, y: -3.0137053}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 301
-  zoom: 0.907001
+  zoom: 0.8170011
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -3275,9 +3281,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 960933761}
+  - {fileID: 960933800}
   selectedCommands:
-  - {fileID: 960933781}
+  - {fileID: 960933799}
   variables:
   - {fileID: 960933763}
   - {fileID: 960933797}
@@ -3319,7 +3325,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 157.42397
     y: 47.40899
-    width: 123.86982
+    width: 125.88729
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3387,7 +3393,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 383.7612
     y: 43.116337
-    width: 131.58755
+    width: 134.4552
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3960,7 +3966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 38
   indentLevel: 1
-  duration: 2
+  duration: 1
   targetAlpha: 1
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
@@ -3980,8 +3986,21 @@ MonoBehaviour:
   indentLevel: 1
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 2
+    floatVal: 1
   durationOLD: 0
+--- !u!114 &960933796
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960933760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 960933800}
+  waitForFrames: 1
 --- !u!114 &960933797
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4014,6 +4033,51 @@ MonoBehaviour:
     stringVal: 
   loadingImage: {fileID: 0}
   sceneNameOLD: 
+--- !u!114 &960933799
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960933760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 0
+  duration: 2
+  fadeOut: 0
+  targetView: {fileID: 1735914149}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+--- !u!114 &960933800
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960933760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 629.57837
+    y: 69.30487
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 19
+  blockName: StartFade
+  description: 
+  eventHandler: {fileID: 960933796}
+  commandList:
+  - {fileID: 960933799}
 --- !u!1 &1024504065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4484,7 +4548,7 @@ GameObject:
   - component: {fileID: 1116079201}
   m_Layer: 5
   m_Name: itemImage1
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4701,7 +4765,7 @@ RectTransform:
   - {fileID: 399095006}
   - {fileID: 1861614221}
   m_Father: {fileID: 165153318}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -4933,7 +4997,7 @@ RectTransform:
   m_Children:
   - {fileID: 1878397884}
   m_Father: {fileID: 165153318}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4954,7 +5018,7 @@ GameObject:
   - component: {fileID: 1286744965}
   m_Layer: 5
   m_Name: itemImage5
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5377,7 +5441,7 @@ GameObject:
   - component: {fileID: 1475259336}
   m_Layer: 5
   m_Name: itemImage3
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5557,7 +5621,7 @@ GameObject:
   - component: {fileID: 1630631104}
   m_Layer: 5
   m_Name: itemImage4
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5688,7 +5752,7 @@ GameObject:
   - component: {fileID: 1689617285}
   m_Layer: 5
   m_Name: itemImage9
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5902,6 +5966,8 @@ MonoBehaviour:
   - {fileID: 1994485180}
   - {fileID: 1817095486}
   lastPickedItem: {fileID: 0}
+  itemsToShowInScene: []
+  flowchart: {fileID: 0}
 --- !u!1 &1708352241
 GameObject:
   m_ObjectHideFlags: 0
@@ -6130,6 +6196,50 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725313678}
+--- !u!1 &1735914147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: e0d427add844a4d9faf970a3afa07583, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1735914148}
+  - component: {fileID: 1735914149}
+  m_Layer: 0
+  m_Name: View
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1735914148
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: e0d427add844a4d9faf970a3afa07583, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735914147}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.965509, y: 1.1034398, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 165153318}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1735914149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: e0d427add844a4d9faf970a3afa07583,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735914147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c387d3e32404bcc91c60318d766bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewSize: 205.84775
+  primaryAspectRatio: {x: 4, y: 3}
+  secondaryAspectRatio: {x: 2, y: 1}
 --- !u!1 &1761652106
 GameObject:
   m_ObjectHideFlags: 0
@@ -6226,7 +6336,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 165153318}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6280,7 +6390,7 @@ GameObject:
   - component: {fileID: 1817095485}
   m_Layer: 5
   m_Name: itemImage12
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6411,7 +6521,7 @@ GameObject:
   - component: {fileID: 1853459853}
   m_Layer: 5
   m_Name: itemImage2
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6891,7 +7001,7 @@ GameObject:
   - component: {fileID: 1987005251}
   m_Layer: 5
   m_Name: itemImage6
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7022,7 +7132,7 @@ GameObject:
   - component: {fileID: 1994485179}
   m_Layer: 5
   m_Name: itemImage11
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7153,7 +7263,7 @@ GameObject:
   - component: {fileID: 2040793080}
   m_Layer: 5
   m_Name: itemImage10
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7284,7 +7394,7 @@ GameObject:
   - component: {fileID: 2067615401}
   m_Layer: 5
   m_Name: itemImage7
-  m_TagString: Untagged
+  m_TagString: PackItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
