@@ -1,9 +1,17 @@
 WindowsStandalone
+PlayerPath?
+G:/ML_DEMO.exe
 SceneListBegin?
+Assets/Scenes/Presents.unity
 Assets/Scenes/Loading.unity
 Assets/Scenes/Start.unity
 Assets/Scenes/Setting.unity
 Assets/Scenes/Chapter-1-Level-1.unity
+Assets/Scenes/Chapter-1-Level-2.unity
+Assets/Scenes/Chapter-1-Level-3.unity
+Assets/Scenes/Chapter-1-Level-4.unity
+Assets/Scenes/Chapter-1-Level-5.unity
+Assets/Scenes/Thanks.unity
 SceneListEnd?
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Stop
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SfxrCacheSurrogate
@@ -13,17 +21,17 @@ e3ea99699c3e3c6d4457355e3ca5af67 Assembly-CSharp.dll:Fungus.RotateFrom
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.SaveManager
 381d804adff3ba161f944343def3fe1a Assembly-CSharp.dll:Fungus.GetToggleState
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
-970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
+dbc29a6f2739d277c10da432d73adb6d UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
-54f0e6ddfd6c466a1673d6ad5af5ddcd UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
+13c0cc12d9db99559b2469b7b524857c UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
 c28edace1fdf0563f7e72075531c5744 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioPlayableAsset
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
+31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
 ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlPlayableAsset
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlTrack
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
-9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlTrack
+31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
+31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
+df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 959d0fff5e452c20f305e0bfe3cf69de Assembly-CSharp.dll:Fungus.Mouse
 b20f7948f03b6dc491cc69efe57bc8c1 Assembly-CSharp.dll:Fungus.CharacterControllerCollide
 3d4501935c82b1ad586cc7811d1f8ed2 Assembly-CSharp.dll:Fungus.Collision2D
@@ -33,7 +41,6 @@ d4bcb0964e9fd65eead7c3cbc27a70e2 Assembly-CSharp.dll:Fungus.Vector3Fields
 67a085132ec2c865fdc9fc0613db613a Assembly-CSharp.dll:Fungus.LoadScene
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Else
 826755378fe639384e13690344ada0d6 Assembly-CSharp.dll:Fungus.Clickable2D
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Exit
 9615eba53970846dceeea059cbd82c5d Assembly-CSharp.dll:Fungus.Vector3Normalise
 fae445a7a3d2d0d634ed75030dcbad77 Assembly-CSharp.dll:Fungus.SetActive
 b3146e8846ffa9d4e3283260574e4f63 Assembly-CSharp.dll:Fungus.AddForce2D
@@ -76,13 +83,15 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 d540bd77c4e9c7c24f8e84ebee5ce5d2 Assembly-CSharp.dll:Fungus.SavePointLoaded
+156f130d2af26ab452a516177d82d597 Assembly-CSharp.dll:.Move
 962a1a6297a4edddbb5fb27f0d093431 Assembly-CSharp.dll:Fungus.Localization
 5e6d45a991f8b0a32a316d0a266ae47b Assembly-CSharp.dll:Fungus.Sign
 d5b7498f0e4faa6fdacac6b4930c79e6 Assembly-CSharp.dll:Fungus.RotateLean
 3a2ed0daa3e6e8fdadacfee5193ee2e8 Assembly-CSharp.dll:Fungus.SayDialog
 bf2eac6862efa353f00d8f15a2ca63dc Assembly-CSharp.dll:Fungus.Rigidbody2DVariable
-cace0ab0055f0870812f83f6534c7132 Assembly-CSharp.dll:.LocalizeManager
+886e22b0ad979d0664ce3afa74060bba Assembly-CSharp.dll:.LocalizeManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.MusicManager
+ad55798098fec5110dc0d8eef6929455 Assembly-CSharp.dll:.ExitManager
 7f8debb5a744b28796e7e8be3f5db1a9 Assembly-CSharp.dll:Fungus.LuaElseIf
 dcc22c9157180f0b47e4ca4dd5dd166c Assembly-CSharp.dll:Fungus.SetAnimBool
 0b43b23ca8ab3594d9e6ce19c0151a21 Assembly-CSharp.dll:Fungus.Trig
@@ -122,6 +131,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 c6f8879c5be2aa1779658f46fa00d126 Assembly-CSharp.dll:Fungus.RandomFloat
 915aaa3e4bafcb49624a01ea67789b7e Assembly-CSharp.dll:Fungus.BooleanVariable
 670b7711a7b0282935c373e5e7510848 Assembly-CSharp.dll:Fungus.Draggable2D
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadCSV
 2e7d0e3b7c726491e27b2989eb53993f Assembly-CSharp.dll:Fungus.Stage
 6779758d9a48a23dd32a2444b26e2e5b Assembly-CSharp.dll:Fungus.Vector2Variable
 507638d4a41cb9131848b0d6b4fcb60b Assembly-CSharp.dll:Fungus.ShakeScale
@@ -131,17 +141,17 @@ c6f8879c5be2aa1779658f46fa00d126 Assembly-CSharp.dll:Fungus.RandomFloat
 b8cc663a36e2da57925e944db922b3b9 Assembly-CSharp.dll:Fungus.Flowchart
 3d4501935c82b1ad586cc7811d1f8ed2 Assembly-CSharp.dll:Fungus.Trigger2D
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
-970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
+dbc29a6f2739d277c10da432d73adb6d UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
-54f0e6ddfd6c466a1673d6ad5af5ddcd UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
+13c0cc12d9db99559b2469b7b524857c UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
 c28edace1fdf0563f7e72075531c5744 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioPlayableAsset
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
+31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
 ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlPlayableAsset
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlTrack
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
-9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlTrack
+31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
+31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
+df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 2116ce0c9bbe0018bf219d0d8896533f Assembly-CSharp.dll:Fungus.ResetAnimTrigger
 b2a13d54da2efcf1551bf9fc0a62c1cd Assembly-CSharp.dll:Fungus.PlayAnimState
 d24c75a72062b1df3f05d6730d4a0a44 Assembly-CSharp.dll:Fungus.InfoText
@@ -180,13 +190,14 @@ b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.Quit
 959d0fff5e452c20f305e0bfe3cf69de Assembly-CSharp.dll:Fungus.UpdateTick
 959d0fff5e452c20f305e0bfe3cf69de Assembly-CSharp.dll:Fungus.Render
 21bc64dee3df50d34f08a94b5455dbd7 Assembly-CSharp.dll:Fungus.GetAxis
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.GlobalVariables
 6264351853e9c7233c9a622d961d5a4c Assembly-CSharp.dll:Fungus.SetAudioVolume
 826f13cf6484008d643df5913f2b304c Assembly-CSharp.dll:Fungus.SetSaveProfile
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 dc331af9157ad5cae49bb898fea934c8 Assembly-CSharp.dll:Fungus.AddTorque2D
 1928d671d0ffe9a2f71d39075e9861db Assembly-CSharp.dll:Fungus.Fullscreen
-abb921b4ef874b7b5b817e54014be6c9 Assembly-CSharp.dll:Fungus.ElseIf
+9974ffe984db4c6935e1da2656ff5ad9 Assembly-CSharp.dll:Fungus.ElseIf
 89a36b9f4bc9736fc891182f4fe3037d Assembly-CSharp.dll:Fungus.SetInteractable
 b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.StopTweens
 3053a1d3d09c04317f1d8f0299bb66a2 Assembly-CSharp.dll:Fungus.WriterAudio
@@ -200,6 +211,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 fd0f43a3b3758d704d6ddaee31a24a8b Assembly-CSharp.dll:Fungus.EventHandler
 56dfa3a1efcb6e4aa53d8704b628233e Assembly-CSharp.dll:Fungus.ToInt
 ee80fac5766a5a808eacea4ff0999088 Assembly-CSharp.dll:Fungus.Portrait
+592a312abb269da05a561c27ec83c9c3 Assembly-CSharp.dll:.C1L4GameManager
 297424b720fd4415fac3c663f372410e Assembly-CSharp.dll:Fungus.ScaleAdd
 3d5337827401c4a2abed1ec0a6f62cb6 Assembly-CSharp.dll:Fungus.ExecuteHandler
 5a0297c2b694cd33b47095944e6ef994 Assembly-CSharp.dll:Fungus.RotateAdd
@@ -225,7 +237,7 @@ b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.StopSwipe
 4f3a4eabf58980aa7e9cc8df555a4b24 Assembly-CSharp.dll:Fungus.LuaUtils
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadNextScene
 b6d2a3e67d49b529e242cc91ce41c834 Assembly-CSharp.dll:Fungus.ReadTextFile
-cb8e1ee6f13d221ed8fc7a74acef8b6c Assembly-CSharp.dll:.ItemMouseHandeler
+1bde75b7315abb0e5be7d210a58bbd55 Assembly-CSharp.dll:.ItemMouseHandeler
 a2df2af1def9f50f97d6e5028966c9f4 Assembly-CSharp.dll:Fungus.ClearMenu
 af979efbf670a695ecf468da1f77adec Assembly-CSharp.dll:Fungus.Call
 106a6eb2caee11ab6bed7e193e032e31 Assembly-CSharp.dll:Fungus.FadeScreen
@@ -237,6 +249,7 @@ e1be7416cd0029d9960d6fe7a95e9cee Assembly-CSharp.dll:Fungus.ScaleTo
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 0af48a890577dc5af96a7c7b0f2553a9 Assembly-CSharp.dll:Fungus.Destroy
+f34a4c53055030324d4fc6493565b6be Assembly-CSharp.dll:.FontManager
 756583da8e4247ba481c3d2e9cc96cbf Assembly-CSharp.dll:Fungus.TextureVariable
 0b43b23ca8ab3594d9e6ce19c0151a21 Assembly-CSharp.dll:Fungus.Round
 5e98a5480c3a7c1207d0ed1178881744 Assembly-CSharp.dll:Fungus.InvokeEvent
@@ -247,10 +260,11 @@ b0e44a4640c05bc7dffcf824950f569e Assembly-CSharp.dll:Fungus.ExecuteLua
 5f692182acc4e73fadde07d2de7cc644 Assembly-CSharp.dll:Fungus.Label
 9fcb8ba9ef84c15ee213c3fa147e52ef Assembly-CSharp.dll:Fungus.SpriteVariable
 5e6d45a991f8b0a32a316d0a266ae47b Assembly-CSharp.dll:Fungus.Abs
-abb921b4ef874b7b5b817e54014be6c9 Assembly-CSharp.dll:Fungus.While
+9974ffe984db4c6935e1da2656ff5ad9 Assembly-CSharp.dll:Fungus.While
 d42c0964705688f14135e5d833a587b1 Assembly-CSharp.dll:Fungus.OpenURL
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.EventDispatcher
 5093524ccdcfa505089337cf23998886 Assembly-CSharp.dll:Fungus.Parallax
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.JudgeItem
 c1e5e4e5ad9eb07bed8851b99038c6fa Assembly-CSharp.dll:Fungus.KeyPressed
 301a30eeaee996dbf8f54342ee92cb21 Assembly-CSharp.dll:Fungus.SavePoint
 b8a18df1051085b5f90566253ca49ebf Assembly-CSharp.dll:Fungus.ReloadScene
@@ -299,16 +313,23 @@ b497cd6cb84c2199c071bc81e08e7906 Assembly-CSharp.dll:Fungus.StopMusic
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
+9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
+67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
+67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 75a9fd1e005e4eceffdbb565a1176168 Assembly-CSharp.dll:Fungus.MoveToView
 959d0fff5e452c20f305e0bfe3cf69de Assembly-CSharp.dll:Fungus.ApplicationState
 e7616abb390a21bcfd4e9f1697910642 Assembly-CSharp.dll:Fungus.StopTween
 131438269e7cd20bc413758d5cf3b691 Assembly-CSharp.dll:Fungus.MoveFrom
+9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
-abb921b4ef874b7b5b817e54014be6c9 Assembly-CSharp.dll:Fungus.If
+67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
+67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+9974ffe984db4c6935e1da2656ff5ad9 Assembly-CSharp.dll:Fungus.If
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.SceneLoader
 5a24898fd8b54346cb8049601696d8b9 Assembly-CSharp.dll:.MenuClickHandeler
 89d4e43e5295d3eea0a5c6829fcca293 Assembly-CSharp.dll:Fungus.SetText
+3933449af832af45e62f26d8e86e27a4 Assembly-CSharp.dll:.CheckItemManager
 b15824a6bb101ccacba53ce69baf66e6 Assembly-CSharp.dll:Fungus.SetSpriteOrder
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
@@ -336,7 +357,7 @@ ee89b1b5b5f65cb74289075021dc8085 Assembly-CSharp.dll:Fungus.FloatVariable
 d8f44a9b64195a671a39d675de04d51f Assembly-CSharp.dll:Fungus.Menu
 e0296d5d3b66ca1ad568fd5ee987f416 Assembly-CSharp.dll:Fungus.SetClickable2D
 64ac2f7e4a2245866e0d1042ba4a9ccc Assembly-CSharp.dll:Fungus.RotateTo
-51ae52d378ea669ba83162d355c63890 Assembly-CSharp.dll:.ItemsManager
+5b2da239a5b2afa5a9ad191b289590f2 Assembly-CSharp.dll:.ItemsManager
 f60dd9de3c6f6e5ebd51bc8cf90890ea Assembly-CSharp.dll:.BGFadeInOut
 a6cc716ff45b305b8bfd476db85bd219 Assembly-CSharp.dll:Fungus.StopBlock
 8e32f86da5244fa3fd8c5ecbd5db6422 Assembly-CSharp.dll:Fungus.Character
@@ -361,7 +382,7 @@ a0dcb8b539796676b0a47cc6bb8cf1ed Assembly-CSharp.dll:Fungus.DragExited
 32a7db1107693f3ce2e12123ab78f417 Assembly-CSharp.dll:Fungus.ShakeCamera
 55f4e74117b53167347e2976e61f9f31 Assembly-CSharp.dll:Fungus.Block
 a9b584424c1bd58fc35cf0db73a8a42e Assembly-CSharp.dll:Fungus.DragCancelled
-69bba96e3802fac375bfb367ad29b6d8 Assembly-CSharp.dll:Fungus.SetVariable
+6f2f94697eb857e1702338380b849ba2 Assembly-CSharp.dll:Fungus.SetVariable
 3d4501935c82b1ad586cc7811d1f8ed2 Assembly-CSharp.dll:Fungus.Collision
 c62a0d5a09fb248b291a594b3005858f Assembly-CSharp.dll:Fungus.TransformProperty
 e2edf8be30edf1b53356e4ac2139b562 Assembly-CSharp.dll:Fungus.Writer

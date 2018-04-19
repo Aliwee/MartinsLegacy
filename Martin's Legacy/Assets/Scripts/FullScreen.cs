@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//用于在Canvas之外保证全屏的类-已抛弃!!!
 public class FullScreen : MonoBehaviour {
 
 	private SpriteRenderer spriteRenderer;

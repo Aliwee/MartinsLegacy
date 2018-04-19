@@ -6,6 +6,7 @@ using System.Xml;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//全局管理用户数据
 public class UserDataManager : MonoBehaviour {
 	
 	private string userDataXmlPath;                   //xml文件路径
@@ -278,8 +279,15 @@ public class UserDataManager : MonoBehaviour {
 
 	//保存用户存档
 	IEnumerator saveUserData() {
+		//保存xml存档文件
 		userDataXml.Save (userDataXmlPath);
-		yield return new WaitForSeconds (1.0f);
+
+		//等待1秒再执行
+		yield return new WaitForSeconds (3.0f);
+
+		//如果是Loading页面需要在获取到存档文件之后跳转至下一个页面
+		if (SceneManager.GetActiveScene ().name == "Loading") 
+			LoadStartScene ();
 	}
 
 	//分割场景名称字符串
@@ -310,5 +318,65 @@ public class UserDataManager : MonoBehaviour {
 		//加入consumedItems中
 		Item i = new Item (itemName, tag);
 		this.consumedItems.Add (i);
+	}
+
+	/// <summary>
+	/// Finds the item in consume.
+	/// </summary>
+	/// <returns>The item in consume.</returns>
+	public int findItemInConsume() {
+		return consumedItems.Count;
+	}
+
+	/// <summary>
+	/// Clears the user data.
+	/// </summary>
+	public void clearUserData() {
+		// 重制数据
+		this.chapterNum = "1";
+		this.levelNum = "1";
+		itemsInPack.Clear ();
+		consumedItems.Clear ();
+
+		//遍历所有<component>子节点
+		foreach (XmlElement component in userDataNodes) {
+			//选择标签为setting的<component>
+			if (component.GetAttribute ("type") == "level") {
+				XmlNodeList userSettingNodes = component.ChildNodes;   //获得标签为level的<component>下的子节点
+				//遍历所有<level>子节点
+				foreach (XmlElement level in userSettingNodes ) {
+					if (level.GetAttribute ("type") == "chapterNum")
+						level.InnerText = this.chapterNum;    //更新章节信息
+					else if (level.GetAttribute ("type") == "levelNum")
+						level.InnerText = this.levelNum;      //更新关卡信息
+				}
+			}
+		}
+
+		//删除之前的物品栏数据
+		XmlNode items = userDataNodes.Item (2);
+		while (items.HasChildNodes)
+			items.RemoveChild (items.FirstChild);
+		// 插入默认数据
+		XmlElement new_item1 = userDataXml.CreateElement ("item");
+		new_item1.SetAttribute ("type", "check");
+		new_item1.InnerText = "item000";
+		items.AppendChild (new_item1);
+		XmlElement new_item2 = userDataXml.CreateElement ("item");
+		new_item2.SetAttribute ("type", "use");
+		new_item2.InnerText = "item001";
+		items.AppendChild (new_item2);
+
+		//插入itemsInPack
+		AddItemInPack ("item000", "check");
+		AddItemInPack ("item001", "use");
+
+		//删除已消耗物品数据
+		XmlNode consumed_items = userDataNodes.Item (3);
+		while (consumed_items.HasChildNodes)
+			consumed_items.RemoveChild (consumed_items.FirstChild);
+
+		//保存xml存档文件
+		userDataXml.Save (userDataXmlPath);
 	}
 }

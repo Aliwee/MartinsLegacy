@@ -12,4 +12,3 @@ If you are interested in game's world or walkthrough, you can visit the wiki pag
 https://github.com/Aliwee/MartinsLegacy/wiki
 
 Feel free to ask any questions!  
-

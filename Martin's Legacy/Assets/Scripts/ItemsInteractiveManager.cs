@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//全局处理点击物品栏物品之后与场景交互的类
 public class ItemsInteractiveManager : MonoBehaviour {
 	private string pickedItem;                //选中的物品栏物品
 	private List<string> consumableItems;     //待互动物品列表
@@ -47,6 +48,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 		
 	//设置当前选中的物品栏物品
 	public void SetPickedItem(string itemName) {
+		Debug.Log("Log-ItemsInteractiveManager: set pickedItem:" + itemName);
 		this.pickedItem = itemName;
 	}
 
@@ -57,6 +59,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 
 	//设置当前选中的场景中物品
 	public void SetWaitForConsumeItem(string itemName) {
+		Debug.Log("Log-ItemsInteractiveManager: set waitForConsumeItem:" + itemName);
 		this.waitForConsumeItem = itemName;
 	}
 
@@ -72,7 +75,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 
 	//获取当前待交互物品
 	void GetConsumableItems() {
-		string path = "/Canvas/consumableItems";
+		string path = "/Canvas/background/consumableItems";
 		GameObject root = GameObject.Find (path);
 		if (root != null) {
 			foreach (Transform child in root.transform) {
@@ -83,22 +86,23 @@ public class ItemsInteractiveManager : MonoBehaviour {
 
 	//销毁场景中的物品
 	public void DestoryConsumedItem() {
-		string path = "/Canvas/consumableItems/" + waitForConsumeItem;
+		string path = "/Canvas/background/consumableItems/" + waitForConsumeItem;
+		AfterSuccessfulInteraction (pickedItem);
 		GameObject o = GameObject.Find (path);
 		if (o != null) {
 			Destroy (o);
 			consumableItems.Remove (waitForConsumeItem);
 			waitForConsumeItem = "null_consumed";
+			pickedItem = "null_picked";
 		}
-		AfterSuccessfulInteraction (pickedItem);
 	}
 
 	//根据物品进行交互成功之后的处理
 	void AfterSuccessfulInteraction(string changeId) {
 		switch (changeId) {
-		case "item002":
-			//跳转至开始界面
-			SceneManager.LoadScene ("Chapter-1-Level-5");
+		case "item001":
+			Fungus.Flowchart fc = GameObject.Find ("FungusFlow").GetComponent<Fungus.Flowchart> ();
+			fc.ExecuteBlock ("lockGate");
 			break;
 		default :
 			break;

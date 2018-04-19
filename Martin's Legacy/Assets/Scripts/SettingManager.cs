@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 using System.Xml;
 
+//用于处理设置页面的类
 public class SettingManager : MonoBehaviour {
 
 	private string language;             //文本语言
@@ -79,11 +80,13 @@ public class SettingManager : MonoBehaviour {
 
 	//返回按钮事件
 	void BackClick() {
+		Debug.Log("Log-SettingManager: back to Start scene.");
 		SceneManager.LoadScene ("Start");
 	}
 
 	//语言按钮事件
 	void NextLanguageClick() {
+		Debug.Log("Log-SettingManager: next language.");
 		//判断当前下标是否为最后一个
 		if (index == numberOfLanguages - 1)
 			index = 0;
@@ -108,6 +111,7 @@ public class SettingManager : MonoBehaviour {
 	void ApplyClick() {
 		//如果发生了更改
 		if (new_language != language) {
+			Debug.Log("Log-SettingManager: new language:" + new_language);
 			UserDataManager.instance.UpdateSettingData (new_language);
 		}
 

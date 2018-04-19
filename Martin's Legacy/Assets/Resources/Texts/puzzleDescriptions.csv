@@ -1,0 +1,6 @@
+Key,Description,CN,EN
+positionLeft,c1l3中的左边道路,通往森林左边的道路。,
+positionMiddle,c1l3中的中间道路,通往森林中间的道路。,
+positionright,c1l3中的右边道路,通往森林右边的道路。,
+lock,c1l5中的锁,这扇门上有一把锁。,
+item001,c1l5中解开的锁,现在锁上的机关解除了。,

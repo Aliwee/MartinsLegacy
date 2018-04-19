@@ -7,8 +7,11 @@ TagManager:
   - PickableItem
   - CheckableItem
   - UseableItem
-  - Menu
-  - UnravelableItem
+  - CtoPItem
+  - WalkableItem
+  - TalkableItem
+  - PackItem
+  - MenuItem
   layers:
   - Default
   - TransparentFX

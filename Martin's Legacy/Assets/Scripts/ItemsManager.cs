@@ -6,7 +6,9 @@ using System.Xml;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using Fungus;
 
+//用于管理物品栏的类
 public class ItemsManager : MonoBehaviour {
 
 	private List<Item> itemsInPack;              //用户存档中物品栏
@@ -14,14 +16,12 @@ public class ItemsManager : MonoBehaviour {
 	private string itemsPath;                    //物品资源路径
 	private int levelItemsNum;                   //用户存档物品数
 	private string interactionSuccess;           //交互成功
+	private const string magnifierName = "item000";
 
 	public Button[] itemTiles;                   //物品栏中的物品窗格
-	public Button[] clickTiles;                  //拆解互动按钮窗格
-	public Button exitBtn;                       //退出按钮
-	public GameObject letter;                    //显示纸质内容的面板
-	public GameObject shadow;                    //显示纸质内容的阴影
-	public Button backBtn;                       //取消显示纸质内容按钮
-	public GameObject lastPickedItem;           //上一次选中的物品
+	public GameObject lastPickedItem;            //上一次选中的物品
+	public GameObject[] itemsToShowInScene;      //要显示的item
+	public Fungus.Flowchart flowchart;           //Fungus Flowchart
 
 	//Awake总是在任何Start方法之前调用
 	void Start() {
@@ -32,16 +32,16 @@ public class ItemsManager : MonoBehaviour {
 		int item_length = itemTiles.Length;
 		for (int i = 0; i < item_length; i++) {
 			itemTiles [i].onClick.AddListener (ItemClick);
-			clickTiles [i].onClick.AddListener (UseItemClick);
 		}
-		exitBtn.onClick.AddListener (ExitClick);
-		backBtn.onClick.AddListener (BackClick);
 
 		//隐藏场景中已经获得的物品
 		HideItemsInScene();
 
 		//加载物品栏
 		LoadItemsInPack ();
+
+		//显示某些隐藏在场景中的物品
+		ShowItemsInScene();
 
 	}
 
@@ -56,6 +56,7 @@ public class ItemsManager : MonoBehaviour {
 		if (interactionSuccess == "true") {
 			DestoryItems ();
 			interactionSuccess = "false";
+			ItemsInteractiveManager.instance.SetPickedItem ("null_picked");
 		}
 	}
 
@@ -73,13 +74,6 @@ public class ItemsManager : MonoBehaviour {
 				imageSourceSprite = Resources.Load (path, imageSourceSprite.GetType ()) as Sprite;
 				//绑定资源
 				itemTiles[i].GetComponent <Image> ().sprite = imageSourceSprite;
-
-				//取得物品的属性
-				string tag = itemsInPack[i].tag;
-				//如果是可拆解物品还需要拆解按钮显示
-				if (tag == "unravel") {
-					clickTiles [i].gameObject.SetActive (true);
-				}
 			} else {
 				//取得路径
 				string path = "General/transparent";
@@ -94,40 +88,34 @@ public class ItemsManager : MonoBehaviour {
 
 	//隐藏场景中的物品
 	void HideItemsInScene() {
-		for (int i = 0; i < consumedItems.Count; i++) {
+		for (int i = consumedItems.Count-1; i >= 0; i--) {
 			//取得物品索引名字
 			string name = consumedItems[i].name;
-			string path1 = "/Canvas/interactableItems/" + name;
-			string path2 = "/Canvas/consumableItems/" + name;
+			string path1 = "/Canvas/background/interactableItems/" + name;
+			string path2 = "/Canvas/background/consumableItems/" + name;
+
 			//隐藏已获得在物品栏中的图标
 			GameObject o = GameObject.Find (path1);
 			if (o != null) {
-				o.SetActive (false);
+				Destroy (o);
 			}
 			//隐藏在场景中的物品
 			o = GameObject.Find (path2);
 			if (o != null) {
-				o.SetActive (false);
+				Destroy (o);
 			}
 		}
-		for (int i = 0; i < itemsInPack.Count; i++) {
+		for (int i = itemsInPack.Count-1; i >= 0; i--) {
 			//取得物品索引名字
 			string name = itemsInPack[i].name;
-			string path = "/Canvas/interactableItems/" + name;
+			string path = "/Canvas/background/interactableItems/" + name;
 			//隐藏已获得在物品栏中的图标
 			GameObject o = GameObject.Find (path);
 			if (o != null) {
 				o.SetActive (false);
 			}
 		}
-	}
 
-	//退出按钮
-	void ExitClick() {
-		//保存用户当前物品栏中的物品
-		UserDataManager.instance.UpdateItemsAndLevelData ();
-		//跳转至开始界面
-		SceneManager.LoadScene ("Start");
 	}
 
 	//物品点击按钮
@@ -137,7 +125,7 @@ public class ItemsManager : MonoBehaviour {
 		string itemName = btn.GetComponent <Image> ().sprite.name;
 
 		//显示选框
-		if(itemName != "transparent") {
+		if(itemName != "transparent" && itemName != magnifierName) {
 			if (lastPickedItem != null)
 				lastPickedItem.SetActive (false);
 			GameObject itemBack = btn.transform.GetChild (0).gameObject;
@@ -148,57 +136,8 @@ public class ItemsManager : MonoBehaviour {
 		//设置当前选中的物品标志到ItemsInteractiveManager中去
 		ItemsInteractiveManager.instance.SetWaitForConsumeItem ("null_consumed");
 		ItemsInteractiveManager.instance.SetPickedItem (itemName);
-
-		//读信件
-		if (itemName == "item003") {
-			//取得路径
-			string path = itemsPath + itemName;
-			//取得索引下的资源
-			Sprite imageSourceSprite = new Sprite();
-			imageSourceSprite = Resources.Load (path, imageSourceSprite.GetType ()) as Sprite;
-			//绑定资源
-			letter.GetComponent<Image >().sprite = imageSourceSprite;
-			//显示
-			letter.SetActive (true);
-			shadow.SetActive (true);
-			backBtn.gameObject.SetActive (true);
-		}		
 	}
-
-	//取消显示纸质内容按钮
-	void BackClick() {
-		letter.SetActive (false);
-		shadow.SetActive (false);
-		backBtn.gameObject.SetActive (false);
-	}
-
-	//拆解物品按钮
-	void UseItemClick() {
-		//获取物品的名称
-		GameObject btn = EventSystem.current.currentSelectedGameObject;
-		GameObject itemImage = btn.transform.parent.GetChild (0).gameObject;
-		string itemName = itemImage.GetComponent <Image> ().sprite.name;
-		//在itemsInPack中找到它并删除它
-		for (int i = 0; i < itemsInPack.Count; i++) {
-			Item item = itemsInPack [i];
-			if (item.name == itemName) {
-				UserDataManager.instance.RemoveItemInPack (item);
-				UserDataManager.instance.AddItemInConsume (itemName, "ravel");
-				break;
-			}
-		}
-		//得到分割物品名之后的多个子物品名
-		string[] nameArray = itemName.Split (new char[] { '-' });
-		for (int i = 0; i < nameArray.Length; i++) {
-			string childItemName = nameArray [i];
-			UserDataManager.instance.AddItemInPack (childItemName, "use");
-		}
-		//交互按钮重设为设为不可见
-		btn.SetActive (false);
-		if (lastPickedItem != null)
-			lastPickedItem.SetActive (false);
-	}
-
+		
 	//销毁交互成功的物品
 	void DestoryItems() {
 		//获取交互成功的物品栏物品和场景中物品
@@ -215,10 +154,10 @@ public class ItemsManager : MonoBehaviour {
 		Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
 	}
 
-	//仅销毁物品栏中的物品
+	//仅销毁物品栏中的奶酪
 	public void DestoryPickedItems() {
 		//获取交互成功的物品栏物品和场景中物品
-		string pickedItemName = ItemsInteractiveManager.instance.GetPickedItem ();
+		string pickedItemName = "item003";
 		//销毁物品栏物品
 		for (int i = 0; i < itemsInPack.Count; i++) {
 			if (itemsInPack [i].name == pickedItemName)
@@ -227,5 +166,32 @@ public class ItemsManager : MonoBehaviour {
 		UserDataManager.instance.AddItemInConsume (pickedItemName, "consumed");
 		//鼠标重设为默认
 		Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
+	}
+
+	/// <summary>
+	/// Shows some items in scene.
+	/// </summary>
+	void ShowItemsInScene() {
+		string levelName = SceneManager.GetActiveScene ().name;
+		switch (levelName) {
+		case "Chapter-1-Level-2":
+			//查找是否有item003
+			int index = itemsInPack.FindIndex (item => item.name == "item003");
+			if (index > 0) {
+				foreach (GameObject o in itemsToShowInScene)
+					o.SetActive (true);
+			}
+			break;
+		default:
+			break;
+		}
+	}
+
+	/// <summary>
+	/// Shows the atuo dialog.
+	/// </summary>
+	void showAtuoDialog() {
+		Block block = flowchart.FindBlock ("AtuoDialog");
+		flowchart.ExecuteBlock (block);
 	}
 }
