@@ -22,3 +22,9 @@ Improved animation of walking in the second level of chapter 1.
 Added two new csv file for game texts. One is game characters description and another is game puzzles description. Thus updated ItemsInteractiveManager.cs, ItemsManager.cs and CheckItemsManager.cs.
 
 Finished implementing a new level, cheers!
+
+==========Update Note Apr. 15, 2018==========
+
+Added two new levels! Designed one real puzzle, so another gameplay programmer wrote a script to control it. 
+
+Released Demo2.0. Yeahhhhhhhhhhhhhhhhhhhh!

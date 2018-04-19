@@ -327,4 +327,56 @@ public class UserDataManager : MonoBehaviour {
 	public int findItemInConsume() {
 		return consumedItems.Count;
 	}
+
+	/// <summary>
+	/// Clears the user data.
+	/// </summary>
+	public void clearUserData() {
+		// 重制数据
+		this.chapterNum = "1";
+		this.levelNum = "1";
+		itemsInPack.Clear ();
+		consumedItems.Clear ();
+
+		//遍历所有<component>子节点
+		foreach (XmlElement component in userDataNodes) {
+			//选择标签为setting的<component>
+			if (component.GetAttribute ("type") == "level") {
+				XmlNodeList userSettingNodes = component.ChildNodes;   //获得标签为level的<component>下的子节点
+				//遍历所有<level>子节点
+				foreach (XmlElement level in userSettingNodes ) {
+					if (level.GetAttribute ("type") == "chapterNum")
+						level.InnerText = this.chapterNum;    //更新章节信息
+					else if (level.GetAttribute ("type") == "levelNum")
+						level.InnerText = this.levelNum;      //更新关卡信息
+				}
+			}
+		}
+
+		//删除之前的物品栏数据
+		XmlNode items = userDataNodes.Item (2);
+		while (items.HasChildNodes)
+			items.RemoveChild (items.FirstChild);
+		// 插入默认数据
+		XmlElement new_item1 = userDataXml.CreateElement ("item");
+		new_item1.SetAttribute ("type", "check");
+		new_item1.InnerText = "item000";
+		items.AppendChild (new_item1);
+		XmlElement new_item2 = userDataXml.CreateElement ("item");
+		new_item2.SetAttribute ("type", "use");
+		new_item2.InnerText = "item001";
+		items.AppendChild (new_item2);
+
+		//插入itemsInPack
+		AddItemInPack ("item000", "check");
+		AddItemInPack ("item001", "use");
+
+		//删除已消耗物品数据
+		XmlNode consumed_items = userDataNodes.Item (3);
+		while (consumed_items.HasChildNodes)
+			consumed_items.RemoveChild (consumed_items.FirstChild);
+
+		//保存xml存档文件
+		userDataXml.Save (userDataXmlPath);
+	}
 }

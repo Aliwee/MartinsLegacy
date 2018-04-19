@@ -1,4 +1,10 @@
 Key,Description,Standard
-SAY.flowchart.116.安德烈,,我找不到山羊人了，但是前方似乎有一扇门。
-SAY.flowchart.125.安德烈,,我应该用奥尼尔先生给我的钥匙试一试。
+SAY.FungusFlow.4.安德烈,,
+SAY.FungusFlow.7.,,
+SAY.FungusFlow.213.安德烈,,这就是山羊人消失之前的地方了。我应该仔细检查一下。
+SAY.FungusFlow.140.安德烈,,太好了，我解开了锁上的机关，现在锁孔出现了。
+SAY.FungusFlow.150.安德烈,,铁门上面有一道锁。这道锁的结构很奇怪...
+SAY.FungusFlow.210.安德烈,,四周白雾一片，只能辨认出前方铁门的轮廓。
+SAY.FungusFlow.223.安德烈,,左边似乎有一道机关，是它在阻止锁孔的出现？
+SAY.FungusFlow.225.安德烈,,右边似乎有一道机关，是它在阻止锁孔的出现？
 CHARACTER.安德烈,,安德烈

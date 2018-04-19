@@ -1236,7 +1236,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 399095006}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1682,6 +1682,7 @@ GameObject:
   - component: {fileID: 357419195}
   - component: {fileID: 357419197}
   - component: {fileID: 357419196}
+  - component: {fileID: 357419198}
   m_Layer: 5
   m_Name: Text
   m_TagString: MenuItem
@@ -1729,7 +1730,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
+    m_Font: {fileID: 0}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
@@ -1749,6 +1750,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357419194}
+--- !u!114 &357419198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 357419194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &391633204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,8 +1819,8 @@ Transform:
   m_Children:
   - {fileID: 310866451}
   - {fileID: 1125024067}
-  - {fileID: 767022016}
   - {fileID: 290214285}
+  - {fileID: 767022016}
   - {fileID: 967962142}
   - {fileID: 1588106887}
   - {fileID: 1926906995}
@@ -3262,7 +3276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &767022016
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3274,7 +3288,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000035, y: 1.0000035, z: 1.0000035}
   m_Children: []
   m_Father: {fileID: 399095006}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4370,7 +4384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5724422a635e425bae0af9ffe2615d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeLanguage: EN
+  activeLanguage: 
   localizationFile: {fileID: 11500000, guid: cf3136328c4c3524e9c473156f208c9f, type: 3}
 --- !u!4 &940825575
 Transform:
@@ -4607,6 +4621,9 @@ GameObject:
   - component: {fileID: 960933830}
   - component: {fileID: 960933832}
   - component: {fileID: 960933839}
+  - component: {fileID: 960933847}
+  - component: {fileID: 960933846}
+  - component: {fileID: 960933848}
   m_Layer: 0
   m_Name: FungusFlow
   m_TagString: Untagged
@@ -4695,19 +4712,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 254.24316, y: 18.965223}
+  scrollPos: {x: -35.306313, y: -61.18202}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 304
-  zoom: 0.6700003
+  zoom: 0.864674
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 960933761}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 960933763}
@@ -4750,7 +4766,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 157.42397
     y: 16.42072
-    width: 120
+    width: 127.485855
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4818,7 +4834,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 297.57428
     y: 16.251663
-    width: 120
+    width: 135.58139
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4886,7 +4902,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 297.31543
     y: 95.59671
-    width: 120
+    width: 120.54682
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5215,7 +5231,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 919.35333
     y: 92.69526
-    width: 120
+    width: 128.64236
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5479,7 +5495,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 572.99225
     y: 251.09064
-    width: 121.641754
+    width: 141.36392
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5586,7 +5602,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 732.5321
     y: 248.08333
-    width: 126.11937
+    width: 143.67693
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5647,7 +5663,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 899.1546
     y: 253.10487
-    width: 127.6119
+    width: 149.45944
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6393,7 +6409,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1058.4645
     y: 95.30413
-    width: 138.05966
+    width: 161.0245
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6481,6 +6497,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 960933841}
   targetButton: {fileID: 767022017}
+--- !u!114 &960933846
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960933760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 133
+  indentLevel: 0
+  musicClip: {fileID: 8300000, guid: 06a62c3cfd1cb06469f688deda620258, type: 3}
+  atTime: 0
+  loop: 1
+  fadeDuration: 1
+--- !u!114 &960933847
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960933760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 15.607449
+    y: 38.64667
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: audio
+  description: 
+  eventHandler: {fileID: 960933848}
+  commandList:
+  - {fileID: 960933846}
+--- !u!114 &960933848
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960933760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 960933847}
+  waitForFrames: 1
 --- !u!114 &960933850
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8471,6 +8542,7 @@ GameObject:
   - component: {fileID: 1229217434}
   - component: {fileID: 1229217436}
   - component: {fileID: 1229217435}
+  - component: {fileID: 1229217437}
   m_Layer: 5
   m_Name: Text
   m_TagString: MenuItem
@@ -8518,7 +8590,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
+    m_Font: {fileID: 0}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
@@ -8538,6 +8610,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1229217433}
+--- !u!114 &1229217437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1229217433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &1248334476
 GameObject:
   m_ObjectHideFlags: 0
@@ -9302,11 +9387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541aea027d012ca42b83404fb7cb8d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothing: 90
+  smoothing: 95
   menuDialog: {fileID: 1347497168}
   pausePanel: {fileID: 786958773}
-  none: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
+  xMaxFactor: 0.6
+  xMinFactor: 0.2
 --- !u!50 &1518207593
 Rigidbody2D:
   serializedVersion: 4
@@ -9579,6 +9664,7 @@ GameObject:
   - component: {fileID: 1579494639}
   - component: {fileID: 1579494641}
   - component: {fileID: 1579494640}
+  - component: {fileID: 1579494642}
   m_Layer: 5
   m_Name: Text
   m_TagString: MenuItem
@@ -9626,7 +9712,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
+    m_Font: {fileID: 0}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
@@ -9646,6 +9732,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579494638}
+--- !u!114 &1579494642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1579494638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &1588106886
 GameObject:
   m_ObjectHideFlags: 0
@@ -9868,6 +9967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textTiles:
   - {fileID: 730526087}
+  - {fileID: 955982343}
   localize: {fileID: 940825573}
 --- !u!1 &1705972182
 GameObject:

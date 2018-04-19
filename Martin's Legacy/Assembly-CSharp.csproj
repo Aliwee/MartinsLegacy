@@ -573,6 +573,7 @@
      <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrParams.cs" />
      <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrSynth.cs" />
      <Compile Include="Assets\Scripts\BGFadeInOut.cs" />
+     <Compile Include="Assets\Scripts\C1L4GameManager.cs" />
      <Compile Include="Assets\Scripts\CheckItemManager.cs" />
      <Compile Include="Assets\Scripts\CursorState.cs" />
      <Compile Include="Assets\Scripts\ExitManager.cs" />
@@ -589,11 +590,9 @@
      <Compile Include="Assets\Scripts\MenuClickHandeler.cs" />
      <Compile Include="Assets\Scripts\MenuMouseHandeler.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\SettingManager.cs" />
      <Compile Include="Assets\Scripts\UserDataManager.cs" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />
-     <None Include="Assets\UserData\UserData.xml" />
      <None Include="Assets\Fungus\Docs\README.txt" />
      <None Include="Assets\StreamingAssets\UserData\UserData.xml" />
      <None Include="Assets\Fungus\Thirdparty\LeanTween\ReadMe.txt" />

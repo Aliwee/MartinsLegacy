@@ -5,21 +5,32 @@ using UnityEngine.EventSystems;
 
 
 public class Move : MonoBehaviour {
-    public float smoothing = 80;
+	private float smoothing;
 	public GameObject menuDialog,pausePanel; 
+	public float xMaxFactor, xMinFactor;
     private Rigidbody2D rd;
     private Animator an;
-    public Vector2 none = new Vector2(0, 0);
-    public Vector2 pos = new Vector2(0, 0);
-    private float maxX = (float)0.6 * Screen.width;
-    private float minX = (float)0.2 * Screen.width;
+	private Vector2 none = new Vector2(0, 0);
+	private Vector2 pos = new Vector2(0, 0);
+	private float maxX,minX;
 	private string parentName;
 
     // Use this for initialization
     void Start () {
+		#if UNITY_EDITOR              //如果是Editor模式
+		smoothing = 95;
+
+		#elif UNITY_STANDALONE_WIN    //如果是Windows平台模式
+		smoothing = 300;
+
+		#elif UNITY_STANDALONE_OSX    //如果是MACOS平台
+		smoothing = 300;
+		#endif 
+
         rd = GetComponent<Rigidbody2D>();
         an = GetComponent<Animator>();
-
+		maxX = (float)xMaxFactor * Screen.width;
+		minX = (float)xMinFactor * Screen.width;
     }
 
     // Update is called once per frame
@@ -42,7 +53,7 @@ public class Move : MonoBehaviour {
 
                 GameObject btn = EventSystem.current.currentSelectedGameObject;
 				
-                if (btn == null)
+				if (btn == null || btn.tag=="PickableItem")
                 {
                     Debug.Log("移动");
 

@@ -60,9 +60,10 @@ public class CheckItemManager : MonoBehaviour {
 				Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
 				clear ();
 
-				//determine whether hit any item in inventory 判断是否点击到物品栏中的物品
+				//determine whether hit any item 判断是否点击到物品
 				if (btn != null && btn.GetComponent <Image> () != null) {
 					string parentName = btn.transform.parent.gameObject.name;
+					//点击到物品栏物品
 					if (parentName.StartsWith("Unit")) {
 						string itemName = btn.GetComponent <Image> ().sprite.name;
 						string language = UserDataManager.instance.GetLanguage ();
@@ -75,19 +76,23 @@ public class CheckItemManager : MonoBehaviour {
 							else
 								showDialog (text);
 						}
+					//点击到人物
 					} else if (parentName.StartsWith("characterImage")) {
 						string itemName = btn.name;
 						string language = UserDataManager.instance.GetLanguage ();
 						string text = LoadCSV.instance.getText (itemName, language,"people");
 						lockCursor ();
-						showDialog (text);
+						if (!text.Equals(""))
+							showDialog (text);
+					//点击到谜题
 					} else if (parentName.StartsWith("consumableItems") 
 						&& ItemsInteractiveManager.instance.GetPickedItem() == "null_picked") {
 						string itemName = btn.name;
 						string language = UserDataManager.instance.GetLanguage ();
 						string text = LoadCSV.instance.getText (itemName, language,"puzzle");
 						lockCursor ();
-						showDialog (text);
+						if (!text.Equals(""))
+							showDialog (text);
 					}
 				}
 			}

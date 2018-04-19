@@ -87,6 +87,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 	//销毁场景中的物品
 	public void DestoryConsumedItem() {
 		string path = "/Canvas/background/consumableItems/" + waitForConsumeItem;
+		AfterSuccessfulInteraction (pickedItem);
 		GameObject o = GameObject.Find (path);
 		if (o != null) {
 			Destroy (o);
@@ -94,12 +95,15 @@ public class ItemsInteractiveManager : MonoBehaviour {
 			waitForConsumeItem = "null_consumed";
 			pickedItem = "null_picked";
 		}
-		AfterSuccessfulInteraction (pickedItem);
 	}
 
 	//根据物品进行交互成功之后的处理
 	void AfterSuccessfulInteraction(string changeId) {
 		switch (changeId) {
+		case "item001":
+			Fungus.Flowchart fc = GameObject.Find ("FungusFlow").GetComponent<Fungus.Flowchart> ();
+			fc.ExecuteBlock ("lockGate");
+			break;
 		default :
 			break;
 		}

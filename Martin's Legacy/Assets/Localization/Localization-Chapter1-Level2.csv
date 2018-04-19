@@ -1,21 +1,33 @@
 Key,Description,Standard
-SAY.flowchart.9.安德烈,,你好，我叫安德烈·芬恩。
-SAY.flowchart.10.玛丽,,你好啊年轻人，我是玛丽·彼得森。
-SAY.flowchart.11.安德烈,,这是为收获日准备的吗？
-SAY.flowchart.12.玛丽,,哈，正是！我正在挂彩灯，晚上这里会热闹非凡的。
-SAY.flowchart.13.玛丽,,所有游客都能免费品尝格里姆小镇的美食。
-SAY.flowchart.14.安德烈,,那可太棒了。不过你听说过山羊人吗？
-SAY.flowchart.15.玛丽,,那可是收获日的另一个活动。寻找山羊人！
-SAY.flowchart.16.安德烈,,有很多人都在找？
-SAY.flowchart.17.玛丽,,成百上千呢。这源于小镇的一个传说。{wc}每年这个时候，小镇周围的森林雾气浓郁。
-SAY.flowchart.18.玛丽,,很多人曾说他们在层层迷雾中，看到了直立行走的奇怪生物。
-SAY.flowchart.19.玛丽,,它有山羊的角，却用双脚走路。行动迅速，没人抓住过它。
-SAY.flowchart.20.玛丽,,也许它是被水果的香味吸引过来的？谁也不清楚。
-SAY.flowchart.21.玛丽,,如果你也想抓住它，那祝你好运吧，年轻人。
-SAY.flowchart.22.安德烈,,看来我得用正确的方法才行。
-SAY.flowchart.44.安德烈,,看来这里正在迎接节日的到来。
-SAY.flowchart.50.安德烈,,一串彩旗。看上去很喜庆。
-SAY.flowchart.56.安德烈,,摆满了食物的货架和竹筐。
+SAY.FungusFlow.4.Character Name,,
+SAY.FungusFlow.7.,,
+SAY.FungusFlow.11.Character Name,,一张节日海报，上面写着“欢乐收获日”的相关信息。
+SAY.FungusFlow.89.Character Name,,看来这里正在迎接节日的到来。
+SAY.FungusFlow.24.Character Name,,一串彩旗。看上去很喜庆。
+SAY.FungusFlow.28.Character Name,,架上摆满了果蔬。
+SAY.FungusFlow.32.Character Name,,法式长棍面包，看上去很酥脆。
+SAY.FungusFlow.49.Character Name,,奶酪。信中提到它能吸引到山羊人，我应该问问是否能拿。
+SAY.FungusFlow.55.Character Name,,你好，我叫安德烈·芬恩。
+SAY.FungusFlow.70.Character Name,,你好啊年轻人，我是玛丽·彼得森。
+SAY.FungusFlow.58.Character Name,,这些是为收获日准备的吗？
+SAY.FungusFlow.59.Character Name,,正是！我正在挂彩旗，晚上这里会热闹非凡的。
+SAY.FungusFlow.71.Character Name,,还有其他疑问吗？
+MENU.FungusFlow.61,,奶酪
+MENU.FungusFlow.65,,山羊人
+MENU.FungusFlow.68,,再会
+SAY.FungusFlow.63.Character Name,,我能拿一块架子上的奶酪吗？
+SAY.FungusFlow.64.Character Name,,当然！在收获日中所有游客都能免费品尝格里姆小镇的美食。
+SAY.FungusFlow.77.Character Name,,你听说过山羊人吗？
+SAY.FungusFlow.78.Character Name,,哦，你是说“迷雾中的山羊人”吗？
+SAY.FungusFlow.80.Character Name,,那可是收获日的另一个活动。寻找神秘的山羊人！
+SAY.FungusFlow.79.Character Name,,有很多人都在找？
+SAY.FungusFlow.81.Character Name,,成百上千呢。这源于小镇的一个传说。每年这个时候，小镇周围的森林雾气浓郁。
+SAY.FungusFlow.82.Character Name,,很多人曾说他们在层层迷雾中，看到了直立行走的奇怪生物。
+SAY.FungusFlow.83.Character Name,,它有山羊的角，却用双脚走路。行动迅速，没人抓住过它。
+SAY.FungusFlow.84.Character Name,,也许它是被水果的香味吸引过来的？谁也不清楚。
+SAY.FungusFlow.85.Character Name,,如果你也想抓住它，那祝你好运吧，年轻人。
+SAY.FungusFlow.88.Character Name,,我不打扰你了。
+SAY.FungusFlow.103.Character Name,,我不需要更多的奶酪了，一块足矣。
+SAY.FungusFlow.107.Character Name,,现在我可以拿着奶酪去森林入口处试一试了。
+SAY.FungusFlow.128.Character Name,,现在我可以拿着奶酪去森林入口处试一试了。
 CHARACTER.Character Name,,Character Name
-CHARACTER.安德烈,,安德烈
-CHARACTER.玛丽,,玛丽

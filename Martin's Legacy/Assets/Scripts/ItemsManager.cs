@@ -182,6 +182,8 @@ public class ItemsManager : MonoBehaviour {
 					o.SetActive (true);
 			}
 			break;
+		default:
+			break;
 		}
 	}
 

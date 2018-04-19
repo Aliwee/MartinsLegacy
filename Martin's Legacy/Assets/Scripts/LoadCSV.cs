@@ -56,7 +56,7 @@ public class LoadCSV : MonoBehaviour {
 		
 	public string getText(string key, string language, string type)
    {
-		string result = "哪里出了点小问题";
+		string result = "";
 		int length;
 
 		switch (type) {

@@ -22,7 +22,7 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 	public GameObject itemToShow,pathToShow;
 
 	//Fungus Flowchart
-	public Fungus.Flowchart flowchart;          
+	public Fungus.Flowchart flowchart;    
 
 	//鼠标移入 设置鼠标样式
 	public void OnPointerEnter (PointerEventData eventData)
@@ -73,15 +73,26 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 		 * 如果是有对话的物品，产生对话
         */
 		if (this.tag == "PickableItem") {
-			UserDataManager.instance.AddItemInPack (this.name, "use");
-
-			if (this.name == "item003") {
+			//获得人物移动的参数
+			switch(this.name){
+			case "item003":
+				UserDataManager.instance.AddItemInPack (this.name, "use");
 				itemToShow.SetActive (true);
 				pathToShow.SetActive (true);
 				showAtuoDialog ();
+				Destroy (this.gameObject);
+				break;
+			case "c1l4-lock":
+				break;
+			case "c1l5-gate":
+				flowchart.ExecuteBlock ("wait");
+				break;
+			default:
+				UserDataManager.instance.AddItemInPack (this.name, "use");
+				Destroy (this.gameObject);
+				break;
 			}
 
-			Destroy (this.gameObject);
 			Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
 		} else if (this.tag == "CheckableItem") {
 			lockCursor ();
@@ -98,6 +109,8 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 			lockCursor ();
 		} else if (this.tag == "TalkableItem") {
 			lockCursor ();
+		} else if (this.tag == "WalkableItem") {
+			Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
 		}
 	}
 
@@ -151,5 +164,12 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 	void showAtuoDialog() {
 		Block block = flowchart.FindBlock ("AtuoDialog");
 		flowchart.ExecuteBlock (block);
+	}
+
+	/// <summary>
+	/// Clears the data.
+	/// </summary>
+	public void clearData() {
+		UserDataManager.instance.clearUserData ();
 	}
 }
