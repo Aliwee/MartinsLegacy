@@ -11,17 +11,17 @@ using Fungus;
 public class CheckItemManager : MonoBehaviour {
 
 	private bool inChecking = false;             //if player click the magnifier
-	private const string magnifierName = "item000";  
 	private const string letterName = "item002";
 
 	public Texture2D cursorTexture;              //texture for game cursor 鼠标指针
 	public Fungus.Flowchart flowchart;           //Fungus Flowchart
 	public GameObject pausePanel;                //pause panel 暂停菜单
+	public GameObject icon01;
 	
 	// Update is called once per frame
 	void Update () {
 		//if player click the magnifier in inventory 如果点击了物品栏中的放大镜
-		if (ItemsInteractiveManager.instance.GetPickedItem() == magnifierName && !inChecking){
+		if (EventSystem.current.currentSelectedGameObject == icon01 && !inChecking){
 			inChecking = true;
 		}
 
@@ -104,7 +104,6 @@ public class CheckItemManager : MonoBehaviour {
 	/// </summary>
 	public void clear() 
 	{
-		Debug.Log ("clear");
 		ItemsInteractiveManager.instance.SetPickedItem ("null_picked");
 		ItemsInteractiveManager.instance.SetWaitForConsumeItem ("null_consumed");
 	}

@@ -94,7 +94,7 @@ public class C1L4GameManager : MonoBehaviour {
 			string name = btn.name;
 			//根据名字执行
 			switch (name) {
-			case "按钮1":
+			case "c1l4btn1":
 				if (picN1 == 6)
 				{
 					picN1 = 3;
@@ -105,7 +105,7 @@ public class C1L4GameManager : MonoBehaviour {
 				}
 				Pic1.GetComponent <Image> ().sprite = PicArray[picN1];
 				break;
-			case "按钮2":
+			case "c1l4btn2":
 				if (picN2 == 9)
 				{
 					picN2 = 6;
@@ -116,7 +116,7 @@ public class C1L4GameManager : MonoBehaviour {
 				}
 				Pic2.GetComponent <Image> ().sprite = PicArray[picN2];
 				break;
-			case "按钮3":
+			case "c1l4btn3":
 				if (picN3 == 3)
 				{
 					picN3 = 0;
@@ -160,10 +160,10 @@ public class C1L4GameManager : MonoBehaviour {
 			string name = btn.name;
 			//根据名字执行
 			switch (name) {
-			case "图标1":
+			case "c1l4btn5":
 				picC1 += 1;
 				break;
-			case "图标2":
+			case "c1l4btn6":
 				if(picC1 != 4)
 				{
 					picC1 = 0;
@@ -175,7 +175,7 @@ public class C1L4GameManager : MonoBehaviour {
 
 				}
 				break;
-			case "图标3":
+			case "c1l4btn7":
 				if (picC2 != 7)
 				{
 					picC2 = 0;

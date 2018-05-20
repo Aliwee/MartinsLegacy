@@ -28,3 +28,9 @@ Finished implementing a new level, cheers!
 Added two new levels! Designed one real puzzle, so another gameplay programmer wrote a script to control it. 
 
 Released Demo2.0. Yeahhhhhhhhhhhhhhhhhhhh! I really hope that all the hard work would pay off. 
+
+==========Update Note May. 20, 2018==========
+
+Added new game scenes. Improved gameplay experience. Released Demo2.1.
+
+Hope you guys enjoy!

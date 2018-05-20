@@ -16,7 +16,6 @@ public class ItemsManager : MonoBehaviour {
 	private string itemsPath;                    //物品资源路径
 	private int levelItemsNum;                   //用户存档物品数
 	private string interactionSuccess;           //交互成功
-	private const string magnifierName = "item000";
 
 	public Button[] itemTiles;                   //物品栏中的物品窗格
 	public GameObject lastPickedItem;            //上一次选中的物品
@@ -50,23 +49,26 @@ public class ItemsManager : MonoBehaviour {
 		//加载物品栏
 		itemsInPack = UserDataManager.instance.GetItemsInPack ();
 		consumedItems = UserDataManager.instance.GetConsumedItems ();
-		LoadItemsInPack ();
+
 		//交互成功事件是否触发
 		interactionSuccess = ItemsInteractiveManager.instance.GetItemInteractionResult ();
 		if (interactionSuccess == "true") {
 			DestoryItems ();
+			LoadItemsInPack ();
 			interactionSuccess = "false";
 			ItemsInteractiveManager.instance.SetPickedItem ("null_picked");
 		}
 	}
 
 	//加载物品栏
-	void LoadItemsInPack() {
+	public void LoadItemsInPack() {
 		int item_length = itemsInPack.Count;
 		for (int i = 0; i < itemTiles.Length; i++) {
 			if (i < item_length) {
 				//取得物品索引名字
 				string name = itemsInPack[i].name;
+				if (name == "stick")
+					continue;
 				//取得路径
 				string path = itemsPath + name;
 				//取得索引下的资源
@@ -125,7 +127,7 @@ public class ItemsManager : MonoBehaviour {
 		string itemName = btn.GetComponent <Image> ().sprite.name;
 
 		//显示选框
-		if(itemName != "transparent" && itemName != magnifierName) {
+		if(itemName != "transparent") {
 			if (lastPickedItem != null)
 				lastPickedItem.SetActive (false);
 			GameObject itemBack = btn.transform.GetChild (0).gameObject;
@@ -155,7 +157,7 @@ public class ItemsManager : MonoBehaviour {
 	}
 
 	//仅销毁物品栏中的奶酪
-	public void DestoryPickedItems() {
+	public void DestoryPickedChess() {
 		//获取交互成功的物品栏物品和场景中物品
 		string pickedItemName = "item003";
 		//销毁物品栏物品
@@ -163,6 +165,22 @@ public class ItemsManager : MonoBehaviour {
 			if (itemsInPack [i].name == pickedItemName)
 				UserDataManager.instance.RemoveItemInPack (itemsInPack [i]);
 		}
+		LoadItemsInPack ();
+		UserDataManager.instance.AddItemInConsume (pickedItemName, "consumed");
+		//鼠标重设为默认
+		Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
+	}
+
+	//仅销毁物品栏中的信件
+	public void DestoryPickedLetter() {
+		//获取交互成功的物品栏物品和场景中物品
+		string pickedItemName = "item002";
+		//销毁物品栏物品
+		for (int i = 0; i < itemsInPack.Count; i++) {
+			if (itemsInPack [i].name == pickedItemName)
+				UserDataManager.instance.RemoveItemInPack (itemsInPack [i]);
+		}
+		LoadItemsInPack ();
 		UserDataManager.instance.AddItemInConsume (pickedItemName, "consumed");
 		//鼠标重设为默认
 		Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
@@ -182,6 +200,22 @@ public class ItemsManager : MonoBehaviour {
 					o.SetActive (true);
 			}
 			break;
+		case "Chapter-1-Level-8":
+			//查找是否有stick
+			int index2 = itemsInPack.FindIndex (item => item.name == "stick");
+			if (index2 > 0) {
+				foreach (GameObject o in itemsToShowInScene)
+					o.SetActive (true);
+			}
+			break;
+		case "Chapter-1-Level-9":
+			//查找是否有stick
+			int index3 = itemsInPack.FindIndex (item => item.name == "stick");
+			if (index3 > 0) {
+				foreach (GameObject o in itemsToShowInScene)
+					o.SetActive (true);
+			}
+			break;
 		default:
 			break;
 		}
@@ -193,5 +227,14 @@ public class ItemsManager : MonoBehaviour {
 	void showAtuoDialog() {
 		Block block = flowchart.FindBlock ("AtuoDialog");
 		flowchart.ExecuteBlock (block);
+	}
+
+	/// <summary>
+	/// Changes the name of the danny.
+	/// </summary>
+	public void changeDannyName() {
+		GameObject go = GameObject.Find ("/Canvas/background/树木/characterImage/danny-pre");
+		if(go != null)
+			go.name = "danny";
 	}
 }

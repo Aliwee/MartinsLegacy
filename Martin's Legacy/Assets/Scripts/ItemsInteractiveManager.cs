@@ -11,6 +11,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 	private List<string> consumableItems;     //待互动物品列表
 	private string waitForConsumeItem;        //选中的场景中待交互物品
 	private string isRightItem;               //物品栏物品与场景物品是否交互成功
+	private GameObject lastPickedItem;        //上一次选中的物品
 
 	public static ItemsInteractiveManager instance = null;     //一个ItemsInteractiveManager实例
 
@@ -30,6 +31,7 @@ public class ItemsInteractiveManager : MonoBehaviour {
 		waitForConsumeItem = "null_consumed";
 		isRightItem = "false";
 		consumableItems = new List<string> ();
+		lastPickedItem = null;
 
 		//获得待互动物品列表
 		GetConsumableItems ();
@@ -55,6 +57,16 @@ public class ItemsInteractiveManager : MonoBehaviour {
 	//获取当前选中的物品栏物品
 	public string GetPickedItem() {
 		return this.pickedItem;
+	}
+
+	//设置上次选中的物品栏物品
+	public void SetLastPickedItem(GameObject itemName) {
+		this.lastPickedItem = itemName;
+	}
+
+	//获取上次选中的物品栏物品
+	public GameObject GetLastPickedItem() {
+		return this.lastPickedItem;
 	}
 
 	//设置当前选中的场景中物品

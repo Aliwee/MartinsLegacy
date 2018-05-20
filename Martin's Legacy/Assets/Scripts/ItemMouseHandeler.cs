@@ -24,6 +24,17 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 	//Fungus Flowchart
 	public Fungus.Flowchart flowchart;    
 
+	//ItemsManager脚本
+	public GameObject itemsManagerScript;
+	private ItemsManager im;
+
+	//获得ItemsManager脚本
+	void Start() {
+		//若为Pickable标签的必须拖入ItemsManager
+		if(itemsManagerScript != null)
+			im = itemsManagerScript.GetComponent<ItemsManager> ();
+	}
+
 	//鼠标移入 设置鼠标样式
 	public void OnPointerEnter (PointerEventData eventData)
 	{
@@ -75,6 +86,11 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 		if (this.tag == "PickableItem") {
 			//获得人物移动的参数
 			switch(this.name){
+			case "item002":
+				UserDataManager.instance.AddItemInPack (this.name, "use");
+				Destroy (this.gameObject);
+				im.LoadItemsInPack ();
+				break;
 			case "item003":
 				UserDataManager.instance.AddItemInPack (this.name, "use");
 				itemToShow.SetActive (true);
@@ -85,11 +101,30 @@ public class ItemMouseHandeler : MonoBehaviour,IPointerEnterHandler,IPointerExit
 			case "c1l4-lock":
 				break;
 			case "c1l5-gate":
-				flowchart.ExecuteBlock ("wait");
+				//do nothing here
+				break;
+			case "stick":
+				UserDataManager.instance.AddItemInPack (this.name, "use");
+				itemToShow.SetActive (true);
+				ItemsInteractiveManager.instance.SetLastPickedItem (this.gameObject);
+				break;
+			case "c1l4btn1":
+				break;
+			case "c1l4btn2":
+				break;
+			case "c1l4btn3":
+				break;
+			case "c1l4btn4":
+				break;
+			case "c1l4btn5":
+				break;
+			case "c1l4btn6":
+				break;
+			case "c1l4btn7":
 				break;
 			default:
 				UserDataManager.instance.AddItemInPack (this.name, "use");
-				Destroy (this.gameObject);
+				ItemsInteractiveManager.instance.SetLastPickedItem (this.gameObject);
 				break;
 			}
 

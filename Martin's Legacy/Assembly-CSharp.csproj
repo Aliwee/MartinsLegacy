@@ -576,9 +576,11 @@
      <Compile Include="Assets\Scripts\C1L4GameManager.cs" />
      <Compile Include="Assets\Scripts\CheckItemManager.cs" />
      <Compile Include="Assets\Scripts\CursorState.cs" />
+     <Compile Include="Assets\Scripts\Deer.cs" />
      <Compile Include="Assets\Scripts\ExitManager.cs" />
      <Compile Include="Assets\Scripts\FontManager.cs" />
      <Compile Include="Assets\Scripts\FullScreen.cs" />
+     <Compile Include="Assets\Scripts\IconFadeInOut.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\ItemMouseHandeler.cs" />
      <Compile Include="Assets\Scripts\ItemsInteractiveManager.cs" />
@@ -587,9 +589,12 @@
      <Compile Include="Assets\Scripts\LoadCSV.cs" />
      <Compile Include="Assets\Scripts\LoadNextScene.cs" />
      <Compile Include="Assets\Scripts\LocalizeManager.cs" />
+     <Compile Include="Assets\Scripts\Magic.cs" />
      <Compile Include="Assets\Scripts\MenuClickHandeler.cs" />
      <Compile Include="Assets\Scripts\MenuMouseHandeler.cs" />
-     <Compile Include="Assets\Scripts\Move.cs" />
+     <Compile Include="Assets\Scripts\MoveLong.cs" />
+     <Compile Include="Assets\Scripts\MoveRight.cs" />
+     <Compile Include="Assets\Scripts\MoveShort.cs" />
      <Compile Include="Assets\Scripts\SettingManager.cs" />
      <Compile Include="Assets\Scripts\UserDataManager.cs" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />

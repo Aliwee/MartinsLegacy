@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 3
-  m_Text: "\u674E\u6676\u6021\t\t\u82D1\u9756\u6021\n\u8D75\u6E05\u6E90\t\t\u77F3\u96EA\u9707"
+  m_Text: "\u674E\u6676\u6021\t\t\u82D1\u9756\u6021\t\t\u9EC4\u6B63\u73BA\n\u8D75\u6E05\u6E90\t\t\u77F3\u96EA\u9707\n"
 --- !u!222 &611232387
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -345,8 +345,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 41.3, y: -57.463}
-  m_SizeDelta: {x: -143, y: -266.89996}
+  m_AnchoredPosition: {x: 41.3, y: -88}
+  m_SizeDelta: {x: -143, y: -328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884841980
 MonoBehaviour:
@@ -380,8 +380,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: "\"The Forest and the Trees\"\u2014\u2014 Kevin MacLeod\n\"Enchanted Valley\"\u2014\u2014
-    Kevin MacLeod \n\"When My Summer Becomes a Memory\" \u2014\u2014Taishi Ueda"
+  m_Text: "\"When My Summer Becomes a Memory\" \u2014\u2014Taishi Ueda"
 --- !u!222 &884841981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -687,6 +686,7 @@ RectTransform:
   - {fileID: 611232384}
   - {fileID: 1058968894}
   - {fileID: 884841978}
+  - {fileID: 1334070239}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -757,6 +757,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1334070238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1334070239}
+  - component: {fileID: 1334070241}
+  - component: {fileID: 1334070240}
+  m_Layer: 5
+  m_Name: Musicname3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1334070239
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334070238}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1200919008}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 41.299988, y: 11.521}
+  m_SizeDelta: {x: -143, y: -405.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1334070240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334070238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 2
+  m_Text: "\u65E0\u9898 \u2014\u2014 \u9EC4\u6B63\u73BA"
+--- !u!222 &1334070241
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334070238}
 --- !u!1 &1337119268
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +987,8 @@ GameObject:
   - component: {fileID: 1487911676}
   - component: {fileID: 1487911675}
   - component: {fileID: 1487911677}
+  - component: {fileID: 1487911679}
+  - component: {fileID: 1487911678}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -936,7 +1012,7 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 212
+  blockViewHeight: 390
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -947,7 +1023,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1487911660}
   selectedCommands:
-  - {fileID: 1487911663}
+  - {fileID: 1487911678}
   variables:
   - {fileID: 1487911677}
   description: 
@@ -1006,8 +1082,10 @@ MonoBehaviour:
   - {fileID: 1487911665}
   - {fileID: 1487911670}
   - {fileID: 1487911666}
+  - {fileID: 1487911679}
   - {fileID: 1487911667}
   - {fileID: 1487911668}
+  - {fileID: 1487911678}
   - {fileID: 1487911669}
   - {fileID: 1487911676}
   - {fileID: 1487911675}
@@ -1409,6 +1487,64 @@ MonoBehaviour:
   scope: 1
   key: loading
   value: start
+--- !u!114 &1487911678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1487911657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  targetObjects:
+  - {fileID: 1334070238}
+  tweenType: 2
+  waitUntilFinished:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  duration:
+    floatRef: {fileID: 0}
+    floatVal: 3
+  fadeMode: 0
+  targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  targetAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 0
+--- !u!114 &1487911679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1487911657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6dd8d3a780f4d1ea772e3daf10c372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  targetObjects:
+  - {fileID: 1334070238}
+  tweenType: 2
+  waitUntilFinished:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  duration:
+    floatRef: {fileID: 0}
+    floatVal: 3
+  fadeMode: 0
+  targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  targetAlpha:
+    floatRef: {fileID: 0}
+    floatVal: 1
 --- !u!1 &2035164273
 GameObject:
   m_ObjectHideFlags: 0
