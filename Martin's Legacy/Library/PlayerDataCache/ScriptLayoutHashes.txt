@@ -1,10 +1,11 @@
 WindowsStandalone
 PlayerPath?
-G:/ML_DEMO.exe
+G:/Martin's Legacy Chapter 1.exe
 SceneListBegin?
 Assets/Scenes/Presents.unity
 Assets/Scenes/Loading.unity
 Assets/Scenes/Start.unity
+Assets/Scenes/Setting.unity
 Assets/Scenes/Chapter-1-Level-1.unity
 Assets/Scenes/Chapter-1-Level-2.unity
 Assets/Scenes/Chapter-1-Level-3.unity
@@ -335,7 +336,7 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 9974ffe984db4c6935e1da2656ff5ad9 Assembly-CSharp.dll:Fungus.If
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Fungus.SceneLoader
-5a24898fd8b54346cb8049601696d8b9 Assembly-CSharp.dll:.MenuClickHandeler
+f85e993a37483bbf47468f7cc344c4f9 Assembly-CSharp.dll:.MenuClickHandeler
 89d4e43e5295d3eea0a5c6829fcca293 Assembly-CSharp.dll:Fungus.SetText
 3b80ac990b2d5cd1172f48ce4399d7de Assembly-CSharp.dll:.CheckItemManager
 b15824a6bb101ccacba53ce69baf66e6 Assembly-CSharp.dll:Fungus.SetSpriteOrder

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
 	<component type="setting">
-		<setting type="language">CN</setting>
+		<setting type="language">EN</setting>
 		<setting type="isFirstPaly">False</setting>
 	</component>
 	<component type="level">

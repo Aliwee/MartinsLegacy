@@ -1606,10 +1606,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 30
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2521,9 +2521,9 @@ MonoBehaviour:
   targetTextObject: {fileID: 1060977194}
   punchObject: {fileID: 798019853}
   writingSpeed: 0
-  punctuationPause: 0.25
+  punctuationPause: 0
   hiddenTextColor: {r: 1, g: 1, b: 1, a: 0}
-  writeWholeWords: 1
+  writeWholeWords: 0
   forceRichText: 1
   instantComplete: 1
 --- !u!114 &599073308
@@ -3323,12 +3323,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dbb40ae6f96e912478010710c23da1b7, type: 3}
-    m_FontSize: 45
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3358,8 +3358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 71.7, y: -16.25}
-  m_SizeDelta: {x: -272.8, y: 102.4}
+  m_AnchoredPosition: {x: 71.7, y: -11.5}
+  m_SizeDelta: {x: -272.8, y: 156.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &778990694
 MonoBehaviour:
@@ -3372,7 +3372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 52fdc6fd45ee4a1419337b81fc2662a1, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &786958773
 GameObject:
@@ -4391,7 +4391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeLanguage: 
-  localizationFile: {fileID: 11500000, guid: cf3136328c4c3524e9c473156f208c9f, type: 3}
+  localizationFile: {fileID: 4900000, guid: d3a2682adfdcc3943b8b3142ed9e301c, type: 3}
 --- !u!4 &940825575
 Transform:
   m_ObjectHideFlags: 0
@@ -4523,8 +4523,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000019073027, y: -43.70001}
-  m_SizeDelta: {x: 89.94, y: 20.44}
+  m_AnchoredPosition: {x: 0.000015259, y: -51.6}
+  m_SizeDelta: {x: 159.3, y: 36.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &960933760
 GameObject:
@@ -4602,12 +4602,12 @@ GameObject:
   - component: {fileID: 960933778}
   - component: {fileID: 960933764}
   - component: {fileID: 960933789}
-  - component: {fileID: 960933781}
   - component: {fileID: 960933818}
   - component: {fileID: 960933817}
   - component: {fileID: 960933820}
   - component: {fileID: 960933821}
   - component: {fileID: 960933819}
+  - component: {fileID: 960933781}
   m_Layer: 0
   m_Name: FungusFlow
   m_TagString: Untagged
@@ -4646,7 +4646,6 @@ MonoBehaviour:
   - {fileID: 960933824}
   - {fileID: 960933825}
   - {fileID: 960933789}
-  - {fileID: 960933781}
   - {fileID: 960933778}
   - {fileID: 960933773}
 --- !u!114 &960933762
@@ -4702,11 +4701,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 248.89822, y: -71.90145}
+  scrollPos: {x: 224.69334, y: 1.206706}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 304
-  zoom: 0.94000006
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -4714,9 +4713,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 960933820}
-  selectedCommands:
-  - {fileID: 960933819}
+  - {fileID: 960933761}
+  selectedCommands: []
   variables:
   - {fileID: 960933763}
   - {fileID: 960933830}
@@ -4758,7 +4756,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 432.18378
     y: 90.4729
-    width: 126.59574
+    width: 128.35051
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4839,7 +4837,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 594.365
     y: 24.953468
-    width: 128.72339
+    width: 128.35051
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5039,15 +5037,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 960933760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 217
+  itemId: 295
   indentLevel: 0
-  musicClip: {fileID: 8300000, guid: 1bb958f39998ed949b7275276419be1d, type: 3}
-  atTime: 0
-  loop: 1
-  fadeDuration: 1
+  targetObject: {fileID: 1815539579}
+  methodName: lockCursor
+  delay: 0
 --- !u!114 &960933782
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5118,7 +5115,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 296.23038
     y: 89.937004
-    width: 129.78723
+    width: 129.38144
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5186,7 +5183,7 @@ MonoBehaviour:
   targetButton: {fileID: 378621132}
 --- !u!114 &960933789
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960933760}
@@ -5754,7 +5751,7 @@ MonoBehaviour:
   targetButton: {fileID: 1103169944}
 --- !u!114 &960933817
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960933760}
@@ -5772,7 +5769,7 @@ MonoBehaviour:
   messageOLD: 
 --- !u!114 &960933818
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960933760}
@@ -5785,7 +5782,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &960933819
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960933760}
@@ -5811,7 +5808,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &960933820
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960933760}
@@ -5836,7 +5833,7 @@ MonoBehaviour:
   - {fileID: 960933819}
 --- !u!114 &960933821
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960933760}
@@ -5862,7 +5859,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 588.51666
     y: 91.961525
-    width: 121.27659
+    width: 121.13402
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5971,7 +5968,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -150.5492
     y: 81.44434
-    width: 125.53191
+    width: 125.25773
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6056,8 +6053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 581.36884
-    y: 152.90442
+    x: 582.3998
+    y: 151.87349
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6067,6 +6064,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 960933835}
   commandList:
+  - {fileID: 960933781}
   - {fileID: 960933834}
   - {fileID: 960933833}
   - {fileID: 960933831}
@@ -7049,7 +7047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 5df5c9cf16cd5aa4daf57d7017b9d397, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &1067144715
 GameObject:
@@ -8116,10 +8114,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 30
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -9244,10 +9242,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 30
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0

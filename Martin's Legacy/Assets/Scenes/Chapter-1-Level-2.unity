@@ -1706,7 +1706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104.000015, y: 164.43}
+  m_AnchoredPosition: {x: -239, y: 164.43}
   m_SizeDelta: {x: 35, y: 34.977}
   m_Pivot: {x: 0.5, y: 0.50000024}
 --- !u!114 &354002368
@@ -1801,10 +1801,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 0}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 30
+    m_BestFit: 0
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1831,7 +1831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 52fdc6fd45ee4a1419337b81fc2662a1, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &391633204
 GameObject:
@@ -2386,7 +2386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104, y: 164.43}
+  m_AnchoredPosition: {x: -244, y: 164.43}
   m_SizeDelta: {x: 35, y: 34.977}
   m_Pivot: {x: 0.5, y: 0.50000024}
 --- !u!114 &547685123
@@ -2732,9 +2732,9 @@ MonoBehaviour:
   targetTextObject: {fileID: 1060977194}
   punchObject: {fileID: 798019853}
   writingSpeed: 0
-  punctuationPause: 0.25
+  punctuationPause: 0
   hiddenTextColor: {r: 1, g: 1, b: 1, a: 0}
-  writeWholeWords: 1
+  writeWholeWords: 0
   forceRichText: 1
   instantComplete: 1
 --- !u!114 &599073308
@@ -3237,8 +3237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 98.7, y: 160.73923}
-  m_SizeDelta: {x: 350.5, y: 27.6}
+  m_AnchoredPosition: {x: 13.1, y: 160.73923}
+  m_SizeDelta: {x: 439.2, y: 27.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727296733
 MonoBehaviour:
@@ -3260,19 +3260,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 3
-  m_Text: "\u8868\u793A\u53EF\u4EE5\u8FDB\u5165\u5230\u4E0B\u4E00\u4E2A\u573A\u666F"
+  m_Text: You can enter new place when this icon appears
 --- !u!222 &727296734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3570,7 +3570,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 738475188}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -3814,17 +3814,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dbb40ae6f96e912478010710c23da1b7, type: 3}
-    m_FontSize: 45
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.2
   m_Text: 
 --- !u!222 &778990692
 CanvasRenderer:
@@ -3849,8 +3849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 71.7, y: -16.25}
-  m_SizeDelta: {x: -272.8, y: 102.4}
+  m_AnchoredPosition: {x: 71.7, y: -11.325}
+  m_SizeDelta: {x: -272.8, y: 156.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &778990694
 MonoBehaviour:
@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 52fdc6fd45ee4a1419337b81fc2662a1, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &786958773
 GameObject:
@@ -4818,7 +4818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeLanguage: 
-  localizationFile: {fileID: 11500000, guid: cf3136328c4c3524e9c473156f208c9f, type: 3}
+  localizationFile: {fileID: 4900000, guid: 0a3fd4d7d0f9c44a5a439def2e907d7c, type: 3}
 --- !u!4 &940825575
 Transform:
   m_ObjectHideFlags: 0
@@ -4950,8 +4950,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000019073027, y: -43.70001}
-  m_SizeDelta: {x: 89.94, y: 20.44}
+  m_AnchoredPosition: {x: -0.00001049, y: -49.8}
+  m_SizeDelta: {x: 184.6, y: 41.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &960933760
 GameObject:
@@ -5074,6 +5074,7 @@ GameObject:
   - component: {fileID: 960933871}
   - component: {fileID: 960933874}
   - component: {fileID: 960933873}
+  - component: {fileID: 960933875}
   m_Layer: 0
   m_Name: FungusFlow
   m_TagString: Untagged
@@ -5187,11 +5188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -32.273846, y: -85.932175}
+  scrollPos: {x: -199.42384, y: -64.73869}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 304
-  zoom: 0.8500001
+  zoom: 0.96999997
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5199,7 +5200,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 960933790}
+  - {fileID: 960933841}
   selectedCommands: []
   variables:
   - {fileID: 960933763}
@@ -5242,7 +5243,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 157.42397
     y: 16.42072
-    width: 122.94117
+    width: 121.134026
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5310,7 +5311,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 297.57428
     y: 16.251663
-    width: 131.17645
+    width: 128.35052
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5703,7 +5704,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 919.35333
     y: 92.69526
-    width: 125.29411
+    width: 123.19588
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5967,7 +5968,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 572.99225
     y: 251.09064
-    width: 135.88235
+    width: 134.53609
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6074,7 +6075,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 732.5321
     y: 248.08333
-    width: 139.41176
+    width: 136.59793
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6135,7 +6136,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 899.1546
     y: 253.10487
-    width: 142.94116
+    width: 142.78351
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6749,6 +6750,7 @@ MonoBehaviour:
   description: "\u4E0D\u8981\u5220\u9664!"
   eventHandler: {fileID: 960933836}
   commandList:
+  - {fileID: 960933875}
   - {fileID: 960933835}
   - {fileID: 960933834}
   - {fileID: 960933838}
@@ -6889,7 +6891,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1058.4645
     y: 95.30413
-    width: 155.88234
+    width: 154.12372
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6899,8 +6901,8 @@ MonoBehaviour:
   eventHandler: {fileID: 960933845}
   commandList:
   - {fileID: 960933840}
-  - {fileID: 960933844}
   - {fileID: 960933843}
+  - {fileID: 960933844}
   - {fileID: 960933842}
 --- !u!114 &960933842
 MonoBehaviour:
@@ -7320,7 +7322,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 1
+    floatVal: 2
   durationOLD: 0
 --- !u!114 &960933863
 MonoBehaviour:
@@ -7548,7 +7550,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 0.5
+    floatVal: 2
   durationOLD: 0
 --- !u!114 &960933873
 MonoBehaviour:
@@ -7590,6 +7592,22 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 0
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &960933875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960933760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 295
+  indentLevel: 0
+  targetObject: {fileID: 310866450}
+  methodName: unlockCursor
+  delay: 0
 --- !u!1 &967962141
 GameObject:
   m_ObjectHideFlags: 0
@@ -8220,8 +8238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 94.2, y: 160.73923}
-  m_SizeDelta: {x: 341.6, y: 27.6}
+  m_AnchoredPosition: {x: 13.100014, y: 160.73923}
+  m_SizeDelta: {x: 459.3, y: 27.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048180710
 MonoBehaviour:
@@ -8243,19 +8261,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 3
-  m_Text: "\u8868\u793A\u53EF\u4EE5\u4E0E\u5176\u8FDB\u884C\u5BF9\u8BDD"
+  m_Text: You can chat with others when this icon appears
 --- !u!222 &1048180711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8464,7 +8482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 5df5c9cf16cd5aa4daf57d7017b9d397, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &1067144715
 GameObject:
@@ -8968,7 +8986,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 657.5005, y: -51.5}
+  m_AnchoredPosition: {x: 650, y: -50}
   m_SizeDelta: {x: 1300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143478975
@@ -9028,7 +9046,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1143478977}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -9532,10 +9550,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 0}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 30
+    m_BestFit: 0
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -9562,7 +9580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 52fdc6fd45ee4a1419337b81fc2662a1, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &1248334476
 GameObject:
@@ -10654,10 +10672,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 0}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 30
+    m_BestFit: 0
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -10684,7 +10702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 52fdc6fd45ee4a1419337b81fc2662a1, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!1 &1588106886
 GameObject:
@@ -11570,7 +11588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.063750006, y: 0}
   m_AnchorMax: {x: 0.063750006, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
   m_SizeDelta: {x: 58.8, y: -210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945704878

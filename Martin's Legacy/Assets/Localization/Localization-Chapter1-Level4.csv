@@ -1,10 +1,16 @@
-Key,Description,Standard
-SAY.FungusFlow.4.安德烈,,
-SAY.FungusFlow.7.,,
-SAY.FungusFlow.213.安德烈,,这就是山羊人消失之前的地方了。我应该仔细检查一下。
-SAY.FungusFlow.140.安德烈,,太好了，我解开了锁上的机关，现在锁孔出现了。
-SAY.FungusFlow.150.安德烈,,铁门上面有一道锁。这道锁的结构很奇怪...
-SAY.FungusFlow.210.安德烈,,四周白雾一片，只能辨认出前方铁门的轮廓。
-SAY.FungusFlow.223.安德烈,,左边似乎有一道机关，是它在阻止锁孔的出现？
-SAY.FungusFlow.225.安德烈,,右边似乎有一道机关，是它在阻止锁孔的出现？
-CHARACTER.安德烈,,安德烈
+Key,Description,CN,EN
+SAY.FungusFlow.213.安德烈,,这就是山羊人消失之前的地方了。我应该仔细检查一下。,I lost track of the Goatman here. It seems a gate is holding me back. I should check this place carefully.
+SAY.FungusFlow.140.安德烈,,太好了，我解开了锁上的机关，现在锁孔出现了。,"Great, I unlocked the mechanism, and now the keyhole finally appears."
+SAY.FungusFlow.150.安德烈,,铁门上面有一道锁。这道锁的结构很奇怪...,"Wait... I don't see any keyhole, but there is a strange mechanism on the door."
+SAY.FungusFlow.240.安德烈,,这个按钮能改变石头上的图形！,The button can change the image on the stone!
+SAY.FungusFlow.241.安德烈,,我应该想出正确的组合才行,Maybe I need to come up with the correct combination?
+SAY.FungusFlow.237.安德烈,,这个图形下的石头似乎能被按压很多次。,It seems that the stone can be pressed multiple times...
+SAY.FungusFlow.238.安德烈,,这块石头也能被按压。,This stone can be pressed multiple times...
+SAY.FungusFlow.239.安德烈,,关键是，我应该按压多少次？,How many times should I press those three stones?
+SAY.FungusFlow.210.安德烈,,四周白雾一片，只能辨认出前方铁门的轮廓。,"Surrounded by the white and thick mist, I can only recognize the outline of the iron gate in front of me."
+SAY.FungusFlow.223.安德烈,,左边似乎有一道机关，是它在阻止锁孔的出现？,There's a lock on the left side. I wonder if it's preventing the keyhole from showing up?
+SAY.FungusFlow.225.安德烈,,右边似乎有一道机关，是它在阻止锁孔的出现？,There's a lock on the right side. I wonder if it's preventing the keyhole from showing up?
+SAY.FungusFlow.232.,,,
+SAY.FungusFlow.235.安德烈,,,
+CHARACTER.Character Name,,Character Name,
+CHARACTER.安德烈,,安德烈,

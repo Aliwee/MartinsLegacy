@@ -182,7 +182,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
+    m_Font: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -194,7 +194,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 3
-  m_Text: "\u674E\u6676\u6021\t\t\u82D1\u9756\u6021\t\t\u9EC4\u6B63\u73BA\n\u8D75\u6E05\u6E90\t\t\u77F3\u96EA\u9707\n"
+  m_Text: "Jingyi Lee\t      Jingyi Yuan     Zhengxi Huang\nQingyuan Zhao\t  Xuezheng
+    Shi\n"
 --- !u!222 &611232387
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -297,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c387d3e32404bcc91c60318d766bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewSize: 195.83151
+  viewSize: 254.39052
   primaryAspectRatio: {x: 4, y: 3}
   secondaryAspectRatio: {x: 2, y: 1}
 --- !u!4 &649124848
@@ -380,7 +381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: "\"When My Summer Becomes a Memory\" \u2014\u2014Taishi Ueda"
+  m_Text: '"When My Summer Becomes a Memory" by Taishi Ueda'
 --- !u!222 &884841981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -577,8 +578,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -589,7 +590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: "\u97F3\u4E50\u652F\u6301\uFF1A"
+  m_Text: Audio (Open resources)
 --- !u!222 &1058968897
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -812,7 +813,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
+    m_Font: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
@@ -824,7 +825,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: "\u65E0\u9898 \u2014\u2014 \u9EC4\u6B63\u73BA"
+  m_Text: '"The Forest and the Trees" by Kevin MacLeod'
 --- !u!222 &1334070241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -887,8 +888,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -899,7 +900,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 3
-  m_Text: "\u5F00\u53D1\u4EBA\u5458:"
+  m_Text: Developers
 --- !u!222 &1337119271
 CanvasRenderer:
   m_ObjectHideFlags: 0

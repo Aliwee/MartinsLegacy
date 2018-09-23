@@ -1011,6 +1011,8 @@ GameObject:
   - component: {fileID: 206965020}
   - component: {fileID: 206965021}
   - component: {fileID: 206965022}
+  - component: {fileID: 206965023}
+  - component: {fileID: 206965024}
   m_Layer: 0
   m_Name: "_\u70B9\u51FB\u4E8B\u4EF6"
   m_TagString: Untagged
@@ -1031,11 +1033,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 236.85149, y: -4.8678226}
+  scrollPos: {x: 184.78027, y: -19.514679}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 295
-  zoom: 0.8500001
+  zoom: 0.99999994
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1043,9 +1045,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 206965020}
+  - {fileID: 206964999}
   selectedCommands:
-  - {fileID: 206965022}
+  - {fileID: 206965024}
   variables:
   - {fileID: 206964922}
   - {fileID: 206965004}
@@ -1479,7 +1481,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 117.20288
     y: 24.428116
-    width: 167.64705
+    width: 158
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1650,7 +1652,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 313.12827
     y: 138.08035
-    width: 125.29411
+    width: 121.00001
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1785,7 +1787,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -30.872078
     y: 138.0369
-    width: 151.17645
+    width: 143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1965,7 +1967,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 310.34723
     y: 26.821266
-    width: 159.41174
+    width: 151
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2658,7 +2660,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 137.88823
     y: 138.81108
-    width: 133.5294
+    width: 129
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2777,7 +2779,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 659.5476
     y: 28.2826
-    width: 131.17645
+    width: 126.00001
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3015,7 +3017,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 513.14703
     y: 24.543533
-    width: 122.94117
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3657,9 +3659,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 502.67365
-    y: 136.95015
-    width: 145.2941
+    x: 501.67365
+    y: 135.95015
+    width: 138
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3784,8 +3786,8 @@ MonoBehaviour:
   indentLevel: 0
   musicClip: {fileID: 8300000, guid: 1bb958f39998ed949b7275276419be1d, type: 3}
   atTime: 0
-  loop: 1
-  fadeDuration: 1
+  loop: 0
+  fadeDuration: 2
 --- !u!114 &206964997
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3848,6 +3850,7 @@ MonoBehaviour:
   description: "\u4E0D\u8981\u5220\u9664!"
   eventHandler: {fileID: 206965003}
   commandList:
+  - {fileID: 206965024}
   - {fileID: 206965002}
   - {fileID: 206965001}
   - {fileID: 206965000}
@@ -4273,7 +4276,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &206965019
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206964863}
@@ -4291,7 +4294,7 @@ MonoBehaviour:
   messageOLD: 
 --- !u!114 &206965020
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206964863}
@@ -4313,10 +4316,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 206965021}
   commandList:
+  - {fileID: 206965023}
   - {fileID: 206965022}
 --- !u!114 &206965021
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206964863}
@@ -4329,7 +4333,7 @@ MonoBehaviour:
   message: startAudio
 --- !u!114 &206965022
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206964863}
@@ -4343,6 +4347,35 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 5523e7cfb606301428ed3440ef4fad84, type: 3}
   volume: 1
   waitUntilFinished: 0
+--- !u!114 &206965023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 206964863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359b09a7ba2e4af981f07c07f8af85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 351
+  indentLevel: 0
+--- !u!114 &206965024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 206964863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 352
+  indentLevel: 0
+  targetObject: {fileID: 2137349861}
+  methodName: lockCursor
+  delay: 0
 --- !u!1 &210830246
 GameObject:
   m_ObjectHideFlags: 0
@@ -4741,7 +4774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104, y: 164.43}
+  m_AnchoredPosition: {x: -166, y: 166}
   m_SizeDelta: {x: 35, y: 34.977}
   m_Pivot: {x: 0.5, y: 0.50000024}
 --- !u!114 &255658200
@@ -4969,7 +5002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -179, y: 167}
+  m_AnchoredPosition: {x: -208.79996, y: 167}
   m_SizeDelta: {x: 35, y: 34.977}
   m_Pivot: {x: 0.5, y: 0.50000024}
 --- !u!114 &299617069
@@ -5924,7 +5957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 78.8, y: 160.73923}
+  m_AnchoredPosition: {x: 16.80001, y: 162.30927}
   m_SizeDelta: {x: 310.7, y: 27.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &613716360
@@ -5947,19 +5980,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 3
-  m_Text: "\u8868\u793A\u5F53\u524D\u6709\u8C1C\u9898\u5F85\u89E3"
+  m_Text: This icon means there's a puzzle
 --- !u!222 &613716361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6674,7 +6707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48.79995, y: 163.3093}
+  m_AnchoredPosition: {x: 19, y: 163.3093}
   m_SizeDelta: {x: 400.5, y: 27.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852603854
@@ -6697,19 +6730,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 3
-  m_Text: "\u8868\u793A\u53EF\u7528\u7269\u54C1\u680F\u7269\u54C1\u5C1D\u8BD5\u89E3\u8C1C"
+  m_Text: You can try to solve the puzzle with items
 --- !u!222 &852603855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7033,7 +7066,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textTiles:
   - {fileID: 200870326}
-  localize: {fileID: 0}
+  - {fileID: 1032489025}
+  localize: {fileID: 38847944}
 --- !u!1 &881643621
 GameObject:
   m_ObjectHideFlags: 0
@@ -7381,7 +7415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 5df5c9cf16cd5aa4daf57d7017b9d397, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!114 &914400084
 MonoBehaviour:
@@ -7779,8 +7813,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000019073027, y: -43.70001}
-  m_SizeDelta: {x: 89.94, y: 20.44}
+  m_AnchoredPosition: {x: -0.000015259, y: -51.6}
+  m_SizeDelta: {x: 159.5, y: 36.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032489027
 MonoBehaviour:
@@ -7988,8 +8022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 68, y: -16.25}
-  m_SizeDelta: {x: -280.19, y: 102.4}
+  m_AnchoredPosition: {x: 68, y: -17.3}
+  m_SizeDelta: {x: -280.2, y: 145.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065493835
 MonoBehaviour:
@@ -8002,7 +8036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8b1f76c27bb240a73e15e8d8f75a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  font_EN: {fileID: 12800000, guid: 546ce97402d83de40852016f8ae7cea3, type: 3}
+  font_EN: {fileID: 12800000, guid: 52fdc6fd45ee4a1419337b81fc2662a1, type: 3}
   font_CN: {fileID: 12800000, guid: 8bcc4d86bfb301b498c9800d5ddb6a97, type: 3}
 --- !u!114 &1065493836
 MonoBehaviour:
@@ -8046,17 +8080,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dbb40ae6f96e912478010710c23da1b7, type: 3}
-    m_FontSize: 45
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.2
   m_Text: 
 --- !u!222 &1065493838
 CanvasRenderer:
@@ -9054,9 +9088,9 @@ MonoBehaviour:
   targetTextObject: {fileID: 914400081}
   punchObject: {fileID: 356512267}
   writingSpeed: 0
-  punctuationPause: 0.25
+  punctuationPause: 0
   hiddenTextColor: {r: 1, g: 1, b: 1, a: 0}
-  writeWholeWords: 1
+  writeWholeWords: 0
   forceRichText: 1
   instantComplete: 1
 --- !u!114 &1326270950

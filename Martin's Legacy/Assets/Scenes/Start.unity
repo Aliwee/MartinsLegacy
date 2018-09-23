@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &116316122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -539,7 +539,6 @@ GameObject:
   - component: {fileID: 675463367}
   - component: {fileID: 675463366}
   - component: {fileID: 675463365}
-  - component: {fileID: 675463369}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -623,20 +622,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &675463369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 675463364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5870874bccb28c249bc782d92a28e536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startBtn: {fileID: 608189493}
-  settingBtn: {fileID: 116316123}
-  exitBtn: {fileID: 973836671}
 --- !u!1 &755152867
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224961229}
   - component: {fileID: 1224961230}
+  - component: {fileID: 1224961231}
   m_Layer: 0
   m_Name: LocalizeManager
   m_TagString: Untagged
@@ -943,6 +929,21 @@ MonoBehaviour:
   - {fileID: 116316121}
   - {fileID: 973836669}
   localize: {fileID: 0}
+--- !u!114 &1224961231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224961228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5870874bccb28c249bc782d92a28e536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startBtn: {fileID: 608189493}
+  settingBtn: {fileID: 116316123}
+  exitBtn: {fileID: 973836671}
+  fl: {fileID: 2117148771}
 --- !u!1 &1294734770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1267,9 @@ GameObject:
   - component: {fileID: 2117148773}
   - component: {fileID: 2117148774}
   - component: {fileID: 2117148772}
+  - component: {fileID: 2117148776}
+  - component: {fileID: 2117148777}
+  - component: {fileID: 2117148778}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1298,8 +1302,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2117148773}
-  selectedCommands: []
+  - {fileID: 2117148776}
+  selectedCommands:
+  - {fileID: 2117148777}
   variables: []
   description: 
   stepPause: 0
@@ -1313,7 +1318,7 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &2117148772
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2117148770}
@@ -1381,3 +1386,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2117148776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117148770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 269.5
+    y: 75.5
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 78
+  blockName: fade
+  description: 
+  eventHandler: {fileID: 2117148778}
+  commandList:
+  - {fileID: 2117148777}
+--- !u!114 &2117148777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117148770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+--- !u!114 &2117148778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117148770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 2117148776}
+  targetButton: {fileID: 0}

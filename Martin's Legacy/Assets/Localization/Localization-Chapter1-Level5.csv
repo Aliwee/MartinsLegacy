@@ -1,8 +1,7 @@
-Key,Description,Standard
-SAY.FungusFlow.4.安德烈,,
-SAY.FungusFlow.7.,,
-SAY.FungusFlow.138.安德烈,,雾气散了！是巧合吗？
-SAY.FungusFlow.137.安德烈,,铁门之后的鲁米诺，究竟是怎样的？
-SAY.FungusFlow.128.,,现在我可以拿着奶酪去森林入口处试一试了。
-SAY.FungusFlow.142.安德烈,,阳光令森林更加美丽了。
-CHARACTER.安德烈,,安德烈
+Key,Description,CN,EN
+SAY.FungusFlow.138.安德烈,,雾气散了！是巧合吗？,"Oh my, the fog is gone! Is it a coincidence?"
+SAY.FungusFlow.137.安德烈,,铁门之后的鲁米诺，究竟是怎样的？,So this is Luminor? It's so gorgeous and breathtaking. I'm so curious about what it would be like after I enter.
+SAY.FungusFlow.142.安德烈,,阳光令森林更加美丽了。,"The sunshine, with no doubt, makes the forest even more beautiful."
+SAY.FungusFlow.214.,,,
+SAY.FungusFlow.217.安德烈,,,
+CHARACTER.安德烈,,安德烈,

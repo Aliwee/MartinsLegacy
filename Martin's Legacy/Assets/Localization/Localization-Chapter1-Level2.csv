@@ -1,33 +1,33 @@
-Key,Description,Standard
-SAY.FungusFlow.4.Character Name,,
-SAY.FungusFlow.7.,,
-SAY.FungusFlow.11.Character Name,,一张节日海报，上面写着“欢乐收获日”的相关信息。
-SAY.FungusFlow.89.Character Name,,看来这里正在迎接节日的到来。
-SAY.FungusFlow.24.Character Name,,一串彩旗。看上去很喜庆。
-SAY.FungusFlow.28.Character Name,,架上摆满了果蔬。
-SAY.FungusFlow.32.Character Name,,法式长棍面包，看上去很酥脆。
-SAY.FungusFlow.49.Character Name,,奶酪。信中提到它能吸引到山羊人，我应该问问是否能拿。
-SAY.FungusFlow.55.Character Name,,你好，我叫安德烈·芬恩。
-SAY.FungusFlow.70.Character Name,,你好啊年轻人，我是玛丽·彼得森。
-SAY.FungusFlow.58.Character Name,,这些是为收获日准备的吗？
-SAY.FungusFlow.59.Character Name,,正是！我正在挂彩旗，晚上这里会热闹非凡的。
-SAY.FungusFlow.71.Character Name,,还有其他疑问吗？
-MENU.FungusFlow.61,,奶酪
-MENU.FungusFlow.65,,山羊人
-MENU.FungusFlow.68,,再会
-SAY.FungusFlow.63.Character Name,,我能拿一块架子上的奶酪吗？
-SAY.FungusFlow.64.Character Name,,当然！在收获日中所有游客都能免费品尝格里姆小镇的美食。
-SAY.FungusFlow.77.Character Name,,你听说过山羊人吗？
-SAY.FungusFlow.78.Character Name,,哦，你是说“迷雾中的山羊人”吗？
-SAY.FungusFlow.80.Character Name,,那可是收获日的另一个活动。寻找神秘的山羊人！
-SAY.FungusFlow.79.Character Name,,有很多人都在找？
-SAY.FungusFlow.81.Character Name,,成百上千呢。这源于小镇的一个传说。每年这个时候，小镇周围的森林雾气浓郁。
-SAY.FungusFlow.82.Character Name,,很多人曾说他们在层层迷雾中，看到了直立行走的奇怪生物。
-SAY.FungusFlow.83.Character Name,,它有山羊的角，却用双脚走路。行动迅速，没人抓住过它。
-SAY.FungusFlow.84.Character Name,,也许它是被水果的香味吸引过来的？谁也不清楚。
-SAY.FungusFlow.85.Character Name,,如果你也想抓住它，那祝你好运吧，年轻人。
-SAY.FungusFlow.88.Character Name,,我不打扰你了。
-SAY.FungusFlow.103.Character Name,,我不需要更多的奶酪了，一块足矣。
-SAY.FungusFlow.107.Character Name,,现在我可以拿着奶酪去森林入口处试一试了。
-SAY.FungusFlow.128.Character Name,,现在我可以拿着奶酪去森林入口处试一试了。
-CHARACTER.Character Name,,Character Name
+Key,Description,CN,EN
+SAY.FungusFlow.4.Character Name,,,
+SAY.FungusFlow.7.,,,
+SAY.FungusFlow.11.Character Name,,一张节日海报，上面写着“欢乐收获日”的相关信息。,It's a poster with some information of the Harvest Day in this lovely small town.
+SAY.FungusFlow.89.Character Name,,看来这里正在迎接节日的到来。,It seems that the festival is approaching.
+SAY.FungusFlow.24.Character Name,,一串彩旗。看上去很喜庆。,Bunting adds the gaiety of this town.
+SAY.FungusFlow.28.Character Name,,架上摆满了果蔬。,There're plenty of fruits and vegetables on the shelves.
+SAY.FungusFlow.32.Character Name,,法式长棍面包，看上去很酥脆。,Those baguettes look fresh. They were my favorite food when I was a kid.
+SAY.FungusFlow.49.Character Name,,奶酪。信中提到它能吸引到山羊人，我应该问问是否能拿。,Cheese. The letter mentions that it can attract the Goatman. I could ask the lady there if I can take some of it.
+SAY.FungusFlow.55.Character Name,,你好，我叫安德烈·芬恩。,"Hello, my name is Andre Finn. Nice to meet you."
+SAY.FungusFlow.70.Character Name,,你好啊年轻人，我是玛丽·彼得森。,"Hi there, I'm Mary Peterson."
+SAY.FungusFlow.58.Character Name,,这些是为收获日准备的吗？,Are these prepared for the Harvest Day?
+SAY.FungusFlow.59.Character Name,,正是！我正在挂彩旗，晚上这里会热闹非凡的。,Exactly! I'm hanging bunting and flags. There would be a remarkable degree of buzz and excitement at night.
+SAY.FungusFlow.71.Character Name,,还有其他疑问吗？,Any other questions?
+MENU.FungusFlow.61,,奶酪,The cheese.
+MENU.FungusFlow.65,,山羊人,The Goatman.
+MENU.FungusFlow.68,,再会,See you later.
+SAY.FungusFlow.63.Character Name,,我能拿一块架子上的奶酪吗？,Can I take a piece of cheese on the shelf?
+SAY.FungusFlow.64.Character Name,,当然！在收获日中所有游客都能免费品尝格里姆小镇的美食。,Of course! All visitors can enjoy the food at Grim Town on the Harvest Day for free.
+SAY.FungusFlow.77.Character Name,,你听说过山羊人吗？,Have you ever heared of the Goatman?
+SAY.FungusFlow.78.Character Name,,哦，你是说“迷雾中的山羊人”吗？,Oh you mean the “Goatman in the fog”?
+SAY.FungusFlow.80.Character Name,,那可是收获日的另一个活动。寻找神秘的山羊人！,That's an activity on the Harvest Day. Looking for mysterious Goatman!
+SAY.FungusFlow.79.Character Name,,有很多人都在找？,Other people are also looking for it?
+SAY.FungusFlow.81.Character Name,,成百上千呢。这源于小镇的一个传说。每年这个时候，小镇周围的森林雾气浓郁。,"Hundreds and thousands, my dear. It stems from a folklore. At this time of the year, the forest around the town will be full of fog."
+SAY.FungusFlow.82.Character Name,,很多人曾说他们在层层迷雾中，看到了直立行走的奇怪生物。,Many people have said that they witnessed a strange creature walking upright in layers of fog.
+SAY.FungusFlow.83.Character Name,,它有山羊的角，却用双脚走路。行动迅速，没人抓住过它。,"It has goat's horns but walks with both feet, and moves so quickly that no one has ever captured it."
+SAY.FungusFlow.84.Character Name,,也许它是被水果的香味吸引过来的？谁也不清楚。,Maybe it was attracted by the scent of fruit in the first place? No one really knows the truth of the Goatman.
+SAY.FungusFlow.85.Character Name,,如果你也想抓住它，那祝你好运吧，年轻人。,"If you want to catch it, then good luck to you, my friend."
+SAY.FungusFlow.88.Character Name,,我不打扰你了。,Thank you. I guess I'd better not bother you anymore.
+SAY.FungusFlow.103.Character Name,,我不需要更多的奶酪了，一块足矣。,"There's no need to take the whole cheese. A small piece should be enough, I assume."
+SAY.FungusFlow.107.Character Name,,现在我可以拿着奶酪去森林入口处试一试了。,Now I can take the cheese and try it at the entrance of the forest.
+SAY.FungusFlow.128.Character Name,,现在我可以拿着奶酪去森林入口处试一试了。,Now I can take the cheese and try it at the entrance of the forest.
+CHARACTER.Character Name,,Character Name,

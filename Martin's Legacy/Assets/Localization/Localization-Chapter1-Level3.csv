@@ -1,16 +1,16 @@
-Key,Description,Standard
-SAY.flowchart.116.安德烈,,有三条路，但我不知道该走哪一条路……
-SAY.flowchart.125.安德烈,,现在是奶酪派上用场的时候了。
-SAY.flowchart.287.安德烈,,我应该跟着山羊人。
-SAY.flowchart.302.安德烈,,也许不是这条路？
-SAY.flowchart.312.安德烈,,也许不是这条路？
-SAY.flowchart.209.安德烈,,那是什么？那是一个人吗？但是他有山羊的头？
-SAY.flowchart.210.安德烈,,我应该跟着它。
-SAY.flowchart.305.安德烈,,也许不是这条路？
-SAY.flowchart.316.安德烈,,也许不是这条路？
-SAY.flowchart.250.安德烈,,我应该走它消失的那条路。
-SAY.flowchart.265.安德烈,,我应该走它消失的那条路。
-SAY.flowchart.296.安德烈,,
-SAY.flowchart.299.,,
-SAY.flowchart.322.安德烈,,一共有三条路。如果不知道正确的方向，我很容易在雾中迷路。
-CHARACTER.安德烈,,安德烈
+Key,Description,CN,EN
+SAY.flowchart.116.安德烈,,有三条路，但我不知道该走哪一条路……,"There're three trails, but I don't know which way leads to Luminor. I need to figure it out."
+SAY.flowchart.125.安德烈,,现在是奶酪派上用场的时候了。,It‘s time for the cheese to come in handy.
+SAY.flowchart.287.安德烈,,我应该跟着山羊人。,"I'd better follow the Goatman, or I might get lost in the forest."
+SAY.flowchart.302.安德烈,,也许不是这条路？,Maybe the Goatman isn't nearby on this trail?
+SAY.flowchart.312.安德烈,,也许不是这条路？,Maybe the Goatman isn't nearby on this trail?
+SAY.flowchart.209.安德烈,,那是什么？那是一个人吗？但是他有山羊的头？,Gosh! What is THAT? A man? But it also has horns... The Goatman in the folklore?
+SAY.flowchart.210.安德烈,,我应该跟着它。,"I should follow it, though I was terrified just now."
+SAY.flowchart.305.安德烈,,也许不是这条路？,Maybe the Goatman isn't nearby on this trail?
+SAY.flowchart.316.安德烈,,也许不是这条路？,Maybe the Goatman isn't nearby on this trail?
+SAY.flowchart.250.安德烈,,我应该走它消失的那条路。,It's not the place where the Goatman disappeared.
+SAY.flowchart.265.安德烈,,我应该走它消失的那条路。,It's not the place where the Goatman disappeared.
+SAY.flowchart.296.安德烈,,,
+SAY.flowchart.299.,,,
+SAY.flowchart.322.安德烈,,一共有三条路。如果不知道正确的方向，我很容易在雾中迷路。,"There're three trails, and if I don't know the correct path, I'll easily get lost in the fog."
+CHARACTER.安德烈,,安德烈,

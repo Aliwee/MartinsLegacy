@@ -43,13 +43,13 @@ public class LoadCSV : MonoBehaviour {
 
 		for (int i = 0; i < itemNum; i++)
 		{
-			arrayItem[i] = lineArrayItem[i].Split(',');
+			arrayItem[i] = lineArrayItem[i].Split(';');
 		}
 		for (int i = 0; i < peopleNum; i++) {
-			arrayPeople [i] = lineArrayPeople [i].Split (',');
+			arrayPeople [i] = lineArrayPeople [i].Split (';');
 		}
 		for (int i = 0; i < puzzleNum; i++) {
-			arrayPuzzle [i] = lineArrayPuzzle [i].Split (',');
+			arrayPuzzle [i] = lineArrayPuzzle [i].Split (';');
 		}
 
     }

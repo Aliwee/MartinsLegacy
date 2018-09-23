@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Fungus;
 
 //用于处理开始界面跳转的类
 public class MenuClickHandeler : MonoBehaviour {
@@ -10,6 +11,7 @@ public class MenuClickHandeler : MonoBehaviour {
 	public Button startBtn;
 	public Button settingBtn;
 	public Button exitBtn;
+	public Fungus.Flowchart fl;
 
 	//页面载入时就调用它
 	void Start() {
@@ -34,6 +36,7 @@ public class MenuClickHandeler : MonoBehaviour {
 		                   "-Level-" + levelNum;
 
 		//加载场景
+		fl.ExecuteBlock ("fade");
 		SceneManager.LoadScene (sceneName);
 	}
 

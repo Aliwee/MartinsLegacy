@@ -1,6 +1,6 @@
-Key,Description,CN,EN
-positionLeft,c1l3中的左边道路,通往森林左边的道路。,
-positionMiddle,c1l3中的中间道路,通往森林中间的道路。,
-positionright,c1l3中的右边道路,通往森林右边的道路。,
-lock,c1l5中的锁,这扇门上有一把锁。,
-item001,c1l5中解开的锁,现在锁上的机关解除了。,
+Key;Description;CN;EN
+positionLeft;c1l3中的左边道路;通往森林左边的道路。;The road leads to the left side of the forest.
+positionMiddle;c1l3中的中间道路;通往森林中间的道路。;The road leads to the middle of the forest.
+positionright;c1l3中的右边道路;通往森林右边的道路。;The road leads to the right side of the forest.
+lock;c1l5中的锁;我没看见任何钥匙孔，但是门上倒是有个奇怪的装置。;I don't see any keyhole, but there is a strange mechanism on the door.
+item001;c1l5中解开的锁;太好了！我可以看见钥匙孔了。是奥尼尔先生做的那个装置吗？;Great! The keyhole appears. Did Mr. O'Neill develop that protection?
